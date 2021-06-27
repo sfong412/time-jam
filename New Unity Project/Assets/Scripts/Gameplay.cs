@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Gameplay : MonoBehaviour
 {
+    public float scrollSpeed = 1f;
+    public Transform movingThing;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +20,7 @@ public class Gameplay : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
+
+        movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
     }
 }

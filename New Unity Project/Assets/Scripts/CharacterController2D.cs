@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //Made by Color!Please Studios
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -52,6 +53,11 @@ public class CharacterController2D : MonoBehaviour
         if (other.tag == "Ground")
         {
             isgrounded = true;
+        }
+
+        if (other.tag == "adioslaser")
+        {
+            SceneManager.LoadScene(1);
         }
        
     }
