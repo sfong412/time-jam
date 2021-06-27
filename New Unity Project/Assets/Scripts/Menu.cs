@@ -23,8 +23,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
     }
 
-    public void ExitGame()
+    public void QuitGame()
     {
-      //  Application.QuitGame();
+        Application.Quit();
     }
 }
