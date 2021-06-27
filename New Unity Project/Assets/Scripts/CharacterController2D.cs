@@ -8,8 +8,8 @@ using UnityEngine;
 public class CharacterController2D : MonoBehaviour
 {
 
-    public float MovementSpeed = 1f;
-    public float JumpForce = 1f;
+    public float MovementSpeed;
+    public float JumpForce;
 
     public bool isgrounded;
 
@@ -42,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isgrounded == true)
         {
             rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            Debug.Log("jumped");
         }
     }
     
