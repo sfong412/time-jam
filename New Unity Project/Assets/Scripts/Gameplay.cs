@@ -69,5 +69,6 @@ public class Gameplay : MonoBehaviour
     void OnMouseExit()
     {
         slowDownInitiate = false;
+        slowDownThereBuster = false;
     }
 }
