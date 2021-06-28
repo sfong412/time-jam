@@ -29,6 +29,7 @@ public class CharacterController2D : MonoBehaviour
         //Horizontal Movement 
         var movementx = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
+        Player.SetFloat("X", movementx);
         //Vertical Movement 
         //var movementy = Input.GetAxis("Vertical");
         //transform.position += new Vector3(0, movementy, 0) * Time.deltaTime * MovementSpeed;

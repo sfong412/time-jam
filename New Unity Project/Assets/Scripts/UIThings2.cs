@@ -12,6 +12,8 @@ public class UIThings2 : MonoBehaviour
     public Image image5;
     public int blockType;
 
+    public UIThings2 uIThings2;
+
     // Start is called before the first frame update
     void Start()
     {
