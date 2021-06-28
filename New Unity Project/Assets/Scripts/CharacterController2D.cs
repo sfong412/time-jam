@@ -15,6 +15,8 @@ public class CharacterController2D : MonoBehaviour
     public bool isgrounded;
 
     public Rigidbody2D rb2d; 
+
+    public Animator Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +45,11 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isgrounded == true)
         {
             rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            Player.SetBool("Jumped", true);
             //Debug.Log("jumped");
         }
+
+        
     }
     
 
@@ -53,6 +58,7 @@ public class CharacterController2D : MonoBehaviour
         if (other.tag == "Ground")
         {
             isgrounded = true;
+            Player.SetBool("Jumped", false);
         }
 
         if (other.tag == "adioslaser")
