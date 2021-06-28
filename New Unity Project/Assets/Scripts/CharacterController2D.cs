@@ -43,7 +43,7 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isgrounded == true)
         {
             rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            Debug.Log("jumped");
+            //Debug.Log("jumped");
         }
     }
     
