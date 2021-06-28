@@ -19,8 +19,8 @@ public class HazardGenerator : MonoBehaviour
 
     Vector3 airHazardSpawnPosition;
 
-    float groundHazardTimer;
-    float airHazardTimer;
+    int groundHazardTimer;
+    int airHazardTimer;
 
 
     int randomNumber;
@@ -63,33 +63,23 @@ public class HazardGenerator : MonoBehaviour
         //spawn position for air hazards
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x/2 + Random.Range(-2.00f, 8.00f), Random.Range(-2.00f, 2.00f), transform.position.z);
 
-        Timer();
-        spawnHazard(nonAirHazardSpawnPosition, 0, 3, groundHazardTimer);
-        spawnHazard(airHazardSpawnPosition, 1, 1, airHazardTimer);
+        RandomNumberGenerator();
+        spawnHazard(nonAirHazardSpawnPosition, 0, 6, groundHazardTimer);
+        spawnHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
     }
 
     //Function for spawning hazards
-    void spawnHazard(Vector3 spawnPosition, int index, int maxHazards, float timer)
+    void spawnHazard(Vector3 spawnPosition, int index, int maxHazards, int timer)
     {
-        if (transform.GetChild(index).childCount <= maxHazards && timer <= 0)
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
         {
             Instantiate(hazard, spawnPosition, transform.rotation, transform.GetChild(index));
         }
     }
 
-    void Timer()
+    void RandomNumberGenerator()
     {
-        groundHazardTimer -= Time.deltaTime;
-        airHazardTimer -= Time.deltaTime;
-
-        if (groundHazardTimer <= 0)
-        {
-            groundHazardTimer = Random.Range(0f, 2f);
-        }
-
-        if (airHazardTimer <= 0)
-        {
-            groundHazardTimer = Random.Range(0f, 24f);
-        }
+        groundHazardTimer = Random.Range(0, 30);
+        airHazardTimer = Random.Range(0, 100);
     }
 }
