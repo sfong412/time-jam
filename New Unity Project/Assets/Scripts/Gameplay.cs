@@ -24,7 +24,8 @@ public class Gameplay : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
-      
+
+      //Slows down time
          if (Input.GetMouseButton(0))
         {
             if (slowDownInitiate == true)

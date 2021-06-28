@@ -26,7 +26,7 @@ public class HazardGenerator : MonoBehaviour
     int randomNumber;
     public GameObject hazard;
 
-    Transform transform;
+    Transform transform1;
     Transform movingThingTransform;
 
     BoxCollider2D movingThingBoxCollider;
@@ -34,7 +34,7 @@ public class HazardGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform = GetComponent<Transform>();
+        transform1 = GetComponent<Transform>();
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
         movingThingBoxCollider = GameObject.Find("MovingThing").GetComponent<BoxCollider2D>();

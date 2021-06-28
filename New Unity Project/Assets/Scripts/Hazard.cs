@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
-    Transform transform;
+    Transform transform1;
 
     Transform movingThingTransform;
 
@@ -13,7 +13,7 @@ public class Hazard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform = GetComponent<Transform>();
+        transform1 = GetComponent<Transform>();
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
        // movingThingSprite = GameObject.Find("MovingThing").GetComponent<SpriteRenderer>();
@@ -25,6 +25,11 @@ public class Hazard : MonoBehaviour
         if (transform.position.x < movingThingTransform.position.x)
         {
             
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+               Time.fixedDeltaTime = Time.timeScale * 0.02f;
         }
     }
 
