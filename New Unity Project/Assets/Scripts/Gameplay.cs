@@ -32,7 +32,7 @@ public class Gameplay : MonoBehaviour
             slowDownThereBuster = true;         
             Time.timeScale = slowDownFactor;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
-            Debug.Log("stamin up");
+            //Debug.Log("stamin up");
             }
            
         }
