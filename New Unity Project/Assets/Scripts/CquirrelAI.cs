@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CquirrelAI : MonoBehaviour
+public class Hazard : MonoBehaviour
 {
-    public Transform transform1;
+    Transform transform1;
 
-    public Transform movingThingTransform;
+    Transform movingThingTransform;
 
   //  SpriteRenderer movingThingSprite;
 
@@ -33,18 +33,8 @@ public class CquirrelAI : MonoBehaviour
         }
     }
 
-    public void OnBecameInvisible()
+    void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            
-        }
-    }
-
-
 }
