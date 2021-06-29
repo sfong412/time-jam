@@ -19,6 +19,8 @@ public class Gameplay : MonoBehaviour
 
     Grid grid;
 
+    UIThings2 selector;
+
     public GameObject block1;
     public GameObject block2;
     public GameObject block3;
@@ -32,6 +34,8 @@ public class Gameplay : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
+
+        selector = GameObject.Find("Platforms").GetComponent<UIThings2>();
     }
 
     // Update is called once per frame
@@ -108,7 +112,26 @@ public class Gameplay : MonoBehaviour
             (float)yCount * size,
             (float)zCount * size);
 
-        Instantiate(block1, result, transform.rotation, placedBlocks);
+        if (selector.blockType == 1)
+        {
+            Instantiate(block1, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 2)
+        {
+            Instantiate(block2, result, transform.rotation, placedBlocks);
+        }    
+        if (selector.blockType == 3)
+        {
+            Instantiate(block3, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 4)
+        {
+            Instantiate(block4, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 5)
+        {
+            Instantiate(block5, result, transform.rotation, placedBlocks);
+        }
     }
 
     void PlaceCubeNear (Vector3 clickPoint)
