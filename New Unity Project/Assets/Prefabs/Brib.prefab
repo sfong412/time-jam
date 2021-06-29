@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4675744391322538411}
   - component: {fileID: 4675744391322538410}
   m_Layer: 0
-  m_Name: AirHazard
+  m_Name: Brib
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
