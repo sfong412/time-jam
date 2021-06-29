@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacedBlock : CquirrelAI
+public class PlacedBlock : Hazard
 {
     BoxCollider2D movingThingBoxCollider;
+    public Transform transform1;
 
     void Start()
     {
