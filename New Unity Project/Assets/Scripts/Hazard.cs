@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
-    Transform transform1;
+    public Transform transform1;
 
-    Transform movingThingTransform;
+    public Transform movingThingTransform;
 
   //  SpriteRenderer movingThingSprite;
 
@@ -33,7 +33,7 @@ public class Hazard : MonoBehaviour
         }
     }
 
-    void OnBecameInvisible()
+    public void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
