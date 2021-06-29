@@ -12,15 +12,22 @@ public class Gameplay : MonoBehaviour
     public bool slowDownInitiate = false;
     public Transform movingThing;
 
+    Transform placedBlocks;
     Camera mainCamera;
 
     Vector3 worldPosition;
 
-    public GameObject hazard;
+    public GameObject block1;
+    public GameObject block2;
+    public GameObject block3;
+    public GameObject block4;
+    public GameObject block5;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+
+        placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -84,6 +91,6 @@ public class Gameplay : MonoBehaviour
         mousePos.z = mainCamera.nearClipPlane;
         worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
 
-        Instantiate(hazard, worldPosition, transform.rotation, movingThing);
+        Instantiate(block1, worldPosition, transform.rotation, placedBlocks);
     }
 }
