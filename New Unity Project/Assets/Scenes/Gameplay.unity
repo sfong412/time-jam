@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 5
-  JumpForce: 7
+  JumpForce: 5
   isgrounded: 0
   rb2d: {fileID: 470797601}
   Player: {fileID: 470797604}
@@ -1841,7 +1841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901cb96aae3211e49a2b1015c0348f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 6307049418291793356, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
+  hazard: {fileID: 5198866977051932483, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
+  upsidedownHazard: {fileID: 5198866977051932483, guid: d6ce0a716c1ee4f4e83f49a00009e21e, type: 3}
+  airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
 --- !u!1 &1511213394
 GameObject:
   m_ObjectHideFlags: 0

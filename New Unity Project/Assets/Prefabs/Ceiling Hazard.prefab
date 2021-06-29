@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 6015945414894806380}
   - component: {fileID: 2407734713841018867}
   m_Layer: 0
-  m_Name: Hazard
+  m_Name: Ceiling Hazard
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 7e298b5c0417a524cb343dd5d5c3b6aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5

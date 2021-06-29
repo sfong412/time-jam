@@ -26,6 +26,9 @@ public class HazardGenerator : MonoBehaviour
     int randomNumber;
     public GameObject hazard;
 
+    public GameObject upsidedownHazard;
+    public GameObject airHazard;
+
     Transform transform1;
     Transform movingThingTransform;
 
@@ -64,16 +67,33 @@ public class HazardGenerator : MonoBehaviour
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x/2 + Random.Range(-2.00f, 8.00f), Random.Range(-2.00f, 2.00f), transform.position.z);
 
         RandomNumberGenerator();
-        spawnHazard(nonAirHazardSpawnPosition, 0, 6, groundHazardTimer);
-        spawnHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
+        spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
+        spawnCeilingHazard(ceilingHazardSpawnPosition, 0, 6, groundHazardTimer);
+        spawnAirHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
     }
 
     //Function for spawning hazards
-    void spawnHazard(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    void spawnGroundHazard(Vector3 spawnPosition, int index, int maxHazards, int timer)
     {
         if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
         {
             Instantiate(hazard, spawnPosition, transform.rotation, transform.GetChild(index));
+        }
+    }
+
+    void spawnCeilingHazard(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    {
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
+        {
+            Instantiate(upsidedownHazard, spawnPosition, transform.rotation, transform.GetChild(index));
+        }
+    }
+
+     void spawnAirHazard(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    {
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
+        {
+            Instantiate(airHazard, spawnPosition, transform.rotation, transform.GetChild(index));
         }
     }
 
