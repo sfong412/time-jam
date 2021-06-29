@@ -62,10 +62,6 @@ public class CharacterController2D : MonoBehaviour
             Player.SetBool("Jumped", false);
         }
 
-        if (other.tag == "adioslaser")
-        {
-            SceneManager.LoadScene(1);
-        }
        
     }
 
@@ -74,6 +70,15 @@ public class CharacterController2D : MonoBehaviour
         if (other.tag == "Ground")
         {
             isgrounded = false;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+         if (other.tag == "Ground")
+        {
+            isgrounded = true;
+            Player.SetBool("Jumped", false);
         }
     }
 }

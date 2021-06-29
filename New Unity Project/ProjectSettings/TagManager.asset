@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - adioslaser
   - Moving Thing
+  - Hazard
+  - catchMe
   layers:
   - Default
   - TransparentFX

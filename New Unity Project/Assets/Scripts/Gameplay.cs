@@ -47,15 +47,14 @@ public class Gameplay : MonoBehaviour
         }
 
       //Slows down time
-         if (Input.GetMouseButton(0))
+         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (slowDownInitiate == true)
-            {
+           
             slowDownThereBuster = true;         
             Time.timeScale = slowDownFactor;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             //Debug.Log("stamin up");
-            }
+            
            
         }
         else 
@@ -82,16 +81,7 @@ public class Gameplay : MonoBehaviour
        
     }
 
-    void OnMouseOver()
-    {
-        slowDownInitiate = true; 
-    }
-
-    void OnMouseExit()
-    {
-        slowDownInitiate = false;
-        slowDownThereBuster = false;
-    }
+    
 
     void OnMouseDown()
     {

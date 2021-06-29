@@ -44,6 +44,11 @@ public class Hazard : MonoBehaviour
         {
             
         }
+
+        if (other.tag == "Hazard")
+        {
+            
+        }
     }
 
 

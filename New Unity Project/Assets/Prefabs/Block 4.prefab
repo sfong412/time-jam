@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2139269001859624772}
   m_Layer: 0
   m_Name: Hazard Trigger
-  m_TagString: Ground
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
 --- !u!1 &6307049418291793356
 GameObject:
@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 6307049418291793363}
   - component: {fileID: 9170675815718389963}
   - component: {fileID: 8875641920103664121}
+  - component: {fileID: 3548669228209357085}
   m_Layer: 0
   m_Name: Block 4
   m_TagString: Ground
@@ -86,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 6307049418291793356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.1, y: 0, z: 17.042145}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 2139269001859624771}
   m_Father: {fileID: 0}
@@ -133,8 +134,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 3691511987390681858, guid: e4f36a907e745754a8f2b5fe5d674b6d, type: 3}
-  m_Color: {r: 0.22352941, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.14, y: 0.14}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -184,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transform1: {fileID: 0}
   movingThingTransform: {fileID: 0}
+  transform1: {fileID: 0}
 --- !u!60 &8875641920103664121
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -201,7 +203,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.14, y: 0.14}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -209,8 +211,38 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5, y: 0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
+    - - {x: 0.049488932, y: 0.07}
+      - {x: -0.07, y: -0.05035507}
+      - {x: -0.07, y: -0.07}
+      - {x: 0.07, y: -0.07}
+      - {x: 0.07, y: 0.07}
+--- !u!60 &3548669228209357085
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307049418291793356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.14, y: 0.14}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.049488932, y: 0.07}
+      - {x: -0.07, y: -0.05035507}
+      - {x: -0.07, y: -0.07}
+      - {x: 0.07, y: -0.07}
+      - {x: 0.07, y: 0.07}

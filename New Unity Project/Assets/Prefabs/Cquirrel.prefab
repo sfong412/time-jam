@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bbcf2715f57cd4782634be2d7b24b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transform1: {fileID: 0}
+  movingThingTransform: {fileID: 0}
 --- !u!50 &7364299523597629266
 Rigidbody2D:
   serializedVersion: 4
@@ -178,7 +180,7 @@ GameObject:
   - component: {fileID: 7364299524917178932}
   m_Layer: 0
   m_Name: Hazard Trigger
-  m_TagString: Ground
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,5 +223,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
