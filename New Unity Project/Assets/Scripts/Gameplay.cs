@@ -17,6 +17,10 @@ public class Gameplay : MonoBehaviour
 
     Vector3 worldPosition;
 
+    Grid grid;
+
+    UIThings2 selector;
+
     public GameObject block1;
     public GameObject block2;
     public GameObject block3;
@@ -25,9 +29,13 @@ public class Gameplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        grid = GameObject.Find("Hazard Generator").GetComponent<Grid>();
+
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
+
+        selector = GameObject.Find("Platforms").GetComponent<UIThings2>();
     }
 
     // Update is called once per frame
@@ -91,6 +99,54 @@ public class Gameplay : MonoBehaviour
         mousePos.z = mainCamera.nearClipPlane;
         worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
 
-        Instantiate(block1, worldPosition, transform.rotation, placedBlocks);
+        float size = 0.5f;
+
+        //clickPoint -= transform.position;
+
+        int xCount = Mathf.RoundToInt(worldPosition.x / size);
+        int yCount = Mathf.RoundToInt(worldPosition.y / size);
+        int zCount = Mathf.RoundToInt(worldPosition.z / size);
+
+        Vector3 result = new Vector3(
+            (float)xCount * size,
+            (float)yCount * size,
+            (float)zCount * size);
+
+        if (selector.blockType == 1)
+        {
+            Instantiate(block1, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 2)
+        {
+            Instantiate(block2, result, transform.rotation, placedBlocks);
+        }    
+        if (selector.blockType == 3)
+        {
+            Instantiate(block3, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 4)
+        {
+            Instantiate(block4, result, transform.rotation, placedBlocks);
+        }
+        if (selector.blockType == 5)
+        {
+            Instantiate(block5, result, transform.rotation, placedBlocks);
+        }
+    }
+
+    void PlaceCubeNear (Vector3 clickPoint)
+    {
+        float size = 0.5f;
+
+        //clickPoint -= transform.position;
+
+        int xCount = Mathf.RoundToInt(clickPoint.x / size);
+        int yCount = Mathf.RoundToInt(clickPoint.y / size);
+        int zCount = Mathf.RoundToInt(clickPoint.z / size);
+
+        Vector3 result = new Vector3(
+            (float)xCount * size,
+            (float)yCount * size,
+            (float)zCount * size);
     }
 }
