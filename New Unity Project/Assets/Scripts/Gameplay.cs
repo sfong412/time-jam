@@ -11,10 +11,16 @@ public class Gameplay : MonoBehaviour
     public bool slowDownThereBuster = false;
     public bool slowDownInitiate = false;
     public Transform movingThing;
+
+    Camera mainCamera;
+
+    Vector3 worldPosition;
+
+    public GameObject hazard;
     // Start is called before the first frame update
     void Start()
     {
-        
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -70,5 +76,14 @@ public class Gameplay : MonoBehaviour
     {
         slowDownInitiate = false;
         slowDownThereBuster = false;
+    }
+
+    void OnMouseDown()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = mainCamera.nearClipPlane;
+        worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
+
+        Instantiate(hazard, worldPosition, transform.rotation, movingThing);
     }
 }

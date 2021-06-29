@@ -243,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43546250}
   - component: {fileID: 43546251}
+  - component: {fileID: 43546252}
   m_Layer: 0
   m_Name: MovingThing
   m_TagString: Untagged
@@ -294,6 +295,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.928244, y: 5.245988}
   m_EdgeRadius: 0
+--- !u!156049354 &43546252
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43546249}
+  m_Enabled: 1
+  m_CellSize: {x: 0.5, y: 0.5, z: 1}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
 --- !u!1 &130008838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1847,7 @@ MonoBehaviour:
   slowDownThereBuster: 0
   slowDownInitiate: 0
   movingThing: {fileID: 43546250}
+  hazard: {fileID: 6307049418291793356, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
 --- !u!4 &1521810343
 Transform:
   m_ObjectHideFlags: 0

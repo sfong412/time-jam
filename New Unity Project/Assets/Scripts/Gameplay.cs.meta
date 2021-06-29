@@ -3,7 +3,9 @@ guid: efdaaf802dad7e74db41be344743adb4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - movingThing: {instanceID: 0}
+  - hazard: {fileID: 6307049418291793356, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
