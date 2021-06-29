@@ -243,7 +243,6 @@ GameObject:
   m_Component:
   - component: {fileID: 43546250}
   - component: {fileID: 43546251}
-  - component: {fileID: 43546252}
   m_Layer: 0
   m_Name: MovingThing
   m_TagString: Untagged
@@ -295,18 +294,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.928244, y: 5.245988}
   m_EdgeRadius: 0
---- !u!156049354 &43546252
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43546249}
-  m_Enabled: 1
-  m_CellSize: {x: 0.5, y: 0.5, z: 1}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 0
 --- !u!1 &130008838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416313661}
   - component: {fileID: 1416313662}
+  - component: {fileID: 1416313663}
   m_Layer: 0
   m_Name: Hazard Generator
   m_TagString: Untagged
@@ -1844,6 +1832,18 @@ MonoBehaviour:
   hazard: {fileID: 5198866977051932483, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
   upsidedownHazard: {fileID: 5198866977051932483, guid: d6ce0a716c1ee4f4e83f49a00009e21e, type: 3}
   airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
+--- !u!156049354 &1416313663
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416313660}
+  m_Enabled: 1
+  m_CellSize: {x: 0.5, y: 0.5, z: 0.5}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
 --- !u!1 &1511213394
 GameObject:
   m_ObjectHideFlags: 0
