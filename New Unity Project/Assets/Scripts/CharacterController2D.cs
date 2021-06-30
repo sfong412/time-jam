@@ -14,7 +14,7 @@ public class CharacterController2D : MonoBehaviour
 
     public bool isgrounded;
 
-    public Rigidbody2D rb2d; 
+    public Rigidbody2D rb2d;
 
     public Animator Player;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class CharacterController2D : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    
+
     void FixedUpdate()
     {
         //Horizontal Movement 
@@ -33,11 +33,11 @@ public class CharacterController2D : MonoBehaviour
         //Vertical Movement 
         //var movementy = Input.GetAxis("Vertical");
         //transform.position += new Vector3(0, movementy, 0) * Time.deltaTime * MovementSpeed;
-        
 
-        
 
-        
+
+
+
     }
 
     void Update()
@@ -50,9 +50,9 @@ public class CharacterController2D : MonoBehaviour
             //Debug.Log("jumped");
         }
 
-        
+
     }
-    
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -81,7 +81,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (other.tag == "goner")
         {
-            Debug.Log("player got hurt");
+            SceneManager.LoadScene(1);
         }
     }
 }
