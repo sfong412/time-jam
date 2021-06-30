@@ -9,7 +9,9 @@ public class Gameplay : MonoBehaviour
     public float slowDownFactor = 1;
 
     public bool slowDownThereBuster = false;
-    public bool slowDownInitiate = false;
+    public bool blockPlaced = false;
+
+    public bool canPlace;
     public Transform movingThing;
 
     Transform placedBlocks;
@@ -85,7 +87,9 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
-        Vector3 mousePos = Input.mousePosition;
+        if (canPlace)
+        {
+             Vector3 mousePos = Input.mousePosition;
         mousePos.z = mainCamera.nearClipPlane;
         worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
 
@@ -102,25 +106,52 @@ public class Gameplay : MonoBehaviour
             (float)yCount * size,
             (float)zCount * size);
 
-        if (selector.blockType == 1)
-        {
-            Instantiate(block1, result, transform.rotation, placedBlocks);
+        switch(selector.blockType)
+            {
+                case 1: 
+                 Instantiate(block1, result, transform.rotation, placedBlocks);
+                 blockPlaced = true;
+                 break;
+
+                case 2: 
+                  Instantiate(block2, result, transform.rotation, placedBlocks);
+                  blockPlaced = true;
+                  break;
+
+                case 3: 
+                 Instantiate(block3, result, transform.rotation, placedBlocks);
+                 blockPlaced = true;
+                 break;
+
+                case 4:
+                 Instantiate(block4, result, transform.rotation, placedBlocks);
+                 blockPlaced = true;
+                 break;
+
+                case 5: 
+                  Instantiate(block5, result, transform.rotation, placedBlocks);
+                  blockPlaced = true;
+                  break;
+            }
         }
-        if (selector.blockType == 2)
-        {
-            Instantiate(block2, result, transform.rotation, placedBlocks);
-        }    
-        if (selector.blockType == 3)
-        {
-            Instantiate(block3, result, transform.rotation, placedBlocks);
-        }
-        if (selector.blockType == 4)
-        {
-            Instantiate(block4, result, transform.rotation, placedBlocks);
-        }
-        if (selector.blockType == 5)
-        {
-            Instantiate(block5, result, transform.rotation, placedBlocks);
-        }
+       
+
+        
+    }
+
+    void PlaceCubeNear (Vector3 clickPoint)
+    {
+        float size = 0.5f;
+
+        //clickPoint -= transform.position;
+
+        int xCount = Mathf.RoundToInt(clickPoint.x / size);
+        int yCount = Mathf.RoundToInt(clickPoint.y / size);
+        int zCount = Mathf.RoundToInt(clickPoint.z / size);
+
+        Vector3 result = new Vector3(
+            (float)xCount * size,
+            (float)yCount * size,
+            (float)zCount * size);
     }
 }

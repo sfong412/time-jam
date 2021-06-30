@@ -10,7 +10,7 @@ public class UIThings : MonoBehaviour
     [SerializeField] Text uiText;
 
     public int Duration;
-    private float remainingDuration;
+    [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
     void Start()
     {

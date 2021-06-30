@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlacedBlock : Hazard
 {
+
     public Transform transform1;
 
     BoxCollider2D blockCollider;
@@ -14,6 +15,14 @@ public class PlacedBlock : Hazard
 
     BoxCollider2D movingThingBoxCollider;
 
+    BoxCollider2D movingThingBoxCollider;
+    public PlacedBlock placedBlock;
+    public Transform transform1;
+
+    public bool blockPlaced;
+
+
+
     void Start()
     {
         transform1 = GetComponent<Transform>();
@@ -22,6 +31,7 @@ public class PlacedBlock : Hazard
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
         movingThingBoxCollider = GameObject.Find("MovingThing").GetComponent<BoxCollider2D>();
+        blockPlaced = true;
     }
 
     void OnBecameInvisible()

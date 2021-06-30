@@ -10,6 +10,7 @@ TagManager:
   - Hazard
   - catchMe
   - goner
+  - Ground2
   layers:
   - Default
   - TransparentFX
