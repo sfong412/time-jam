@@ -49,6 +49,8 @@ public class UIThings2 : MonoBehaviour
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = 1;
 
+        Debug.Log("what?");
+
         //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 

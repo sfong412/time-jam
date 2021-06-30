@@ -21,7 +21,7 @@ public class Gameplay : MonoBehaviour
 
     Grid grid;
 
-    UIThings2 selector;
+    public UIThings2 selector;
 
     public GameObject block1;
     public GameObject block2;
@@ -37,7 +37,7 @@ public class Gameplay : MonoBehaviour
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
 
-        selector = GameObject.Find("Platforms").GetComponent<UIThings2>();
+        selector = GameObject.Find("Selector").GetComponent<UIThings2>();
     }
 
     // Update is called once per frame
