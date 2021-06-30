@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3548669228209357085}
   m_Layer: 0
   m_Name: Block 4
-  m_TagString: Ground
+  m_TagString: Ground2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +128,8 @@ MonoBehaviour:
   transform1: {fileID: 0}
   movingThingTransform: {fileID: 0}
   transform1: {fileID: 0}
+  placedBlock: {fileID: 0}
+  blockPlaced: 0
 --- !u!60 &8875641920103664121
 PolygonCollider2D:
   m_ObjectHideFlags: 0
