@@ -15,9 +15,7 @@ public class PlacedBlock : Hazard
 
     BoxCollider2D movingThingBoxCollider;
 
-    BoxCollider2D movingThingBoxCollider;
     public PlacedBlock placedBlock;
-    public Transform transform1;
 
     public bool blockPlaced;
 

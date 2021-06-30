@@ -8,6 +8,9 @@ public class UIThings3 : MonoBehaviour
 
     public float startingHealth;
     public float remainingHealth;
+
+    public float remainingFocus;
+    public float startingFocus;
     public Slider healthBar;
 
     public float smoothing = 5;
@@ -116,6 +119,20 @@ public class UIThings3 : MonoBehaviour
         else
         {
             remainingHealth = startingHealth;
+        }
+    }
+
+    public void FocusDeplete(float damage)
+    {
+        if (remainingHealth - damage >= 0)
+        {
+            remainingHealth -= damage;
+             
+        }
+        else 
+        {   
+          remainingHealth = 0;
+          damageScript.gonered = true;   
         }
     }
 }
