@@ -8,6 +8,8 @@ public class PlacedBlock : Hazard
 
     BoxCollider2D blockCollider;
 
+    SpriteRenderer renderer;
+
     Camera mainCamera;
 
     BoxCollider2D movingThingBoxCollider;
@@ -15,6 +17,7 @@ public class PlacedBlock : Hazard
     void Start()
     {
         transform1 = GetComponent<Transform>();
+        renderer = GetComponent<SpriteRenderer>();
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
@@ -34,11 +37,20 @@ public class PlacedBlock : Hazard
             }
         }
     */
+
+    private void OnMouseEnter()
+    {
+        renderer.material.color = Color.red;
+    }
+    private void OnMouseExit()
+    {
+        renderer.material.color = Color.white;
+    }
+
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log(gameObject.transform.position);
             Destroy(gameObject);
         }
     }
