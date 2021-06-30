@@ -9,6 +9,7 @@ TagManager:
   - Moving Thing
   - Hazard
   - catchMe
+  - goner
   layers:
   - Default
   - TransparentFX

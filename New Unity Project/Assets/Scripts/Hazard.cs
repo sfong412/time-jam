@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hazard : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class Hazard : MonoBehaviour
 
         if (other.tag == "Hazard")
         {
-            
+
         }
     }
 

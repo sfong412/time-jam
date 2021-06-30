@@ -7,9 +7,9 @@ public class HazardGenerator : MonoBehaviour
 
     Vector3 generatedRandomPosition;
 
-    float groundSpawnTime = 2f;
+    float groundSpawnTime = 3f;
 
-    float airSpawnTime = 5f;
+    float airSpawnTime = 3f;
 
     Vector3 groundHazardSpawnPosition;
     Vector3 ceilingHazardSpawnPosition;
@@ -28,6 +28,11 @@ public class HazardGenerator : MonoBehaviour
 
     public GameObject upsidedownHazard;
     public GameObject airHazard;
+
+    public GameObject Cquirrel;
+
+    public GameObject currentAirHazard;
+
 
     Transform transform1;
     Transform movingThingTransform;
@@ -56,10 +61,10 @@ public class HazardGenerator : MonoBehaviour
         switch(randomNumber)
         {
             case 0:
-                nonAirHazardSpawnPosition = groundHazardSpawnPosition;
+                currentAirHazard = Cquirrel;
                 break;
             case 1:
-                nonAirHazardSpawnPosition = ceilingHazardSpawnPosition;
+                currentAirHazard = airHazard;
                 break;
         }
 
@@ -93,7 +98,7 @@ public class HazardGenerator : MonoBehaviour
     {
         if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
         {
-            Instantiate(airHazard, spawnPosition, transform.rotation, transform.GetChild(index));
+            Instantiate(currentAirHazard, spawnPosition, transform.rotation, transform.GetChild(index));
         }
     }
 
