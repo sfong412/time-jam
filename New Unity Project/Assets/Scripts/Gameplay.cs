@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class Gameplay : MonoBehaviour
 {
     public float scrollSpeed = 1f;
+
+    public float currentInkCost;
     public float slowDownFactor = 1;
 
     public bool slowDownThereBuster = false;
     public bool blockPlaced = false;
 
+    public bool focusDown;
+
     public bool canPlace;
+    public bool canSlow = true;
     public Transform movingThing;
 
     Transform placedBlocks;
@@ -38,6 +43,13 @@ public class Gameplay : MonoBehaviour
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
 
         selector = GameObject.Find("Selector").GetComponent<UIThings2>();
+
+        
+    }
+
+    void Awake()
+    {
+        canSlow = true;
     }
 
     // Update is called once per frame
@@ -52,10 +64,13 @@ public class Gameplay : MonoBehaviour
          if (Input.GetKey(KeyCode.LeftShift))
         {
            
+           
             slowDownThereBuster = true;         
             Time.timeScale = slowDownFactor;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             //Debug.Log("stamin up");
+           
+          
             
            
         }
@@ -66,6 +81,15 @@ public class Gameplay : MonoBehaviour
             slowDownFactor = 1;
         }
 
+        if (canSlow == false)
+        {
+              slowDownThereBuster = false; 
+            Time.timeScale = 1;
+            slowDownFactor = 1;
+        }
+
+
+
         movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
     }
 
@@ -73,10 +97,14 @@ public class Gameplay : MonoBehaviour
     {
         if (slowDownThereBuster == true)
         {
-             if (slowDownFactor > 0.2f)
+            
+            
+                if (slowDownFactor > 0.2f)
              {
                     slowDownFactor -= 0.04f;
              }
+            
+             
           
                         
         }
@@ -110,26 +138,31 @@ public class Gameplay : MonoBehaviour
             {
                 case 1: 
                  Instantiate(block1, result, transform.rotation, placedBlocks);
+                 currentInkCost = 30;
                  blockPlaced = true;
                  break;
 
                 case 2: 
                   Instantiate(block2, result, transform.rotation, placedBlocks);
+                  currentInkCost = 15;
                   blockPlaced = true;
                   break;
 
                 case 3: 
                  Instantiate(block3, result, transform.rotation, placedBlocks);
+                 currentInkCost = 10;
                  blockPlaced = true;
                  break;
 
                 case 4:
                  Instantiate(block4, result, transform.rotation, placedBlocks);
+                 currentInkCost = 10;
                  blockPlaced = true;
                  break;
 
                 case 5: 
                   Instantiate(block5, result, transform.rotation, placedBlocks);
+                  currentInkCost = 40;
                   blockPlaced = true;
                   break;
             }

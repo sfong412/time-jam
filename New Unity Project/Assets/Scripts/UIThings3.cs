@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIThings3 : MonoBehaviour
 {
@@ -9,15 +10,21 @@ public class UIThings3 : MonoBehaviour
     public float startingHealth;
     public float remainingHealth;
 
+    public float healthCounter;
+
     public float remainingFocus;
     public float startingFocus;
     public Slider healthBar;
+    public Slider focusBar;
+
+    public TextMeshProUGUI healthCounter2;
 
     public float smoothing = 5;
 
     public bool placeBlockDeplete;
     public bool heal;
     public bool healCoolDown1;
+
     public Gameplay gameplaying;
 
     public DamageScript damageScript;
@@ -30,6 +37,9 @@ public class UIThings3 : MonoBehaviour
         healthBar.maxValue = startingHealth;
         healthBar.value = remainingHealth;
         gameplaying.blockPlaced = false;
+        remainingFocus = startingFocus;
+        focusBar.maxValue = startingFocus;
+        focusBar.value = remainingFocus;
     }
 
     // Update is called once per frame
@@ -40,9 +50,15 @@ public class UIThings3 : MonoBehaviour
            healthBar.value = Mathf.Lerp(healthBar.value, remainingHealth, smoothing * Time.fixedDeltaTime);
        }
 
+       if (focusBar.value != remainingFocus)
+       {
+           focusBar.value = Mathf.Lerp(focusBar.value, remainingFocus, smoothing * Time.fixedDeltaTime);
+       }
+
        if (gameplaying.blockPlaced == true)
        {
-           InkDeplete(17);
+           InkDeplete(gameplaying.currentInkCost);
+           healthCounter = remainingHealth;
            gameplaying.blockPlaced = false;
            healCoolDown1 = true;   
        }
@@ -52,11 +68,34 @@ public class UIThings3 : MonoBehaviour
            gameplaying.canPlace = true;
        }
 
+       if (remainingFocus > 1)
+       {
+            gameplaying.canSlow = true;
+       }
+
        if (damageScript.damaged == true)
        {
            DamageTaken(10);
           
        }
+
+       if (healthCounter > remainingHealth)
+       {
+           healthCounter--;
+       }
+
+       if (healthCounter < remainingHealth)
+       {
+           healthCounter++;
+       }
+
+       if (gameplaying.slowDownThereBuster == true)
+       {
+           FocusDeplete(0.3f);
+       }
+
+
+        healthCounter2.SetText($"{Mathf.RoundToInt(healthCounter)}");
     
        
       
@@ -65,7 +104,8 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        Healing(0.15f);
+        Healing(0.07f);
+        HealingFocus(0.6f);
     }
 
     
@@ -124,15 +164,28 @@ public class UIThings3 : MonoBehaviour
 
     public void FocusDeplete(float damage)
     {
-        if (remainingHealth - damage >= 0)
+        if (remainingFocus - damage >= 0)
         {
-            remainingHealth -= damage;
+            remainingFocus -= damage;
+             gameplaying.canSlow = true;
              
         }
         else 
         {   
-          remainingHealth = 0;
-          damageScript.gonered = true;   
+          //something idk
+          gameplaying.canSlow = false;   
+        }
+    }
+
+    public void HealingFocus(float increase)
+    {
+        if (remainingFocus + increase <= startingFocus)
+        {
+            remainingFocus += increase;
+        }
+        else
+        {
+            remainingFocus = startingFocus;
         }
     }
 }
