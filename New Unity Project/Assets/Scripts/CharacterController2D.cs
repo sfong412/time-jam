@@ -61,8 +61,6 @@ public class CharacterController2D : MonoBehaviour
             isgrounded = true;
             Player.SetBool("Jumped", false);
         }
-
-       
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -75,10 +73,15 @@ public class CharacterController2D : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-         if (other.tag == "Ground")
+        if (other.tag == "Ground")
         {
             isgrounded = true;
             Player.SetBool("Jumped", false);
+        }
+
+        if (other.tag == "goner")
+        {
+            Debug.Log("player got hurt");
         }
     }
 }
