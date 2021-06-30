@@ -79,9 +79,6 @@ public class CharacterController2D : MonoBehaviour
             Player.SetBool("Jumped", false);
         }
 
-        if (other.tag == "goner")
-        {
-            SceneManager.LoadScene(1);
-        }
+      
     }
 }
