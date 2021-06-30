@@ -50,35 +50,11 @@ public class CharacterController2D : MonoBehaviour
             //Debug.Log("jumped");
         }
 
-
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Ground")
-        {
-            isgrounded = true;
-            Player.SetBool("Jumped", false);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Ground")
-        {
-            isgrounded = false;
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.tag == "Ground")
-        {
-            isgrounded = true;
-            Player.SetBool("Jumped", false);
-        }
-
       
+
+
     }
+
+
+   
 }
