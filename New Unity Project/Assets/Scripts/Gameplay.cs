@@ -175,20 +175,4 @@ public class Gameplay : MonoBehaviour
 
         
     }
-
-    void PlaceCubeNear (Vector3 clickPoint)
-    {
-        float size = 0.5f;
-
-        //clickPoint -= transform.position;
-
-        int xCount = Mathf.RoundToInt(clickPoint.x / size);
-        int yCount = Mathf.RoundToInt(clickPoint.y / size);
-        int zCount = Mathf.RoundToInt(clickPoint.z / size);
-
-        Vector3 result = new Vector3(
-            (float)xCount * size,
-            (float)yCount * size,
-            (float)zCount * size);
-    }
 }

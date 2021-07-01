@@ -52,9 +52,9 @@ public class HazardGenerator : MonoBehaviour
     void Update()
     {
         //spawn positions for floor / ceiling hazards
-        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -2f, transform.position.z);
+        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.7f, transform.position.z);
 
-        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 2f, transform.position.z);
+        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.6f, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
         randomNumber = Random.Range(0, 2);
@@ -69,7 +69,7 @@ public class HazardGenerator : MonoBehaviour
         }
 
         //spawn position for air hazards
-        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(-2.00f, 2.00f), transform.position.z);
+        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(1f, 3.00f), transform.position.z);
 
         RandomNumberGenerator();
         spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
@@ -87,12 +87,13 @@ public class HazardGenerator : MonoBehaviour
             //clickPoint -= transform.position;
 
             int xCount = Mathf.RoundToInt(spawnPosition.x / size);
-            int yCount = Mathf.RoundToInt(spawnPosition.y / size);
+         //   int yCount = Mathf.RoundToInt(spawnPosition.y / size);
             int zCount = Mathf.RoundToInt(spawnPosition.z / size);
 
             Vector3 result = new Vector3(
                 (float)xCount * size,
-                (float)yCount * size,
+                //(float)yCount * size,
+                spawnPosition.y,
                 (float)zCount * size);
             
             Instantiate(hazard, result, transform.rotation, transform.GetChild(index));
@@ -108,12 +109,13 @@ public class HazardGenerator : MonoBehaviour
             //clickPoint -= transform.position;
 
             int xCount = Mathf.RoundToInt(spawnPosition.x / size);
-            int yCount = Mathf.RoundToInt(spawnPosition.y / size);
+           // int yCount = Mathf.RoundToInt(spawnPosition.y / size);
             int zCount = Mathf.RoundToInt(spawnPosition.z / size);
 
             Vector3 result = new Vector3(
                 (float)xCount * size,
-                (float)yCount * size,
+                //(float)yCount * size,
+                spawnPosition.y,
                 (float)zCount * size);
             
             Instantiate(upsidedownHazard, result, transform.rotation, transform.GetChild(index));
