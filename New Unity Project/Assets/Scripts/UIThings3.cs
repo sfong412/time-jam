@@ -14,8 +14,13 @@ public class UIThings3 : MonoBehaviour
 
     public float remainingFocus;
     public float startingFocus;
+
+    public float startingEraser;
+    public float remainingEraser;
     public Slider healthBar;
     public Slider focusBar;
+
+    public Slider eraserBar;
 
     public TextMeshProUGUI healthCounter2;
 
@@ -42,6 +47,14 @@ public class UIThings3 : MonoBehaviour
         remainingFocus = startingFocus;
         focusBar.maxValue = startingFocus;
         focusBar.value = remainingFocus;
+        remainingEraser = startingEraser;
+        eraserBar.maxValue = startingEraser;
+        eraserBar.value = remainingEraser;
+    }
+
+    void Awake()
+    {
+        gameplaying.canPlace = true;
     }
 
     // Update is called once per frame
@@ -57,6 +70,11 @@ public class UIThings3 : MonoBehaviour
            focusBar.value = Mathf.Lerp(focusBar.value, remainingFocus, smoothing * Time.fixedDeltaTime);
        }
 
+       if (eraserBar.value != remainingEraser)
+       {
+           eraserBar.value = Mathf.Lerp(eraserBar.value, remainingEraser, smoothing * Time.fixedDeltaTime);
+       }
+
        if (gameplaying.blockPlaced == true)
        {
            InkDeplete(gameplaying.currentInkCost);
@@ -65,11 +83,7 @@ public class UIThings3 : MonoBehaviour
            healCoolDown1 = true;   
        }
 
-       if (remainingHealth > 20)
-       {
-           gameplaying.canPlace = true;
-          
-       }
+      
 
        if (remainingFocus > 1)
        {
@@ -97,6 +111,25 @@ public class UIThings3 : MonoBehaviour
            FocusDeplete(0.3f);
        }
 
+       if (remainingHealth < gameplaying.currentInkCost)
+       {
+           gameplaying.canPlace = false;
+       }
+
+       if (remainingHealth > gameplaying.currentInkCost)
+       {
+           gameplaying.canPlace = true;
+       }
+
+       if (gameplaying.shake == true)
+       {
+           Ink.SetBool("shake", true);
+            StartCoroutine(shakeCooldown());
+            gameplaying.shake = false;
+       }
+
+
+
 
         healthCounter2.SetText($"{Mathf.RoundToInt(healthCounter)}");
     
@@ -107,9 +140,15 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        Healing(0.07f);
+        if (heal == true)
+        {
+            Healing(0.07f);
+        }
+        
         HealingFocus(0.6f);
     }
+
+   
 
     
 
@@ -119,6 +158,16 @@ public class UIThings3 : MonoBehaviour
         Ink.SetBool("shake", false);
     }
 
+    IEnumerator healing()
+    {
+        if (!heal)
+        {
+        yield return new WaitForSeconds(1);
+        heal = true;
+        }
+        
+    }
+
 
 
    
@@ -126,14 +175,19 @@ public class UIThings3 : MonoBehaviour
     {
         if (remainingHealth - damage >= 0)
         {
+            heal = false;
             remainingHealth -= damage;
+            StartCoroutine(healing());
+            
+           
+            
              
         }
-        else 
+        else if (remainingHealth - damage <= 0)
         {
             gameplaying.canPlace = false;
-            Ink.SetBool("shake", true);
-            StartCoroutine(shakeCooldown());
+            heal = true;
+            remainingHealth = 0;
             
             
         }
@@ -189,6 +243,21 @@ public class UIThings3 : MonoBehaviour
         else
         {
             remainingFocus = startingFocus;
+        }
+    }
+
+    public void EraserDeplete(float damage)
+    {
+         if (remainingFocus - damage >= 0)
+        {
+            remainingFocus -= damage;
+             gameplaying.canSlow = true;
+             
+        }
+        else 
+        {   
+          //something idk
+          gameplaying.canSlow = false;   
         }
     }
 

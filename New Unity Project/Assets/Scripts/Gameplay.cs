@@ -15,7 +15,7 @@ public class Gameplay : MonoBehaviour
     public bool slowDownThereBuster = false;
     public bool blockPlaced = false;
 
-    public bool focusDown;
+    public bool shake;
 
     public bool canPlace;
 
@@ -31,6 +31,8 @@ public class Gameplay : MonoBehaviour
     Grid grid;
 
     public UIThings2 selector;
+
+    public UIThings3 guiBars;
 
     public GameObject block1;
     public GameObject block2;
@@ -92,6 +94,30 @@ public class Gameplay : MonoBehaviour
             slowDownFactor = 1;
         }
 
+        switch(selector.blockType)
+        {
+            case 1: 
+            currentInkCost = 30;
+            break;
+
+            case 2: 
+            currentInkCost = 10;
+            break;
+
+            case 3: 
+            currentInkCost = 15;
+            break;
+
+            case 4: 
+            currentInkCost = 10;
+            break;
+
+            case 5:
+            currentInkCost = 40;
+            break;
+
+        }
+
 
 
         movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
@@ -119,6 +145,7 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
+        
         if (canPlace)
         {
              Vector3 mousePos = Input.mousePosition;
@@ -142,36 +169,34 @@ public class Gameplay : MonoBehaviour
             {
                 case 1: 
                  Instantiate(block1, result, transform.rotation, placedBlocks);
-                 currentInkCost = 30;
                  blockPlaced = true;
                  break;
 
                 case 2: 
                   Instantiate(block2, result, transform.rotation, placedBlocks);
-                  currentInkCost = 15;
                   blockPlaced = true;
                   break;
 
                 case 3: 
                  Instantiate(block3, result, transform.rotation, placedBlocks);
-                 currentInkCost = 10;
                  blockPlaced = true;
                  break;
 
                 case 4:
                  Instantiate(block4, result, transform.rotation, placedBlocks);
-                 currentInkCost = 10;
                  blockPlaced = true;
                  break;
 
                 case 5: 
                   Instantiate(block5, result, transform.rotation, placedBlocks);
-                  currentInkCost = 40;
                   blockPlaced = true;
                   break;
             }
         }
-       
+        else
+        {
+            shake = true;
+        }
 
         
     }
