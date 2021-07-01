@@ -11,6 +11,7 @@ TagManager:
   - catchMe
   - goner
   - Ground2
+  - scopion
   layers:
   - Default
   - TransparentFX

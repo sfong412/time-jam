@@ -36,7 +36,10 @@ public class HazardGenerator : MonoBehaviour
 
     public GameObject Cquirrel;
 
+    public GameObject Scopion;
+
     public GameObject currentAirHazard;
+    public GameObject currentGroundHazard;
 
     public GameObject currentPlatform;
 
@@ -68,7 +71,7 @@ public class HazardGenerator : MonoBehaviour
         Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), -1.5f, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
-        randomNumber = Random.Range(0, 2);
+        randomNumber = Random.Range(0, 4);
         switch (randomNumber)
         {
             case 0:
@@ -77,6 +80,14 @@ public class HazardGenerator : MonoBehaviour
             case 1:
                 currentAirHazard = airHazard;
                 break;
+
+            case 2:
+                currentGroundHazard = hazard;
+                break;
+
+            case 3:
+            currentGroundHazard = Scopion;  
+            break;  
         }
 
         currentPlatform = platform;
@@ -110,7 +121,7 @@ public class HazardGenerator : MonoBehaviour
                 spawnPosition.y,
                 (float)zCount * size);
             
-            Instantiate(hazard, result, transform.rotation, transform.GetChild(index));
+            Instantiate(currentGroundHazard, result, transform.rotation, transform.GetChild(index));
         }
     }
 

@@ -10,11 +10,18 @@ public class UIThings : MonoBehaviour
     [SerializeField] Text uiText;
 
     public int Duration;
+
+    public bool stopping;
+
+    public Animator blackFade;
+    public GameObject Text1;
+    public GameObject Text2;
     [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
     void Start()
     {
         Being(Duration);
+        stopping = false;
     }
 
     // Update is called once per frame
@@ -46,6 +53,17 @@ public class UIThings : MonoBehaviour
 
     private void OnEnd()
     {
-        //End Time do something idk
+        stopping = true;
+        StartCoroutine(UIAnimations());
+    }
+
+    IEnumerator UIAnimations()
+    {
+        blackFade.SetBool("transistion", true);
+        yield return new WaitForSeconds(0.5f);
+        Text1.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Text2.SetActive(true);
+
     }
 }

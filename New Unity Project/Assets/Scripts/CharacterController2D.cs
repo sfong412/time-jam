@@ -16,6 +16,8 @@ public class CharacterController2D : MonoBehaviour
 
     public Rigidbody2D rb2d;
 
+    public UIThings itsTimeToStop;
+
     public Animator Player;
     // Start is called before the first frame update
     void Start()
@@ -26,17 +28,12 @@ public class CharacterController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Horizontal Movement 
+        if (itsTimeToStop.stopping == false)
+        {
         var movementx = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
         Player.SetFloat("X", movementx);
-        //Vertical Movement 
-        //var movementy = Input.GetAxis("Vertical");
-        //transform.position += new Vector3(0, movementy, 0) * Time.deltaTime * MovementSpeed;
-
-
-
-
+        }
 
     }
 
