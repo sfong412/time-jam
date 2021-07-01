@@ -38,6 +38,8 @@ public class UIThings3 : MonoBehaviour
     
     public Animator Ink;
 
+    public UIThings pleaseStop;
+
     void Start()
     {
         remainingHealth = startingHealth;
@@ -195,7 +197,9 @@ public class UIThings3 : MonoBehaviour
 
     public void DamageTaken(float damage)
     {
-         if (remainingHealth - damage >= 0)
+        if (pleaseStop.stopping == false)
+        {
+             if (remainingHealth - damage >= 0)
         {
             remainingHealth -= damage;
              
@@ -205,6 +209,8 @@ public class UIThings3 : MonoBehaviour
           remainingHealth = 0;
           damageScript.gonered = true;   
         }
+        }
+        
     }
 
     public void Healing(float increase)

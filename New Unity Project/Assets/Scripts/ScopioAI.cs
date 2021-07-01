@@ -5,6 +5,11 @@ using UnityEngine;
 public class ScopioAI : MonoBehaviour
 {
     public float Speed;
+
+    public float shouldIJump;
+    public bool shouldIReally;
+
+    public bool ignore;
     public int direction = 1;
 
 
@@ -24,7 +29,7 @@ public Rigidbody2D rigidbody2D1;
 
     void Awake()
     {
-        
+        ignore = false;
     }
 
     // Update is called once per frame
@@ -41,7 +46,25 @@ public Rigidbody2D rigidbody2D1;
             break;
         }
 
+        if (shouldIReally == true)
+        {
+            Jump();
+            shouldIReally = false;
+        }
         
+    }
+
+    void FixedUpdate()
+    {
+        shouldIJump = Random.Range(0, 50);
+        
+        switch(shouldIJump)
+        {
+            case 0:
+            shouldIReally = true;
+            break;
+        }
+
     }
 
     public void OnBecameInvisible()
@@ -49,18 +72,10 @@ public Rigidbody2D rigidbody2D1;
         Destroy(gameObject);
     }
 
-   void OnCollisionEnter2D()
-   {
-       if (direction == 1)
-       {
-           direction = 0;
-       }
-       else
-       {
-           direction = 1;
-
-       }
-   }
+  
+       
+     
+   
 
    void MoveLeft()
    {
@@ -71,6 +86,11 @@ public Rigidbody2D rigidbody2D1;
    {
         transform.position += new Vector3(-Speed + 0.4f, 0, 0) * Time.deltaTime * Speed;
 
+   }
+
+   void Jump()
+   {
+       rigidbody2D1.AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
    }
 
    

@@ -37,7 +37,11 @@ public class UIThings2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            one();
+            Debug.Log("su");
+        }
     }
 //Block Types
     public void one()

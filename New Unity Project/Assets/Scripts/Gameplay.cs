@@ -30,6 +30,8 @@ public class Gameplay : MonoBehaviour
 
     Grid grid;
 
+    public UIThings stop;
+
     public UIThings2 selector;
 
     public UIThings3 guiBars;
@@ -119,8 +121,12 @@ public class Gameplay : MonoBehaviour
         }
 
 
-
-        movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
+        if (stop.stopping == false)
+        {
+              movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
+        }
+    
+      
     }
 
     void FixedUpdate()
@@ -145,6 +151,7 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
+        
         
         if (canPlace)
         {
@@ -198,6 +205,9 @@ public class Gameplay : MonoBehaviour
             shake = true;
         }
 
+        
+        
+        
         
     }
 }
