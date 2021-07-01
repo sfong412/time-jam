@@ -7,6 +7,9 @@ public class PlacedBlockShadow : MonoBehaviour
     Transform transform;
     SpriteRenderer spriteRenderer;
 
+    UIThings3 ink;
+    Gameplay gameplay;
+
     public Sprite horizontalBlock;
     public Sprite verticalBlock;
     public Sprite rightTriangleBlock;
@@ -23,6 +26,8 @@ public class PlacedBlockShadow : MonoBehaviour
     {
         transform = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ink = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
+        gameplay = GameObject.Find("Gameplay Manager").GetComponent<Gameplay>();
 
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
@@ -55,6 +60,15 @@ public class PlacedBlockShadow : MonoBehaviour
 
     void changeSprite()
     {
+        if (ink.remainingHealth >= gameplay.currentInkCost)
+        {
+            spriteRenderer.color = new Color(0.42f, 1f, 0.56f, 0.35f);
+        }
+        else
+        {
+            spriteRenderer.color = new Color(0.78f, 0.01f, 0.06f, 0.35f);
+        }
+
         switch (selector.blockType)
         {
             case 1:
