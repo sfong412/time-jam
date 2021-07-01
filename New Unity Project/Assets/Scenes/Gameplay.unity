@@ -1321,6 +1321,7 @@ MonoBehaviour:
   image4: {fileID: 1384341487}
   image5: {fileID: 1951487071}
   blockType: 0
+  scrollNumber: 0
   uIThings2: {fileID: 324687309}
 --- !u!4 &324687310
 Transform:
@@ -3930,7 +3931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.36, y: 0}
+  m_AnchoredPosition: {x: 4.6, y: -0.42}
   m_SizeDelta: {x: 174.02, y: 31.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1243347233
@@ -4411,12 +4412,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901cb96aae3211e49a2b1015c0348f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformSpawnY: 0
   hazard: {fileID: 5198866977051932483, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
   upsidedownHazard: {fileID: 5198866977051932483, guid: d6ce0a716c1ee4f4e83f49a00009e21e, type: 3}
   airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
   platform: {fileID: 473274174841287573, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   Cquirrel: {fileID: 8977165716598174456, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
-  Scopion: {fileID: 0}
+  Scopion: {fileID: 6846212555915975882, guid: 2e03f7cc82a416045be498e5664af767, type: 3}
   currentAirHazard: {fileID: 0}
   currentGroundHazard: {fileID: 0}
   currentPlatform: {fileID: 0}
