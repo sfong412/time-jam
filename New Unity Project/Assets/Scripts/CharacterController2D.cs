@@ -28,12 +28,12 @@ public class CharacterController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (itsTimeToStop.stopping == false)
-        {
-        var movementx = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
-        Player.SetFloat("X", movementx);
-        }
+      //  if (itsTimeToStop.stopping == false)
+      //  {
+            var movementx = Input.GetAxis("Horizontal");
+            transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
+            Player.SetFloat("X", movementx);
+       // }
 
     }
 

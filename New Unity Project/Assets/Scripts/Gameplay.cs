@@ -120,12 +120,14 @@ public class Gameplay : MonoBehaviour
 
         }
 
-
+    /*
         if (stop.stopping == false)
         {
               movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
         }
-    
+    */
+
+    movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
       
     }
 

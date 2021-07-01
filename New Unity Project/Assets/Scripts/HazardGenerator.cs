@@ -19,9 +19,13 @@ public class HazardGenerator : MonoBehaviour
 
     Vector3 airHazardSpawnPosition;
 
+    Vector3 platformSpawnPosition;
+    public float platformSpawnY;
+
     int groundHazardTimer;
     int airHazardTimer;
 
+    int platformTimer;
 
     int randomNumber;
     public GameObject hazard;
@@ -29,19 +33,23 @@ public class HazardGenerator : MonoBehaviour
     public GameObject upsidedownHazard;
     public GameObject airHazard;
 
+    public GameObject platform;
+
     public GameObject Cquirrel;
 
     public GameObject Scopion;
 
     public GameObject currentAirHazard;
-
     public GameObject currentGroundHazard;
+
+    public GameObject currentPlatform;
 
 
     Transform transform1;
     Transform movingThingTransform;
 
     BoxCollider2D movingThingBoxCollider;
+    BoxCollider2D platformBoxCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +58,7 @@ public class HazardGenerator : MonoBehaviour
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
         movingThingBoxCollider = GameObject.Find("MovingThing").GetComponent<BoxCollider2D>();
+        platformBoxCollider = platform.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -59,6 +68,8 @@ public class HazardGenerator : MonoBehaviour
         Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.7f, transform.position.z);
 
         Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.6f, transform.position.z);
+
+        Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
         randomNumber = Random.Range(0, 4);
@@ -80,6 +91,8 @@ public class HazardGenerator : MonoBehaviour
             break;  
         }
 
+        //currentPlatform = platform;
+
         //spawn position for air hazards
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(1f, 3.00f), transform.position.z);
 
@@ -87,6 +100,11 @@ public class HazardGenerator : MonoBehaviour
         spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
         spawnCeilingHazard(ceilingHazardSpawnPosition, 0, 6, groundHazardTimer);
         spawnAirHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
+
+        if (platform != null)
+        {
+            spawnPlatform(platformSpawnPosition, 3, 1, platformTimer);
+        }
     }
 
     //Function for spawning hazards
@@ -155,9 +173,31 @@ public class HazardGenerator : MonoBehaviour
         }
     }
 
+    void spawnPlatform(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    {
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
+        {
+            float size = 0.5f;
+
+            //clickPoint -= transform.position;
+
+            int xCount = Mathf.RoundToInt(spawnPosition.x / size);
+            int yCount = Mathf.RoundToInt(spawnPosition.y / size);
+            int zCount = Mathf.RoundToInt(spawnPosition.z / size);
+
+            Vector3 result = new Vector3(
+                (float)xCount * size,
+                (float)yCount * size,
+                (float)zCount * size);
+            
+            Instantiate(currentPlatform, result, transform.rotation, transform.GetChild(index));
+        }
+    }
+
     void RandomNumberGenerator()
     {
         groundHazardTimer = Random.Range(0, 30);
         airHazardTimer = Random.Range(0, 100);
+        platformTimer = Random.Range(0, 100);
     }
 }

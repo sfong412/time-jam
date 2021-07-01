@@ -46,12 +46,12 @@ public class PlacedBlockShadow : MonoBehaviour
 
         int xCount = Mathf.RoundToInt(worldPosition.x / size);
         int yCount = Mathf.RoundToInt(worldPosition.y / size);
-        int zCount = Mathf.RoundToInt(worldPosition.z / size);
+        //int zCount = Mathf.RoundToInt(worldPosition.z / size);
 
         Vector3 result = new Vector3(
             (float)xCount * size,
             (float)yCount * size,
-            (float)zCount * size);
+            -6f);
 
         transform.position = result;
 
