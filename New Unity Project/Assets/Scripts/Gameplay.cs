@@ -153,13 +153,11 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
-        
-        
         if (canPlace)
         {
-             Vector3 mousePos = Input.mousePosition;
-        mousePos.z = mainCamera.nearClipPlane;
-        worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = mainCamera.nearClipPlane;
+            worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
 
         float size = 0.5f;
 
