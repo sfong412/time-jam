@@ -46,7 +46,7 @@ public class Gameplay : MonoBehaviour
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
 
-        selector = GameObject.Find("Selector").GetComponent<UIThings2>();
+        selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
 
         
     }
