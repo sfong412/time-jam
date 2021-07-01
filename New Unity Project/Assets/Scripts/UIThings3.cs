@@ -142,11 +142,7 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (heal == true)
-        {
-            Healing(0.07f);
-        }
-        
+            Healing(0.07f); 
         HealingFocus(0.6f);
     }
 
@@ -160,15 +156,7 @@ public class UIThings3 : MonoBehaviour
         Ink.SetBool("shake", false);
     }
 
-    IEnumerator healing()
-    {
-        if (!heal)
-        {
-        yield return new WaitForSeconds(1);
-        heal = true;
-        }
-        
-    }
+   
 
 
 
@@ -179,7 +167,6 @@ public class UIThings3 : MonoBehaviour
         {
             heal = false;
             remainingHealth -= damage;
-            StartCoroutine(healing());
             
            
             
@@ -197,8 +184,8 @@ public class UIThings3 : MonoBehaviour
 
     public void DamageTaken(float damage)
     {
-        if (pleaseStop.stopping == false)
-        {
+        
+        
              if (remainingHealth - damage >= 0)
         {
             remainingHealth -= damage;
@@ -209,7 +196,7 @@ public class UIThings3 : MonoBehaviour
           remainingHealth = 0;
           damageScript.gonered = true;   
         }
-        }
+        
         
     }
 
