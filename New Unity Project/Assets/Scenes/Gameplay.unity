@@ -2385,7 +2385,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.4198113, g: 1, b: 0.56292814, a: 0.5019608}
+  m_Color: {r: 0.4198113, g: 1, b: 0.56292814, a: 0.3529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6963,6 +6963,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8977165716598174452, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977165716598174452, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977165716598174452, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977165716598174452, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 8977165716598174454, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7063,7 +7079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d8d8be67ff2c9469fa0b4a964a5f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1.2
+  Speed: 1.5
   direction: 1
   rigidbody2D1: {fileID: 2106621932}
   Scopio: {fileID: 2106621930}

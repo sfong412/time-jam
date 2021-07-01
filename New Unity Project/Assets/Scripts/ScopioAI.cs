@@ -64,12 +64,12 @@ public Rigidbody2D rigidbody2D1;
 
    void MoveLeft()
    {
-       rigidbody2D1.AddForce(new Vector2(Speed, 0));
+       transform.position += new Vector3(Speed, 0, 0) * Time.deltaTime * Speed;
    }
 
    void MoveRight()
    {
-        rigidbody2D1.AddForce(new Vector2(-Speed + 0.3f, 0));
+        transform.position += new Vector3(-Speed + 0.4f, 0, 0) * Time.deltaTime * Speed;
 
    }
 
