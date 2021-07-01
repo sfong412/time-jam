@@ -20,6 +20,7 @@ public class HazardGenerator : MonoBehaviour
     Vector3 airHazardSpawnPosition;
 
     Vector3 platformSpawnPosition;
+    public float platformSpawnY;
 
     int groundHazardTimer;
     int airHazardTimer;
@@ -68,7 +69,7 @@ public class HazardGenerator : MonoBehaviour
 
         Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.6f, transform.position.z);
 
-        Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), -1.5f, transform.position.z);
+        Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
         randomNumber = Random.Range(0, 4);
@@ -90,7 +91,7 @@ public class HazardGenerator : MonoBehaviour
             break;  
         }
 
-        currentPlatform = platform;
+        //currentPlatform = platform;
 
         //spawn position for air hazards
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(1f, 3.00f), transform.position.z);
@@ -99,7 +100,11 @@ public class HazardGenerator : MonoBehaviour
         spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
         spawnCeilingHazard(ceilingHazardSpawnPosition, 0, 6, groundHazardTimer);
         spawnAirHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
-        spawnPlatform(platformSpawnPosition, 3, 0, platformTimer);
+
+        if (platform != null)
+        {
+            spawnPlatform(platformSpawnPosition, 3, 1, platformTimer);
+        }
     }
 
     //Function for spawning hazards

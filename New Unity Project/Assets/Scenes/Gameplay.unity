@@ -774,6 +774,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143157422}
   m_CullTransparentMesh: 1
+--- !u!1 &177516900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 177516901}
+  - component: {fileID: 177516902}
+  m_Layer: 0
+  m_Name: Platform Selector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &177516901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177516900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1833664933}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &177516902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177516900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecea3026ce7b2064ca4fa01aaf9fbfa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platforms1: {fileID: 473274174841287573, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
+  platforms2: {fileID: 4211775886178261195, guid: f9c3d7b6ca54ab04083012e1f79f129b, type: 3}
+  platforms3: {fileID: 0}
 --- !u!1 &191642510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1684,7 @@ MonoBehaviour:
   JumpForce: 1.5
   isgrounded: 0
   rb2d: {fileID: 470797601}
+  itsTimeToStop: {fileID: 0}
   Player: {fileID: 470797604}
 --- !u!61 &470797600
 BoxCollider2D:
@@ -4369,7 +4416,9 @@ MonoBehaviour:
   airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
   platform: {fileID: 473274174841287573, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   Cquirrel: {fileID: 8977165716598174456, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
+  Scopion: {fileID: 0}
   currentAirHazard: {fileID: 0}
+  currentGroundHazard: {fileID: 0}
   currentPlatform: {fileID: 0}
 --- !u!156049354 &1416313663
 Grid:
@@ -4536,6 +4585,7 @@ MonoBehaviour:
   canPlace2: 0
   canSlow: 0
   movingThing: {fileID: 43546250}
+  stop: {fileID: 0}
   selector: {fileID: 324687309}
   guiBars: {fileID: 1542899951}
   block1: {fileID: 6307049418291793356, guid: 8d327ea28d0541a42affeeae9e3c7ab3, type: 3}
@@ -4882,6 +4932,7 @@ MonoBehaviour:
   gameplaying: {fileID: 1521810342}
   damageScript: {fileID: 2144735749}
   Ink: {fileID: 1542899952}
+  pleaseStop: {fileID: 0}
 --- !u!95 &1542899952
 Animator:
   serializedVersion: 3
@@ -5513,7 +5564,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 177516901}
   m_Father: {fileID: 1416313661}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7113,6 +7165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1.5
+  shouldIJump: 0
+  shouldIReally: 0
+  ignore: 0
   direction: 1
   rigidbody2D1: {fileID: 2106621932}
   Scopio: {fileID: 2106621930}
@@ -7365,6 +7420,10 @@ MonoBehaviour:
   uiFill: {fileID: 1134139636}
   uiText: {fileID: 1878911946}
   Duration: 100
+  stopping: 0
+  blackFade: {fileID: 0}
+  Text1: {fileID: 0}
+  Text2: {fileID: 0}
   remainingDuration: 0
 --- !u!1 &2144735747
 GameObject:
