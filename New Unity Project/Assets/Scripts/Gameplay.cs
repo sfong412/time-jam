@@ -8,6 +8,8 @@ public class Gameplay : MonoBehaviour
     public float scrollSpeed = 1f;
 
     public float currentInkCost;
+
+    public float currentCostThreshhold;
     public float slowDownFactor = 1;
 
     public bool slowDownThereBuster = false;
@@ -16,6 +18,8 @@ public class Gameplay : MonoBehaviour
     public bool focusDown;
 
     public bool canPlace;
+
+    public bool canPlace2;
     public bool canSlow = true;
     public Transform movingThing;
 
@@ -133,7 +137,7 @@ public class Gameplay : MonoBehaviour
             (float)xCount * size,
             (float)yCount * size,
             (float)zCount * size);
-
+        
         switch(selector.blockType)
             {
                 case 1: 

@@ -25,6 +25,8 @@ public class UIThings3 : MonoBehaviour
     public bool heal;
     public bool healCoolDown1;
 
+    public bool hey;
+
     public Gameplay gameplaying;
 
     public DamageScript damageScript;
@@ -66,6 +68,7 @@ public class UIThings3 : MonoBehaviour
        if (remainingHealth > 20)
        {
            gameplaying.canPlace = true;
+          
        }
 
        if (remainingFocus > 1)
@@ -188,4 +191,6 @@ public class UIThings3 : MonoBehaviour
             remainingFocus = startingFocus;
         }
     }
+
+    
 }
