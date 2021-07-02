@@ -35,6 +35,8 @@ public class HazardGenerator : MonoBehaviour
 
     public GameObject platform;
 
+    public GameObject platform2;
+
     public GameObject Cquirrel;
 
     public GameObject Scopion;
@@ -65,18 +67,18 @@ public class HazardGenerator : MonoBehaviour
     void Update()
     {
         //spawn positions for floor / ceiling hazards
-        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.7f, transform.position.z);
+        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.78f, transform.position.z);
 
-        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.6f, transform.position.z);
+        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.65f, transform.position.z);
 
         Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
-        randomNumber = Random.Range(0, 4);
+        randomNumber = Random.Range(0, 6);
         switch (randomNumber)
         {
             case 0:
-                currentAirHazard = Cquirrel;
+                currentGroundHazard = Cquirrel;
                 break;
             case 1:
                 currentAirHazard = airHazard;
@@ -88,13 +90,19 @@ public class HazardGenerator : MonoBehaviour
 
             case 3:
             currentGroundHazard = Scopion;  
-            break;  
+            break; 
+
+            case 4:
+            currentPlatform = platform; 
+            break;
+
+            case 5: 
+            currentPlatform = platform2;
+            break;
         }
 
-        //currentPlatform = platform;
-
         //spawn position for air hazards
-        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(1f, 3.00f), transform.position.z);
+        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.67f), transform.position.z);
 
         RandomNumberGenerator();
         spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
