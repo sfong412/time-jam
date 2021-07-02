@@ -7,13 +7,14 @@ using TMPro;
 
 public class Shop : MonoBehaviour
 {
-    public int coinAmount = 2000;
+    public int coinAmount;
 
     TextMeshProUGUI coinCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        coinAmount = 1500;
         coinCounter = GameObject.Find("Coin Amount").GetComponent<TextMeshProUGUI>();
     }
 
@@ -23,9 +24,12 @@ public class Shop : MonoBehaviour
         coinCounter.text = "Coins: " + coinAmount.ToString();
     }
 
-    public void BuyItem()
+    public void BuyItem(int itemCost)
     {
-        coinAmount = coinAmount - 500;
+        if (coinAmount >= itemCost)
+        {
+            coinAmount = coinAmount - itemCost;
+        }
     }
 
     public void StartGame()
