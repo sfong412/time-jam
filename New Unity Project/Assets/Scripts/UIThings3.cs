@@ -100,7 +100,11 @@ public class UIThings3 : MonoBehaviour
 
        if (damageScript.damaged == true)
        {
-           DamageTaken(10);
+           if (pleaseStop.stopping == false)
+           {
+                DamageTaken(10);
+           }
+          
           
        }
 
@@ -159,8 +163,12 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!pleaseStop.stopping)
+        {
             Healing(InkRegenRate); 
         HealingFocus(0.6f);
+        }
+        
     }
 
    

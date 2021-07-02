@@ -26,6 +26,17 @@ public class HazardGenerator : MonoBehaviour
     int airHazardTimer;
 
     int platformTimer;
+    public int maxSpikes;
+
+    public int maxAirEnemies;
+
+    public int maxGroundEnemies;
+
+    public int groundHazardSpawnTimer;
+
+    public int airHazardspawnTimer;
+
+    public int platformSpawnTimer;
 
     int randomNumber;
     public GameObject hazard;
@@ -42,7 +53,7 @@ public class HazardGenerator : MonoBehaviour
     public GameObject Scopion;
 
     public GameObject currentAirHazard;
-    public GameObject currentGroundHazard;
+    public GameObject currentGroundEnemy;
 
     public GameObject currentPlatform;
 
@@ -69,7 +80,7 @@ public class HazardGenerator : MonoBehaviour
         //spawn positions for floor / ceiling hazards
         Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.78f, transform.position.z);
 
-        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.65f, transform.position.z);
+        Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.68f, transform.position.z);
 
         Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
@@ -78,31 +89,32 @@ public class HazardGenerator : MonoBehaviour
         switch (randomNumber)
         {
             case 0:
-                currentGroundHazard = Cquirrel;
+                currentGroundEnemy = Cquirrel;
                 break;
             case 1:
                 currentAirHazard = airHazard;
                 break;
 
             case 2:
-                currentGroundHazard = hazard;
+                currentGroundEnemy = hazard;
                 break;
 
             case 3:
-                currentGroundHazard = Scopion;  
+                currentGroundEnemy = Scopion;  
                 break; 
         }
 
-        currentPlatform = platform2;
+        //currentPlatform = platform2;
         platformSpawnY = -0.41f;
 
         //spawn position for air hazards
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.67f), transform.position.z);
 
         RandomNumberGenerator();
-        spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
-        spawnCeilingHazard(ceilingHazardSpawnPosition, 0, 6, groundHazardTimer);
-        spawnAirHazard(airHazardSpawnPosition, 1, 2, airHazardTimer);
+        spawnGroundHazard(groundHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
+        spawnCeilingHazard(ceilingHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
+        spawnAirHazard(airHazardSpawnPosition, 1, maxAirEnemies, airHazardTimer);
+        spawnGroundEnemy(groundHazardSpawnPosition, 2, maxGroundEnemies, groundHazardTimer);
 
         if (platform != null)
         {
@@ -129,7 +141,29 @@ public class HazardGenerator : MonoBehaviour
                 spawnPosition.y,
                 (float)zCount * size);
             
-            Instantiate(currentGroundHazard, result, transform.rotation, transform.GetChild(index));
+            Instantiate(hazard, result, transform.rotation, transform.GetChild(index));
+        }
+    }
+
+    void spawnGroundEnemy(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    {
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
+        {
+            float size = 1f;
+
+            //clickPoint -= transform.position;
+
+            int xCount = Mathf.RoundToInt(spawnPosition.x / size);
+         //   int yCount = Mathf.RoundToInt(spawnPosition.y / size);
+            int zCount = Mathf.RoundToInt(spawnPosition.z / size);
+
+            Vector3 result = new Vector3(
+                (float)xCount * size,
+                //(float)yCount * size,
+                spawnPosition.y,
+                (float)zCount * size);
+            
+            Instantiate(currentGroundEnemy, result, transform.rotation, transform.GetChild(index));
         }
     }
 
@@ -199,8 +233,8 @@ public class HazardGenerator : MonoBehaviour
 
     void RandomNumberGenerator()
     {
-        groundHazardTimer = Random.Range(0, 30);
-        airHazardTimer = Random.Range(0, 100);
-        platformTimer = Random.Range(0, 100);
+        groundHazardTimer = Random.Range(0, groundHazardSpawnTimer);
+        airHazardTimer = Random.Range(0, airHazardspawnTimer);
+        platformTimer = Random.Range(0, platformSpawnTimer);
     }
 }

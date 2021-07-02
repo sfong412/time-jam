@@ -12,6 +12,8 @@ public class DamageScript : MonoBehaviour
 
     public Animator cameraMain;
 
+    public UIThings stopnow;
+
     void OnTriggerEnter2D(Collider2D other)
     {
           if (other.tag == "goner")
@@ -41,8 +43,12 @@ public class DamageScript : MonoBehaviour
 
         if (triggerDamaged == true)
         {
+            if (!stopnow)
+            {
             StartCoroutine(damaged2());
             triggerDamaged = false;
+            }
+           
         }
     }
 

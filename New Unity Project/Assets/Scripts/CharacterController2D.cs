@@ -28,12 +28,17 @@ public class CharacterController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-      //  if (itsTimeToStop.stopping == false)
-      //  {
+        if (itsTimeToStop.stopping == false)
+        {
             var movementx = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
             Player.SetFloat("X", movementx);
-       // }
+        }
+        else
+        {
+            Player.SetBool("time", true);
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
 
     }
 
@@ -42,10 +47,15 @@ public class CharacterController2D : MonoBehaviour
         //MAKE SURE TO HAVE A "GROUND" TAG WITH A TRIGGER IF YOU WANT TO USE THE JUMPING FUNCTION
         if (Input.GetButtonDown("Jump") && isgrounded == true)
         {
-            rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+             if (itsTimeToStop.stopping == false)
+             {
+                 rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             Player.SetBool("Jumped", true);
+             }
+            
             //Debug.Log("jumped");
         }
+
 
       
 
