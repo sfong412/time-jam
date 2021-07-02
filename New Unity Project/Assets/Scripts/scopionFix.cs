@@ -7,7 +7,7 @@ public class scopionFix : MonoBehaviour
     public ScopioAI directionguy;
      void OnTriggerEnter2D(Collider2D other)
    {
-       if (other.tag == "Ground")
+       if (other.tag == "Ground" || other.tag == "scopion")
        {
         if (directionguy.direction == 1)
        {
