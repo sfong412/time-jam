@@ -5066,7 +5066,7 @@ MonoBehaviour:
   platform: {fileID: 7135699730995980158, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   platform2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   Cquirrel: {fileID: 8977165716598174456, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
-  Scopion: {fileID: 6846212555915975882, guid: 2e03f7cc82a416045be498e5664af767, type: 3}
+  Scopion: {fileID: 1160040605712977760, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
   currentAirHazard: {fileID: 0}
   currentGroundHazard: {fileID: 0}
   currentPlatform: {fileID: 0}
@@ -5648,23 +5648,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 10000
   remainingHealth: 0
+  InkRegenRate: 0
   healthCounter: 0
   remainingFocus: 0
   startingFocus: 10000
-  startingEraser: 0
+  startingEraser: 100
   remainingEraser: 0
   healthBar: {fileID: 1243347233}
   focusBar: {fileID: 901238166}
   eraserBar: {fileID: 75884933}
   healthCounter2: {fileID: 751995652}
   smoothing: 5
-  placeBlockDeplete: 0
+  canErase: 0
   heal: 0
   healCoolDown1: 0
   hey: 0
+  erased: 0
   gameplaying: {fileID: 1521810342}
   damageScript: {fileID: 2144735749}
   Ink: {fileID: 1542899952}
+  Eraser: {fileID: 0}
   pleaseStop: {fileID: 0}
 --- !u!95 &1542899952
 Animator:

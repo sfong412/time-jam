@@ -79,11 +79,13 @@ public Rigidbody2D rigidbody2D1;
 
    void MoveLeft()
    {
+       Scopio.SetBool("right", true);
        transform.position += new Vector3(Speed, 0, 0) * Time.deltaTime * Speed;
    }
 
    void MoveRight()
    {
+         Scopio.SetBool("right", false);
         transform.position += new Vector3(-Speed + 0.4f, 0, 0) * Time.deltaTime * Speed;
 
    }
@@ -92,6 +94,8 @@ public Rigidbody2D rigidbody2D1;
    {
        rigidbody2D1.AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
    }
+
+    
 
    
 

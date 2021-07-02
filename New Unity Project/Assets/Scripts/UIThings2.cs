@@ -41,13 +41,11 @@ public class UIThings2 : MonoBehaviour
         if (Input.mouseScrollDelta.y < -0.1f)
         {
             scrollNumber--;
-            Debug.Log("impostor");
         }
 
          if (Input.mouseScrollDelta.y > 0.1f)
         {
             scrollNumber++;
-            Debug.Log("impostor2");
         }
         switch(scrollNumber)
         {
