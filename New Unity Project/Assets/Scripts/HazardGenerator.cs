@@ -65,7 +65,7 @@ public class HazardGenerator : MonoBehaviour
     void Update()
     {
         //spawn positions for floor / ceiling hazards
-        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.7f, transform.position.z);
+        Vector3 groundHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), -3.78f, transform.position.z);
 
         Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.6f, transform.position.z);
 
@@ -76,7 +76,7 @@ public class HazardGenerator : MonoBehaviour
         switch (randomNumber)
         {
             case 0:
-                currentAirHazard = Cquirrel;
+                currentGroundHazard = Cquirrel;
                 break;
             case 1:
                 currentAirHazard = airHazard;
@@ -94,7 +94,7 @@ public class HazardGenerator : MonoBehaviour
         //currentPlatform = platform;
 
         //spawn position for air hazards
-        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(1f, 3.00f), transform.position.z);
+        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.67f), transform.position.z);
 
         RandomNumberGenerator();
         spawnGroundHazard(groundHazardSpawnPosition, 0, 6, groundHazardTimer);
