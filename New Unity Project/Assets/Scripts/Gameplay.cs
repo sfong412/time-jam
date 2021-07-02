@@ -91,12 +91,12 @@ public class Gameplay : MonoBehaviour
 
         if (canSlow == false)
         {
-              slowDownThereBuster = false; 
+            slowDownThereBuster = false; 
             Time.timeScale = 1;
             slowDownFactor = 1;
         }
 
-        switch(selector.blockType)
+        switch(UIThings2.blockType)
         {
             case 1: 
             currentInkCost = 30;
@@ -172,7 +172,7 @@ public class Gameplay : MonoBehaviour
             (float)yCount * size,
             (float)zCount * size);
         
-        switch(selector.blockType)
+        switch(UIThings2.blockType)
             {
                 case 1: 
                  Instantiate(block1, result, transform.rotation, placedBlocks);

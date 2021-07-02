@@ -69,7 +69,7 @@ public class PlacedBlockShadow : MonoBehaviour
             spriteRenderer.color = new Color(0.78f, 0.01f, 0.06f, 0.35f);
         }
 
-        switch (selector.blockType)
+        switch (UIThings2.blockType)
         {
             case 1:
                 transform.localScale = new Vector3(7.27f, 5.23f, 1f);
