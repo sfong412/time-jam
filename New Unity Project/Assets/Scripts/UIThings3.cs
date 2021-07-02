@@ -98,14 +98,11 @@ public class UIThings3 : MonoBehaviour
             gameplaying.canSlow = true;
        }
 
-       if (damageScript.damaged == true)
+       if (damageScript.damaged == true && pleaseStop.stopping == false)
        {
-           if (pleaseStop.stopping == false)
-           {
-                DamageTaken(10);
-           }
           
-          
+                      DamageTaken(10);
+                              
        }
 
        if (healthCounter > remainingHealth)
@@ -163,11 +160,11 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!pleaseStop.stopping)
-        {
+        
+        
             Healing(InkRegenRate); 
         HealingFocus(0.6f);
-        }
+        
         
     }
 

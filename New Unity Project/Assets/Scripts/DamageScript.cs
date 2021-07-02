@@ -22,18 +22,6 @@ public class DamageScript : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-         if (other.tag == "goner")
-        {
-            if (triggerDamaged == false)
-            {
-                triggerDamaged = true;
-            }
-
-        }
-    }
-
     void Update()
     {
         if (gonered == true)

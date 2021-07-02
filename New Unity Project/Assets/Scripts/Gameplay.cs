@@ -153,7 +153,7 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (canPlace)
+        if (canPlace && stop.stopping == false)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = mainCamera.nearClipPlane;

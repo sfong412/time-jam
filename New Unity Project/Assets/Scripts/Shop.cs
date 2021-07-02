@@ -9,6 +9,8 @@ public class Shop : MonoBehaviour
 {
     public int coinAmount;
 
+    public GameObject blackFade;
+
     TextMeshProUGUI coinCounter;
 
     // Start is called before the first frame update
@@ -27,6 +29,11 @@ public class Shop : MonoBehaviour
 
         Debug.Log(UIThings2.blockTypeLoadout[1]);
     }
+    
+    void Awake()
+    {
+        StartCoroutine(blackFade22());
+    }
 
     public void BuyItem(int itemCost)
     {
@@ -39,6 +46,12 @@ public class Shop : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene(3);
+    }
+
+    IEnumerator blackFade22()
+    {
+        yield return new WaitForSeconds(1);
+        blackFade.SetActive(false);
     }
 }
