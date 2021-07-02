@@ -23,11 +23,11 @@ public class PlatformSelector : MonoBehaviour
         switch (randomNumber)
         {
             case 0:
-                generator.platformSpawnY = -1.5f;
+                generator.platformSpawnY = Random.Range(-1.5f, -3f);
                 generator.currentPlatform = platforms1;
                 break;
             case 1:
-                generator.platformSpawnY = 3f;
+                generator.platformSpawnY = -0.41f;
                 generator.currentPlatform = platforms2;
                 break;
             case 2:
