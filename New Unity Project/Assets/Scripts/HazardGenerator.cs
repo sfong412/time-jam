@@ -89,10 +89,8 @@ public class HazardGenerator : MonoBehaviour
                 break;
 
             case 3:
-            currentGroundHazard = Scopion;  
-            break; 
-
-           
+                currentGroundHazard = Scopion;  
+                break; 
         }
 
         currentPlatform = platform2;
