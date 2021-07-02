@@ -11,12 +11,9 @@ public class UIThings2 : MonoBehaviour
     public Image image4;
     public Image image5;
     public int blockType;
+
+    public int[] blockTypeLoadout;
     public int scrollNumber;
-
-    CursorMode cursorMode = CursorMode.Auto;
-
-    Texture2D cursorTexture1, cursorTexture2, cursorTexture3, cursorTexture4, cursorTexture5;
-
     public UIThings2 uIThings2;
 
     // Start is called before the first frame update
@@ -28,11 +25,7 @@ public class UIThings2 : MonoBehaviour
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
 
-        cursorTexture1 = null;
-        cursorTexture2 = null;
-        cursorTexture3 = Resources.Load<Texture2D>("Textures/03");
-        cursorTexture4 = Resources.Load<Texture2D>("Textures/04");
-        cursorTexture5 = null;
+        blockTypeLoadout = new int[5] {1, 2, 3, 4, 5};
     }
 
     // Update is called once per frame
@@ -89,7 +82,7 @@ public class UIThings2 : MonoBehaviour
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-        blockType = 1;
+        blockType = blockTypeLoadout[0];
 
         //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
@@ -101,7 +94,7 @@ public class UIThings2 : MonoBehaviour
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-        blockType = 2;
+        blockType = blockTypeLoadout[1];
 
         //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
@@ -113,7 +106,7 @@ public class UIThings2 : MonoBehaviour
         image2.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-        blockType = 3;
+        blockType = blockTypeLoadout[2];
 
         //Cursor.SetCursor(cursorTexture3, Vector2.zero, cursorMode);
     }
@@ -125,7 +118,7 @@ public class UIThings2 : MonoBehaviour
         image2.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-        blockType = 4;
+        blockType = blockTypeLoadout[3];
 
         //Cursor.SetCursor(cursorTexture4, Vector2.zero, cursorMode);
     }
@@ -137,7 +130,7 @@ public class UIThings2 : MonoBehaviour
         image2.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-        blockType = 5;
+        blockType = blockTypeLoadout[4];
 
         //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
