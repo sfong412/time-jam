@@ -53,6 +53,7 @@ public class UIThings2 : MonoBehaviour
         for (int i = 0; i < blockTypeLoadout.Length; i++)
         {
             TextMeshProUGUI priceText = prices[i].GetChild(0).GetComponent<TextMeshProUGUI>();
+            RectTransform rectTransform = loadouts[i].GetComponent<RectTransform>();
 
             switch (blockTypeLoadout[i])
             {
@@ -60,30 +61,35 @@ public class UIThings2 : MonoBehaviour
                     loadouts[i].sprite = blockType1;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.9f, 0.7f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = blockTypeInkCost[0].ToString();
                     break;
                 case 2:
                     loadouts[i].sprite = blockType2;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(-0.8f, 0.7f, 1f);
+                    rectTransform.sizeDelta = new Vector2(36.7f, 153.3f);
                     priceText.text = blockTypeInkCost[1].ToString();
                     break;
                 case 3:
                     loadouts[i].sprite = blockType3;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 180);
                     loadouts[i].transform.localScale = new Vector3(-0.7f, -2.78f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = blockTypeInkCost[2].ToString();
                     break;
                 case 4:
                     loadouts[i].sprite = blockType4;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 90);
                     loadouts[i].transform.localScale = new Vector3(-0.7f, 2.78f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = blockTypeInkCost[3].ToString();
                     break;
                 case 5:
                     loadouts[i].sprite = blockType5;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.7f, 2.78f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = blockTypeInkCost[4].ToString();
                     break;
             }
