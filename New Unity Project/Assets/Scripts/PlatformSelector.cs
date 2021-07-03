@@ -27,8 +27,7 @@ public class PlatformSelector : MonoBehaviour
                 generator.platformSpawnY = Random.Range(-1.5f, -3f);
                 generator.currentPlatform = platforms1;
             */
-                generator.platformSpawnY = -0.41f;
-                generator.currentPlatform = platforms2;
+                generator.currentPlatform = platforms1;
                 break;
             case 1:
                 generator.platformSpawnY = -0.41f;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UIThings : MonoBehaviour
 {
 
@@ -13,7 +14,13 @@ public class UIThings : MonoBehaviour
 
     public bool stopping;
 
+    public int currentScene;
+
     public Animator blackFade;
+
+    public GameObject blackFade2;
+
+    public GameObject shadow;
     public GameObject Text1;
     public GameObject Text2;
     [SerializeField]private float remainingDuration;
@@ -54,6 +61,7 @@ public class UIThings : MonoBehaviour
     private void OnEnd()
     {
         stopping = true;
+        shadow.SetActive(false);
         StartCoroutine(UIAnimations());
     }
 
@@ -65,5 +73,17 @@ public class UIThings : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Text2.SetActive(true);
 
+    }
+
+    IEnumerator NextRound1()
+    {
+        blackFade2.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(currentScene + 1);
+    }
+
+    public void NextRound()
+    {
+        StartCoroutine(NextRound1());
     }
 }

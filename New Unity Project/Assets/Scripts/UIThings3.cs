@@ -10,6 +10,8 @@ public class UIThings3 : MonoBehaviour
     public float startingHealth;
     public float remainingHealth;
 
+    public float InkRegenRate;
+
     public float healthCounter;
 
     public float remainingFocus;
@@ -26,17 +28,20 @@ public class UIThings3 : MonoBehaviour
 
     public float smoothing = 5;
 
-    public bool placeBlockDeplete;
+    public bool canErase;
     public bool heal;
     public bool healCoolDown1;
 
     public bool hey;
+
+    public bool erased;
 
     public Gameplay gameplaying;
 
     public DamageScript damageScript;
     
     public Animator Ink;
+    public Animator Eraser;
 
     public UIThings pleaseStop;
 
@@ -57,6 +62,7 @@ public class UIThings3 : MonoBehaviour
     void Awake()
     {
         gameplaying.canPlace = true;
+        canErase = true;
     }
 
     // Update is called once per frame
@@ -92,10 +98,11 @@ public class UIThings3 : MonoBehaviour
             gameplaying.canSlow = true;
        }
 
-       if (damageScript.damaged == true)
+       if (damageScript.damaged == true && pleaseStop.stopping == false)
        {
-           DamageTaken(10);
           
+                      DamageTaken(10);
+                              
        }
 
        if (healthCounter > remainingHealth)
@@ -130,6 +137,17 @@ public class UIThings3 : MonoBehaviour
             gameplaying.shake = false;
        }
 
+       if (erased == true)
+       {
+           EraserDeplete(20);
+           erased = false;
+       }
+
+       if (remainingEraser < 20)
+       {
+            canErase = false; 
+       }
+
 
 
 
@@ -142,8 +160,12 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-            Healing(0.07f); 
+        
+        
+            Healing(InkRegenRate); 
         HealingFocus(0.6f);
+        
+        
     }
 
    
@@ -243,14 +265,12 @@ public class UIThings3 : MonoBehaviour
     {
          if (remainingFocus - damage >= 0)
         {
-            remainingFocus -= damage;
-             gameplaying.canSlow = true;
+            remainingEraser -= damage;
              
         }
         else 
         {   
-          //something idk
-          gameplaying.canSlow = false;   
+          canErase = false; 
         }
     }
 

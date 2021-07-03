@@ -19,6 +19,8 @@ public class PlacedBlock : Hazard
 
     public bool blockPlaced;
 
+    public UIThings3 eraser;
+
 
 
     void Start()
@@ -29,6 +31,7 @@ public class PlacedBlock : Hazard
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
         movingThingBoxCollider = GameObject.Find("MovingThing").GetComponent<BoxCollider2D>();
+          eraser = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
         blockPlaced = true;
     }
 
@@ -48,7 +51,15 @@ public class PlacedBlock : Hazard
 
     private void OnMouseEnter()
     {
-        renderer.material.color = Color.red;
+        if (eraser.canErase)
+        {
+            renderer.material.color = Color.red;
+        }
+        else
+        {
+            renderer.material.color = Color.gray;
+        }
+    
     }
     private void OnMouseExit()
     {
@@ -59,7 +70,12 @@ public class PlacedBlock : Hazard
     {
         if (Input.GetMouseButtonDown(1))
         {
+            if (eraser.canErase)
+            {
+            eraser.erased = true;
             Destroy(gameObject);
+            }
+           
         }
     }
 }
