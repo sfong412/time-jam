@@ -12,6 +12,7 @@ TagManager:
   - goner
   - Ground2
   - scopion
+  - jump
   layers:
   - Default
   - TransparentFX

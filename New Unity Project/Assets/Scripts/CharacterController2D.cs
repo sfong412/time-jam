@@ -18,6 +18,8 @@ public class CharacterController2D : MonoBehaviour
 
     public UIThings itsTimeToStop;
 
+    public bool jumpHigh;
+
     public Animator Player;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             Player.SetBool("time", true);
-            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;    
         }
 
     }
@@ -56,6 +58,13 @@ public class CharacterController2D : MonoBehaviour
             //Debug.Log("jumped");
         }
 
+        if (jumpHigh == true)
+
+{
+    rb2d.AddForce(new Vector2(0, JumpForce + 1), ForceMode2D.Impulse);
+    Player.SetBool("Jumped", true);
+    jumpHigh = false;
+}
 
       
 
