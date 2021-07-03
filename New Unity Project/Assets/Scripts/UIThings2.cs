@@ -52,27 +52,29 @@ public class UIThings2 : MonoBehaviour
 
         for (int i = 0; i < blockTypeLoadout.Length; i++)
         {
+            TextMeshProUGUI priceText = prices[i].GetChild(0).GetComponent<TextMeshProUGUI>();
+
             switch (blockTypeLoadout[i])
             {
                 case 1:
                     loadouts[i].sprite = blockType1;
-                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[0].ToString();
+                    priceText.text = blockTypeInkCost[0].ToString();
                     break;
                 case 2:
                     loadouts[i].sprite = blockType2;
-                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[1].ToString();
+                    priceText.text = blockTypeInkCost[1].ToString();
                     break;
                 case 3:
                     loadouts[i].sprite = blockType3;
-                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[2].ToString();
+                    priceText.text = blockTypeInkCost[2].ToString();
                     break;
                 case 4:
                     loadouts[i].sprite = blockType4;
-                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[3].ToString();
+                    priceText.text = blockTypeInkCost[3].ToString();
                     break;
                 case 5:
                     loadouts[i].sprite = blockType5;
-                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[4].ToString();
+                    priceText.text = blockTypeInkCost[4].ToString();
                     break;
             }
         }
@@ -132,7 +134,7 @@ public class UIThings2 : MonoBehaviour
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[0];
 
-        //Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        Debug.Log("button one clicked");
     }
 
     public void two()
@@ -143,8 +145,6 @@ public class UIThings2 : MonoBehaviour
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[1];
-
-        //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 
     public void three()
@@ -155,8 +155,6 @@ public class UIThings2 : MonoBehaviour
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[2];
-
-        //Cursor.SetCursor(cursorTexture3, Vector2.zero, cursorMode);
     }
 
     public void four()
@@ -167,8 +165,6 @@ public class UIThings2 : MonoBehaviour
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[3];
-
-        //Cursor.SetCursor(cursorTexture4, Vector2.zero, cursorMode);
     }
 
     public void five()
@@ -179,7 +175,5 @@ public class UIThings2 : MonoBehaviour
         image3.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[4];
-
-        //Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 }

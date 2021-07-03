@@ -10,6 +10,12 @@ public class Shop : MonoBehaviour
     public GameObject blackFade;
     UIThings2 ui;
 
+    bool isBuying = false;
+
+    int blockType;
+
+    int currentBlockType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +30,6 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(UIThings2.blockTypeLoadout[1]);
     }
 
     void Awake()
@@ -32,13 +37,49 @@ public class Shop : MonoBehaviour
         StartCoroutine(blackFade22());
     }
 
-    public void GetItem(int test)
+    public void SelectItem(int blockType)
     {
-        UIThings2.blockTypeLoadout[test] = 5;
-        UIThings2.loadouts[test].sprite = ui.blockType5;
-       // UIThings2.prices[test].GetChild(0).GetComponent<TextMeshProUGUI>().text = ui.blockTypeInkCost[5].ToString();
+        if (isBuying == false)
+        {
+            isBuying = true;
+            currentBlockType = blockType;
+        }
     }
 
+    public void PlaceItem(int platform)
+    {
+        if (isBuying == true)
+        {
+            UIThings2.blockTypeLoadout[platform] = currentBlockType;
+
+            switch (currentBlockType)
+            {
+                case 1:
+                    UIThings2.loadouts[platform].sprite = ui.blockType1;
+                    //    priceText.text = blockTypeInkCost[0].ToString();
+                    break;
+                case 2:
+                    UIThings2.loadouts[platform].sprite = ui.blockType2;
+                    //    priceText.text = blockTypeInkCost[1].ToString();
+                    break;
+                case 3:
+                    UIThings2.loadouts[platform].sprite = ui.blockType3;
+                    //    priceText.text = blockTypeInkCost[2].ToString();
+                    break;
+                case 4:
+                    UIThings2.loadouts[platform].sprite = ui.blockType4;
+                    //    priceText.text = blockTypeInkCost[3].ToString();
+                    break;
+                case 5:
+                    UIThings2.loadouts[platform].sprite = ui.blockType5;
+                    //    priceText.text = blockTypeInkCost[4].ToString();
+                    break;
+            }
+
+         //   UIThings2.loadouts[platform].sprite = ui.blockType5;
+            isBuying = false;
+        }
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(3);
