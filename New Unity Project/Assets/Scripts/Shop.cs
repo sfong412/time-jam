@@ -32,10 +32,10 @@ public class Shop : MonoBehaviour
         StartCoroutine(blackFade22());
     }
 
-    public void GetItem()
+    public void GetItem(int test)
     {
-        UIThings2.blockTypeLoadout[1] = 5;
-        UIThings2.loadouts[2].sprite = ui.blockType5;
+        UIThings2.blockTypeLoadout[test] = 5;
+        UIThings2.loadouts[test].sprite = ui.blockType5;
     }
 
     public void StartGame()
