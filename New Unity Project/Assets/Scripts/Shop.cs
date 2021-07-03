@@ -11,11 +11,12 @@ public class Shop : MonoBehaviour
 
     TextMeshProUGUI coinCounter;
 
+    UIThings2 ui;
+
     // Start is called before the first frame update
     void Start()
     {
         coinAmount = 1500;
-        coinCounter = GameObject.Find("Coin Amount").GetComponent<TextMeshProUGUI>();
 
         UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
     }
@@ -23,8 +24,6 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinCounter.text = "Coins: " + coinAmount.ToString();
-
         Debug.Log(UIThings2.blockTypeLoadout[1]);
     }
 
@@ -34,6 +33,7 @@ public class Shop : MonoBehaviour
         {
             coinAmount = coinAmount - itemCost;
             UIThings2.blockTypeLoadout[1] = 5;
+         //   UIThings2.loadout2.sprite = ui.blockType5;
         }
     }
 

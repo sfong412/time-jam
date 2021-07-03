@@ -12,8 +12,12 @@ public class UIThings2 : MonoBehaviour
     public Image image5;
     static public int blockType;
 
-    static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+    static public int[] blockTypeLoadout;
     public int scrollNumber;
+
+    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5;
+
+    static public Image loadout1, loadout2, loadout3, loadout4, loadout5;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +28,16 @@ public class UIThings2 : MonoBehaviour
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
 
-    //    blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        loadout1 = GameObject.Find("Platform 1").GetComponent<Image>();
+        loadout2 = GameObject.Find("Platform 2").GetComponent<Image>();
+        loadout3 = GameObject.Find("Platform 3").GetComponent<Image>();
+        loadout4 = GameObject.Find("Platform 4").GetComponent<Image>();
+        loadout5 = GameObject.Find("Platform 5").GetComponent<Image>();
+
+        if (blockTypeLoadout == null)
+        {
+            blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        }
     }
 
     // Update is called once per frame
