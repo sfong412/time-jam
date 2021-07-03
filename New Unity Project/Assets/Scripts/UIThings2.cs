@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIThings2 : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class UIThings2 : MonoBehaviour
 
     static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
 
+    static public int[] blockTypeInkCost = new int[5] { 30, 10, 15, 10, 40 };
+
     static public Image[] loadouts = new Image[5];
+
+    static public Transform[] prices = new Transform[5];
     public int scrollNumber;
 
     public Sprite blockType1, blockType2, blockType3, blockType4, blockType5;
@@ -34,6 +39,12 @@ public class UIThings2 : MonoBehaviour
         loadouts[3] = GameObject.Find("Platform 4").GetComponent<Image>();
         loadouts[4] = GameObject.Find("Platform 5").GetComponent<Image>();
 
+        prices[0] = GameObject.Find("Price 1").GetComponent<Transform>();
+        prices[1] = GameObject.Find("Price 2").GetComponent<Transform>();
+        prices[2] = GameObject.Find("Price 3").GetComponent<Transform>();
+        prices[3] = GameObject.Find("Price 4").GetComponent<Transform>();
+        prices[4] = GameObject.Find("Price 5").GetComponent<Transform>();
+
         if (blockTypeLoadout == null)
         {
             blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
@@ -45,18 +56,23 @@ public class UIThings2 : MonoBehaviour
             {
                 case 1:
                     loadouts[i].sprite = blockType1;
+                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[0].ToString();
                     break;
                 case 2:
                     loadouts[i].sprite = blockType2;
+                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[1].ToString();
                     break;
                 case 3:
                     loadouts[i].sprite = blockType3;
+                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[2].ToString();
                     break;
                 case 4:
                     loadouts[i].sprite = blockType4;
+                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[3].ToString();
                     break;
                 case 5:
                     loadouts[i].sprite = blockType5;
+                    prices[i].GetChild(0).GetComponent<TextMeshProUGUI>().text = blockTypeInkCost[4].ToString();
                     break;
             }
         }

@@ -1444,7 +1444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &324687308
 GameObject:
@@ -1673,7 +1673,7 @@ RectTransform:
   - {fileID: 1843138001}
   - {fileID: 901238165}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2347,7 +2347,7 @@ Transform:
   - {fileID: 2081938195}
   - {fileID: 1743787282}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -2857,7 +2857,7 @@ Transform:
   - {fileID: 130008839}
   - {fileID: 324687310}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661546805
 GameObject:
@@ -4314,7 +4314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852874193}
   m_Layer: 0
-  m_Name: Vertical Platform Price
+  m_Name: Price 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4711,7 +4711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946923160}
   m_Layer: 0
-  m_Name: Right Triangle Price
+  m_Name: Price 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6285,7 +6285,7 @@ RectTransform:
   - {fileID: 880670807}
   - {fileID: 1181981862}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6500,7 +6500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284667104}
   m_Layer: 0
-  m_Name: Flat Platform Price
+  m_Name: Price 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6532,7 +6532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294272315}
   m_Layer: 0
-  m_Name: Cage Platform Price
+  m_Name: Price 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7760,7 +7760,7 @@ RectTransform:
   m_Children:
   - {fileID: 1964380988}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7900,7 +7900,7 @@ RectTransform:
   - {fileID: 2009879448}
   - {fileID: 1925302241}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8813,7 +8813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748585708}
   m_Layer: 0
-  m_Name: Left Triangle Price
+  m_Name: Price 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9037,6 +9037,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 494779484}
   - {fileID: 654045592}
   - {fileID: 2144463201}
   - {fileID: 311043292}
@@ -9046,7 +9047,6 @@ RectTransform:
   - {fileID: 1522869364}
   - {fileID: 1209696100}
   - {fileID: 2031531042}
-  - {fileID: 494779484}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10374,7 +10374,7 @@ RectTransform:
   - {fileID: 445655924}
   - {fileID: 75884932}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10912,7 +10912,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11447,7 +11447,7 @@ RectTransform:
   - {fileID: 1134139635}
   - {fileID: 1878911945}
   m_Father: {fileID: 1810518842}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

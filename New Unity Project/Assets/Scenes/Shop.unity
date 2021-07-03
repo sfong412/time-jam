@@ -687,7 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99489063}
   m_Layer: 0
-  m_Name: Flat Platform Price
+  m_Name: Price 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -719,7 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158159117}
   m_Layer: 0
-  m_Name: Cage Platform Price
+  m_Name: Price 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,7 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410995849}
   m_Layer: 0
-  m_Name: Right Triangle Price
+  m_Name: Price 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2079,7 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760689145}
   m_Layer: 0
-  m_Name: Left Triangle Price
+  m_Name: Price 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,7 +2766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387918134}
   m_Layer: 0
-  m_Name: Vertical Platform Price
+  m_Name: Price 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

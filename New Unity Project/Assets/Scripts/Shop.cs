@@ -36,6 +36,7 @@ public class Shop : MonoBehaviour
     {
         UIThings2.blockTypeLoadout[test] = 5;
         UIThings2.loadouts[test].sprite = ui.blockType5;
+       // UIThings2.prices[test].GetChild(0).GetComponent<TextMeshProUGUI>().text = ui.blockTypeInkCost[5].ToString();
     }
 
     public void StartGame()
