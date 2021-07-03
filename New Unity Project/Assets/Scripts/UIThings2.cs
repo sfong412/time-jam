@@ -15,6 +15,8 @@ public class UIThings2 : MonoBehaviour
     static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
     public int scrollNumber;
 
+    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5;
+
     // Start is called before the first frame update
     void Start()
     {

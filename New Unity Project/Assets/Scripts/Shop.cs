@@ -6,27 +6,19 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Shop : MonoBehaviour
-{
-    public int coinAmount;
-
-    public GameObject blackFade;
+{    public GameObject blackFade;
 
     TextMeshProUGUI coinCounter;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinAmount = 1500;
-        coinCounter = GameObject.Find("Coin Amount").GetComponent<TextMeshProUGUI>();
-
         UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
     }
 
     // Update is called once per frame
     void Update()
     {
-        coinCounter.text = "Coins: " + coinAmount.ToString();
-
         Debug.Log(UIThings2.blockTypeLoadout[1]);
     }
     
@@ -35,13 +27,9 @@ public class Shop : MonoBehaviour
         StartCoroutine(blackFade22());
     }
 
-    public void BuyItem(int itemCost)
+    public void GetItem()
     {
-        if (coinAmount >= itemCost)
-        {
-            coinAmount = coinAmount - itemCost;
-            UIThings2.blockTypeLoadout[1] = 5;
-        }
+        UIThings2.blockTypeLoadout[1] = 5;
     }
 
     public void StartGame()
