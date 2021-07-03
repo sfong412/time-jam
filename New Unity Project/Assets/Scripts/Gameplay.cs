@@ -41,6 +41,8 @@ public class Gameplay : MonoBehaviour
     public GameObject block3;
     public GameObject block4;
     public GameObject block5;
+
+    public GameObject block6;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,7 @@ public class Gameplay : MonoBehaviour
 
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
 
-        
+
     }
 
     void Awake()
@@ -68,88 +70,92 @@ public class Gameplay : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
-      //Slows down time
-         if (Input.GetKey(KeyCode.LeftShift))
+        //Slows down time
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-           
-           
-            slowDownThereBuster = true;         
+
+
+            slowDownThereBuster = true;
             Time.timeScale = slowDownFactor;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             //Debug.Log("stamin up");
-           
-          
-            
-           
+
+
+
+
         }
-        else 
+        else
         {
-            slowDownThereBuster = false; 
+            slowDownThereBuster = false;
             Time.timeScale = 1;
             slowDownFactor = 1;
         }
 
         if (canSlow == false)
         {
-            slowDownThereBuster = false; 
+            slowDownThereBuster = false;
             Time.timeScale = 1;
             slowDownFactor = 1;
         }
 
-        switch(UIThings2.blockType)
+        switch (UIThings2.blockType)
         {
-            case 1: 
-            currentInkCost = 30;
-            break;
+            case 1:
+                currentInkCost = 30;
+                break;
 
-            case 2: 
-            currentInkCost = 10;
-            break;
+            case 2:
+                currentInkCost = 10;
+                break;
 
-            case 3: 
-            currentInkCost = 15;
-            break;
+            case 3:
+                currentInkCost = 15;
+                break;
 
-            case 4: 
-            currentInkCost = 10;
-            break;
+            case 4:
+                currentInkCost = 10;
+                break;
 
             case 5:
-            currentInkCost = 40;
-            break;
+                currentInkCost = 40;
+                break;
+
+            case 6:
+                currentInkCost = 25;
+                break;
 
         }
 
-    
+
         if (stop.stopping == false)
         {
-              movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
+            movingThing.Translate(scrollSpeed * Time.deltaTime, 0f, 0f);
         }
-    
 
-  
-      
+
+
+
     }
 
     void FixedUpdate()
     {
         if (slowDownThereBuster == true)
         {
-            
-            
-                if (slowDownFactor > 0.2f)
-             {
-                    slowDownFactor -= 0.04f;
-             }
-            
-             
-          
-                        
+
+
+            if (slowDownFactor > 0.2f)
+            {
+                slowDownFactor -= 0.04f;
+            }
+
+
+
+
         }
-       
+
     }
 
-    
+
 
     void OnMouseDown()
     {
@@ -159,45 +165,50 @@ public class Gameplay : MonoBehaviour
             mousePos.z = mainCamera.nearClipPlane;
             worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
 
-        float size = 0.5f;
+            float size = 0.5f;
 
-        //clickPoint -= transform.position;
+            //clickPoint -= transform.position;
 
-        int xCount = Mathf.RoundToInt(worldPosition.x / size);
-        int yCount = Mathf.RoundToInt(worldPosition.y / size);
-        int zCount = Mathf.RoundToInt(worldPosition.z / size);
+            int xCount = Mathf.RoundToInt(worldPosition.x / size);
+            int yCount = Mathf.RoundToInt(worldPosition.y / size);
+            int zCount = Mathf.RoundToInt(worldPosition.z / size);
 
-        Vector3 result = new Vector3(
-            (float)xCount * size,
-            (float)yCount * size,
-            (float)zCount * size);
-        
-        switch(UIThings2.blockType)
+            Vector3 result = new Vector3(
+                (float)xCount * size,
+                (float)yCount * size,
+                (float)zCount * size);
+
+            switch (UIThings2.blockType)
             {
-                case 1: 
-                 Instantiate(block1, result, transform.rotation, placedBlocks);
-                 blockPlaced = true;
-                 break;
+                case 1:
+                    Instantiate(block1, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
 
-                case 2: 
-                  Instantiate(block2, result, transform.rotation, placedBlocks);
-                  blockPlaced = true;
-                  break;
+                case 2:
+                    Instantiate(block2, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
 
-                case 3: 
-                 Instantiate(block3, result, transform.rotation, placedBlocks);
-                 blockPlaced = true;
-                 break;
+                case 3:
+                    Instantiate(block3, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
 
                 case 4:
-                 Instantiate(block4, result, transform.rotation, placedBlocks);
-                 blockPlaced = true;
-                 break;
+                    Instantiate(block4, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
 
-                case 5: 
-                  Instantiate(block5, result, transform.rotation, placedBlocks);
-                  blockPlaced = true;
-                  break;
+                case 5:
+                    Instantiate(block5, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
+
+                case 6:
+                    Instantiate(block6, result, Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f), placedBlocks);
+                    blockPlaced = true;
+                    break;
             }
         }
         else
@@ -205,9 +216,9 @@ public class Gameplay : MonoBehaviour
             shake = true;
         }
 
-        
-        
-        
-        
+
+
+
+
     }
 }

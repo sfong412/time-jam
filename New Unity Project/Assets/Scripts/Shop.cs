@@ -23,7 +23,7 @@ public class Shop : MonoBehaviour
 
         if (UIThings2.blockTypeLoadout == null)
         {
-            UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+            UIThings2.blockTypeLoadout = new int[6] { 1, 2, 3, 4, 5, 6 };
         }
     }
 
@@ -69,28 +69,35 @@ public class Shop : MonoBehaviour
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.8f, 0.7f, 1f);
                     rectTransform.sizeDelta = new Vector2(36.7f, 153.3f);
                     priceText.text = UIThings2.blockTypeInkCost[1].ToString();
-                     break;
+                    break;
                 case 3:
                     UIThings2.loadouts[platform].sprite = ui.blockType3;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 180);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.7f, -2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = UIThings2.blockTypeInkCost[2].ToString();
-                     break;
+                    break;
                 case 4:
                     UIThings2.loadouts[platform].sprite = ui.blockType4;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 90);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = UIThings2.blockTypeInkCost[3].ToString();
-                     break;
+                    break;
                 case 5:
                     UIThings2.loadouts[platform].sprite = ui.blockType5;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = UIThings2.blockTypeInkCost[4].ToString();
-                     break;
+                    break;
+                case 6:
+                    UIThings2.loadouts[platform].sprite = ui.blockType6;
+                    UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 180);
+                    UIThings2.loadouts[platform].transform.localScale = new Vector3(1f, 1f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
+                    priceText.text = UIThings2.blockTypeInkCost[5].ToString();
+                    break;
             }
 
             //   UIThings2.loadouts[platform].sprite = ui.blockType5;

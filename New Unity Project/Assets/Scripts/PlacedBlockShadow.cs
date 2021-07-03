@@ -16,6 +16,8 @@ public class PlacedBlockShadow : MonoBehaviour
     public Sprite leftTriangleBlock;
     public Sprite cageBlock;
 
+    public Sprite jumpPadBlock;
+
     Camera mainCamera;
     UIThings2 selector;
 
@@ -73,23 +75,33 @@ public class PlacedBlockShadow : MonoBehaviour
         {
             case 1:
                 transform.localScale = new Vector3(7.27f, 5.23f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = horizontalBlock;
                 break;
             case 2:
                 transform.localScale = new Vector3(5.08f, 5.5f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = verticalBlock;
                 break;
             case 3:
                 transform.localScale = new Vector3(4f, 4f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = rightTriangleBlock;
                 break;
             case 4:
                 transform.localScale = new Vector3(4f, 4f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = leftTriangleBlock;
                 break;
             case 5:
                 transform.localScale = new Vector3(7f, 7f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = cageBlock;
+                break;
+            case 6:
+                transform.localScale = new Vector3(0.14f, 0.08f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 180);
+                spriteRenderer.sprite = jumpPadBlock;
                 break;
         }
     }

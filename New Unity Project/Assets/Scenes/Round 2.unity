@@ -1486,6 +1486,7 @@ MonoBehaviour:
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType6: {fileID: 0}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -2153,6 +2154,7 @@ MonoBehaviour:
   isgrounded: 0
   rb2d: {fileID: 470797601}
   itsTimeToStop: {fileID: 2144463204}
+  jumpHigh: 0
   Player: {fileID: 470797604}
 --- !u!61 &470797600
 BoxCollider2D:
@@ -3092,6 +3094,7 @@ MonoBehaviour:
   rightTriangleBlock: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   leftTriangleBlock: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  jumpPadBlock: {fileID: 21300000, guid: e0fba7d4b8b000042804c8a0584caf54, type: 3}
 --- !u!1 &695014921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7637,6 +7640,7 @@ MonoBehaviour:
   block3: {fileID: 6307049418291793356, guid: 76e086f2bca4f244ab63943e4cd7d75e, type: 3}
   block4: {fileID: 6307049418291793356, guid: 1b11ecba4241c5b4e85df474852aeea6, type: 3}
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
+  block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
 --- !u!4 &1521810343
 Transform:
   m_ObjectHideFlags: 0
@@ -8685,6 +8689,7 @@ MonoBehaviour:
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType6: {fileID: 0}
 --- !u!1 &1744678201
 GameObject:
   m_ObjectHideFlags: 0

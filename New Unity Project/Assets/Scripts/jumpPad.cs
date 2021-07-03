@@ -9,7 +9,7 @@ public class jumpPad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jump = GameObject.Find("Player").GetComponent<CharacterController2D>();
     }
 
     // Update is called once per frame

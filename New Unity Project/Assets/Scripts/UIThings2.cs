@@ -13,16 +13,16 @@ public class UIThings2 : MonoBehaviour
     public Image image5;
     static public int blockType;
 
-    static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+    static public int[] blockTypeLoadout = new int[6] { 1, 2, 3, 4, 5, 6 };
 
-    static public int[] blockTypeInkCost = new int[5] { 30, 10, 15, 10, 40 };
+    static public int[] blockTypeInkCost = new int[6] { 30, 10, 15, 10, 40, 25 };
 
     static public Image[] loadouts = new Image[5];
 
     static public Transform[] prices = new Transform[5];
     public int scrollNumber;
 
-    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5;
+    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class UIThings2 : MonoBehaviour
 
         if (blockTypeLoadout == null)
         {
-            blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+            blockTypeLoadout = new int[6] { 1, 2, 3, 4, 5, 6};
         }
 
         for (int i = 0; i < blockTypeLoadout.Length; i++)
@@ -91,6 +91,13 @@ public class UIThings2 : MonoBehaviour
                     loadouts[i].transform.localScale = new Vector3(0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = blockTypeInkCost[4].ToString();
+                    break;
+                case 6:
+                    loadouts[i].sprite = blockType6;
+                    loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 180);
+                    loadouts[i].transform.localScale = new Vector3(1f, 1f, 1f);
+                    rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
+                    priceText.text = blockTypeInkCost[5].ToString();
                     break;
             }
         }
