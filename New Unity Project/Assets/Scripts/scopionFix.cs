@@ -23,6 +23,11 @@ public class scopionFix : MonoBehaviour
 
        }
        }
+
+       if (other.tag == "jump")
+       {
+           directionguy.high = true;
+       }
     
        }
 

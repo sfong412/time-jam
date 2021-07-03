@@ -7143,12 +7143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformSpawnY: 0
-  maxSpikes: 5
-  maxAirEnemies: 2
-  maxGroundEnemies: 2
-  groundHazardSpawnTimer: 40
-  airHazardspawnTimer: 25
-  platformSpawnTimer: 80
+  maxSpikes: 15
+  maxAirEnemies: 7
+  maxGroundEnemies: 5
+  groundHazardSpawnTimer: 20
+  airHazardspawnTimer: 30
+  platformSpawnTimer: 45
   hazard: {fileID: 5198866977051932483, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
   upsidedownHazard: {fileID: 5198866977051932483, guid: d6ce0a716c1ee4f4e83f49a00009e21e, type: 3}
   airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}

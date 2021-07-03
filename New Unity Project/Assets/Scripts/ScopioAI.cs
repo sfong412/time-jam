@@ -9,6 +9,8 @@ public class ScopioAI : MonoBehaviour
     public float shouldIJump;
     public bool shouldIReally;
 
+    public bool high;
+
     public bool ignore;
     public int direction = 1;
 
@@ -50,6 +52,12 @@ public Rigidbody2D rigidbody2D1;
         {
             Jump();
             shouldIReally = false;
+        }
+
+        if (high == true)
+        {
+            Jump2();
+            high = false;
         }
         
     }
@@ -94,6 +102,13 @@ public Rigidbody2D rigidbody2D1;
    {
        rigidbody2D1.AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
    }
+
+    void Jump2()
+   {
+       rigidbody2D1.AddForce(new Vector2(0, 2), ForceMode2D.Impulse);
+   }
+
+
 
     
 

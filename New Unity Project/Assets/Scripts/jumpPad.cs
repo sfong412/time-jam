@@ -6,6 +6,9 @@ public class jumpPad : MonoBehaviour
 {
 
     public CharacterController2D jump;
+    public CquirrelAI jump2;
+
+    public ScopioAI jump3;
     // Start is called before the first frame update
     void Start()
     {
