@@ -6,14 +6,19 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Shop : MonoBehaviour
-{    public GameObject blackFade;
-
-    TextMeshProUGUI coinCounter;
+{
+    public GameObject blackFade;
+    UIThings2 ui;
 
     // Start is called before the first frame update
     void Start()
     {
-        UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        ui = GameObject.Find("Selectors").GetComponent<UIThings2>();
+
+        if (UIThings2.blockTypeLoadout == null)
+        {
+            UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        }
     }
 
     // Update is called once per frame
@@ -21,7 +26,7 @@ public class Shop : MonoBehaviour
     {
         Debug.Log(UIThings2.blockTypeLoadout[1]);
     }
-    
+
     void Awake()
     {
         StartCoroutine(blackFade22());
@@ -30,6 +35,7 @@ public class Shop : MonoBehaviour
     public void GetItem()
     {
         UIThings2.blockTypeLoadout[1] = 5;
+        UIThings2.loadouts[2].sprite = ui.blockType5;
     }
 
     public void StartGame()

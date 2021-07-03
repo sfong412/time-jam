@@ -75,14 +75,13 @@ public class PlacedBlockShadow : MonoBehaviour
                 transform.localScale = new Vector3(7.27f, 5.23f, 1f);
                 spriteRenderer.sprite = horizontalBlock;
                 break;
-            //case 2 and case 3 are reversed because the selectors are flipped.
             case 2:
-                transform.localScale = new Vector3(4f, 4f, 1f);
-                spriteRenderer.sprite = rightTriangleBlock;
-                break;
-            case 3:
                 transform.localScale = new Vector3(5.08f, 5.5f, 1f);
                 spriteRenderer.sprite = verticalBlock;
+                break;
+            case 3:
+                transform.localScale = new Vector3(4f, 4f, 1f);
+                spriteRenderer.sprite = rightTriangleBlock;
                 break;
             case 4:
                 transform.localScale = new Vector3(4f, 4f, 1f);

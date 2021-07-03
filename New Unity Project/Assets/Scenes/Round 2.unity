@@ -1406,6 +1406,11 @@ MonoBehaviour:
   image4: {fileID: 1384341487}
   image5: {fileID: 1951487071}
   scrollNumber: 0
+  blockType1: {fileID: -8177916521313437856, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType2: {fileID: 3665973890185625742, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0

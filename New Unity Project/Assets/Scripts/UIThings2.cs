@@ -13,6 +13,8 @@ public class UIThings2 : MonoBehaviour
     static public int blockType;
 
     static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+
+    static public Image[] loadouts = new Image[5];
     public int scrollNumber;
 
     public Sprite blockType1, blockType2, blockType3, blockType4, blockType5;
@@ -26,7 +28,38 @@ public class UIThings2 : MonoBehaviour
         image4.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
 
-    //    blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        loadouts[0] = GameObject.Find("Platform 1").GetComponent<Image>();
+        loadouts[1] = GameObject.Find("Platform 2").GetComponent<Image>();
+        loadouts[2] = GameObject.Find("Platform 3").GetComponent<Image>();
+        loadouts[3] = GameObject.Find("Platform 4").GetComponent<Image>();
+        loadouts[4] = GameObject.Find("Platform 5").GetComponent<Image>();
+
+        if (blockTypeLoadout == null)
+        {
+            blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        }
+
+        for (int i = 0; i < blockTypeLoadout.Length; i++)
+        {
+            switch (blockTypeLoadout[i])
+            {
+                case 1:
+                    loadouts[i].sprite = blockType1;
+                    break;
+                case 2:
+                    loadouts[i].sprite = blockType2;
+                    break;
+                case 3:
+                    loadouts[i].sprite = blockType3;
+                    break;
+                case 4:
+                    loadouts[i].sprite = blockType4;
+                    break;
+                case 5:
+                    loadouts[i].sprite = blockType5;
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -48,11 +81,11 @@ public class UIThings2 : MonoBehaviour
                 break;
 
             case 1:
-                three();
+                two();
                 break;
 
             case 2:
-                two();
+                three();
                 break;
 
             case 3:

@@ -569,7 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491baf42ff9f0ed42b71ca9fcaf6ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAmount: 0
   blackFade: {fileID: 689353543}
 --- !u!1 &62664801
 GameObject:
