@@ -407,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107304351}
   m_Layer: 0
-  m_Name: Right Triangle Price
+  m_Name: Price 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -857,7 +857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 179.8, y: 16.114166}
+  m_AnchoredPosition: {x: 45.2, y: 16.114166}
   m_SizeDelta: {x: 188.1577, y: 155.2532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191642512
@@ -1406,6 +1406,11 @@ MonoBehaviour:
   image4: {fileID: 1384341487}
   image5: {fileID: 1951487071}
   scrollNumber: 0
+  blockType1: {fileID: -8177916521313437856, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType2: {fileID: 3665973890185625742, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
+  blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -1645,7 +1650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.2, y: 16.114166}
+  m_AnchoredPosition: {x: 179.8, y: 16.114166}
   m_SizeDelta: {x: 188.1577, y: 155.2532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443248520
@@ -3291,7 +3296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769306658}
   m_Layer: 0
-  m_Name: Vertical Platform Price
+  m_Name: Price 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3323,7 +3328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 782245880}
   m_Layer: 0
-  m_Name: Flat Platform Price
+  m_Name: Price 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5189,7 +5194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323995063}
   m_Layer: 0
-  m_Name: Left Triangle Price
+  m_Name: Price 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5765,8 +5770,8 @@ MonoBehaviour:
   selector: {fileID: 324687309}
   guiBars: {fileID: 1542899951}
   block1: {fileID: 6307049418291793356, guid: 8d327ea28d0541a42affeeae9e3c7ab3, type: 3}
-  block2: {fileID: 6307049418291793356, guid: 76e086f2bca4f244ab63943e4cd7d75e, type: 3}
-  block3: {fileID: 6307049418291793356, guid: dd6db137de3584c4d934bebf4f350fbd, type: 3}
+  block2: {fileID: 6307049418291793356, guid: dd6db137de3584c4d934bebf4f350fbd, type: 3}
+  block3: {fileID: 6307049418291793356, guid: 76e086f2bca4f244ab63943e4cd7d75e, type: 3}
   block4: {fileID: 6307049418291793356, guid: 1b11ecba4241c5b4e85df474852aeea6, type: 3}
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
 --- !u!4 &1521810343
@@ -6863,7 +6868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813789613}
   m_Layer: 0
-  m_Name: Cage Platform Price
+  m_Name: Price 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
