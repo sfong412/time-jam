@@ -43,6 +43,8 @@ public class Gameplay : MonoBehaviour
     public GameObject block5;
 
     public GameObject block6;
+
+    public GameObject block7;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,11 +107,11 @@ public class Gameplay : MonoBehaviour
                 break;
 
             case 2:
-                currentInkCost = 10;
+                currentInkCost = 15;
                 break;
 
             case 3:
-                currentInkCost = 15;
+                currentInkCost = 10;
                 break;
 
             case 4:
@@ -122,6 +124,10 @@ public class Gameplay : MonoBehaviour
 
             case 6:
                 currentInkCost = 25;
+                break;
+
+            case 7:
+                currentInkCost = 35;
                 break;
 
         }
@@ -208,6 +214,10 @@ public class Gameplay : MonoBehaviour
                 case 6:
                     Instantiate(block6, result, Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f), placedBlocks);
                     blockPlaced = true;
+                    break;
+                
+                case 7:
+                    Instantiate(block7, result, transform.rotation, placedBlocks);
                     break;
             }
         }
