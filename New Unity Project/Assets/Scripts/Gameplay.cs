@@ -144,7 +144,6 @@ public class Gameplay : MonoBehaviour
 
 
 
-
     }
 
     void FixedUpdate()
@@ -186,7 +185,8 @@ public class Gameplay : MonoBehaviour
             Vector3 result = new Vector3(
                 (float)xCount * size,
                 (float)yCount * size,
-                (float)zCount * size);
+                (float)zCount * size
+                );
 
             switch (UIThings2.blockType)
             {
@@ -230,10 +230,5 @@ public class Gameplay : MonoBehaviour
         {
             shake = true;
         }
-
-
-
-
-
     }
 }
