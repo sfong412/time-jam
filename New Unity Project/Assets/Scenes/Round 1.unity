@@ -5949,6 +5949,7 @@ MonoBehaviour:
   canPlace2: 0
   canSlow: 0
   movingThing: {fileID: 43546250}
+  audioMan: {fileID: 0}
   stop: {fileID: 2144463204}
   selector: {fileID: 324687309}
   guiBars: {fileID: 1542899951}
@@ -5959,6 +5960,7 @@ MonoBehaviour:
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
   block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
   block7: {fileID: 1976227159785723226, guid: 3f91904da49e5c843b856ac8f1f17b79, type: 3}
+  audioController: {fileID: 483723005}
 --- !u!4 &1521810343
 Transform:
   m_ObjectHideFlags: 0
