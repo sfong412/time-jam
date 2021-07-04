@@ -44,11 +44,8 @@ public class Shop : MonoBehaviour
 
     public void SelectItem(int blockType)
     {
-        if (isBuying == false)
-        {
-            isBuying = true;
-            currentBlockType = blockType;
-        }
+        isBuying = true;
+        currentBlockType = blockType;
     }
 
     public void PlaceItem(int platform)
