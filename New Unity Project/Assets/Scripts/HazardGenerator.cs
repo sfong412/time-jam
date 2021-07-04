@@ -108,7 +108,7 @@ public class HazardGenerator : MonoBehaviour
         platformSpawnY = -0.41f;
 
         //spawn position for air hazards
-        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.67f), transform.position.z);
+        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.5f), transform.position.z);
 
         RandomNumberGenerator();
         spawnGroundHazard(groundHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);

@@ -97,7 +97,7 @@ public class UIThings : MonoBehaviour
 
      IEnumerator StartRound()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10f);
         blackFade2.SetActive(false);
     }
 
