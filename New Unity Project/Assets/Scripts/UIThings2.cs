@@ -101,7 +101,7 @@ public class UIThings2 : MonoBehaviour
                     break;
 
                 case 7:
-                     loadouts[i].sprite = blockType7;
+                    loadouts[i].sprite = blockType7;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(1f, 1f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
