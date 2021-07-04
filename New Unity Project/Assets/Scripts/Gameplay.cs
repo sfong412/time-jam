@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Gameplay : MonoBehaviour
 {
     public float scrollSpeed = 1f;
-
     public float currentInkCost;
 
     public float currentCostThreshhold;
@@ -29,6 +28,8 @@ public class Gameplay : MonoBehaviour
     Vector3 worldPosition;
 
     Grid grid;
+
+    public AudioSource audioMan;
 
     public UIThings stop;
 
@@ -55,6 +56,8 @@ public class Gameplay : MonoBehaviour
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
 
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
+
+        audioMan = GetComponent<AudioSource>();
 
 
     }

@@ -13,6 +13,7 @@ public class jumpFix : MonoBehaviour
         {
             characterController2D.isgrounded = true;
             PlayerFix.SetBool("Jumped", false);
+            PlayerFix.SetBool("grounded", true);
         }
     }
 
@@ -21,6 +22,7 @@ public class jumpFix : MonoBehaviour
         if (other.tag == "Ground2")
         {
             characterController2D.isgrounded = false;
+              PlayerFix.SetBool("grounded", false);
         }
     }
 
@@ -30,6 +32,7 @@ public class jumpFix : MonoBehaviour
         {
             characterController2D.isgrounded = true;
             PlayerFix.SetBool("Jumped", false);
+              PlayerFix.SetBool("grounded", true);
         }
 
       

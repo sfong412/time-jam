@@ -18,11 +18,19 @@ public class UIThings : MonoBehaviour
 
     public Animator blackFade;
 
+    public Animator blackFade3;
+
+    public Animator audioTransistion;
+
     public GameObject blackFade2;
 
     public GameObject shadow;
     public GameObject Text1;
     public GameObject Text2;
+
+    public GameObject audioTransistion2;
+
+    
     [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
     
@@ -30,6 +38,8 @@ public class UIThings : MonoBehaviour
     {
          stopping = false;
          Being(Duration);
+         StartCoroutine(StartRound());
+         audioTransistion2.SetActive(true);
     }
 
     // Update is called once per frame
@@ -68,6 +78,7 @@ public class UIThings : MonoBehaviour
 
     IEnumerator UIAnimations()
     {
+        audioTransistion.SetBool("audioFade", true);
         blackFade.SetBool("transistion", true);
         yield return new WaitForSeconds(0.5f);
         Text1.SetActive(true);
@@ -79,8 +90,15 @@ public class UIThings : MonoBehaviour
     IEnumerator NextRound1()
     {
         blackFade2.SetActive(true);
+        blackFade3.SetBool("otherWay", true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(currentScene + 1);
+    }
+
+     IEnumerator StartRound()
+    {
+        yield return new WaitForSeconds(1);
+        blackFade2.SetActive(false);
     }
 
     public void NextRound()
