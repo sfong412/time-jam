@@ -23,6 +23,8 @@ public class Gameplay : MonoBehaviour
     public Transform movingThing;
 
     Transform placedBlocks;
+
+    PlacedBlockShadow placedBlockShadow;
     Camera mainCamera;
 
     Vector3 worldPosition;
@@ -55,6 +57,8 @@ public class Gameplay : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
+
+        placedBlockShadow = GameObject.Find("Placed Block Shadow").GetComponent<PlacedBlockShadow>();
 
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
 
@@ -165,7 +169,15 @@ public class Gameplay : MonoBehaviour
 
     }
 
+    void OnMouseEnter()
+    {
+        placedBlockShadow.ableToPlace = true;
+    }
 
+    void OnMouseExit()
+    {
+        placedBlockShadow.ableToPlace = false;
+    }
 
     void OnMouseDown()
     {

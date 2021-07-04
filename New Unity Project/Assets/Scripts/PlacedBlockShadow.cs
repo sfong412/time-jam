@@ -20,6 +20,8 @@ public class PlacedBlockShadow : MonoBehaviour
 
     public Sprite heavyBlock;
 
+    public bool ableToPlace = true;
+
     Camera mainCamera;
     UIThings2 selector;
 
@@ -64,7 +66,7 @@ public class PlacedBlockShadow : MonoBehaviour
 
     void changeSprite()
     {
-        if (ink.remainingHealth >= gameplay.currentInkCost)
+        if (ink.remainingHealth >= gameplay.currentInkCost && ableToPlace == true)
         {
             spriteRenderer.color = new Color(0.42f, 1f, 0.56f, 0.35f);
         }
