@@ -124,7 +124,7 @@ public class UIThings3 : MonoBehaviour
 
        if (gameplaying.slowDownThereBuster == true)
        {
-           FocusDeplete(0.2f);
+           FocusDeplete(0.3f);
        }
 
        if (remainingHealth < gameplaying.currentInkCost)
