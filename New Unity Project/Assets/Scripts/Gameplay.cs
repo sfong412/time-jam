@@ -66,6 +66,7 @@ public class Gameplay : MonoBehaviour
     void Awake()
     {
         canSlow = true;
+        Application.targetFrameRate = 120;
     }
 
     // Update is called once per frame

@@ -6311,7 +6311,7 @@ MonoBehaviour:
   focusBar: {fileID: 901238166}
   eraserBar: {fileID: 75884933}
   healthCounter2: {fileID: 751995652}
-  smoothing: 5
+  smoothing: 10
   canErase: 0
   heal: 0
   healCoolDown1: 0
