@@ -46,6 +46,7 @@ public class Gameplay : MonoBehaviour
     public GameObject block6;
 
     public GameObject block7;
+    public GameObject audioController;
     // Start is called before the first frame update
     void Start()
     {
@@ -221,6 +222,7 @@ public class Gameplay : MonoBehaviour
                 
                 case 7:
                     Instantiate(block7, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
                     break;
             }
         }

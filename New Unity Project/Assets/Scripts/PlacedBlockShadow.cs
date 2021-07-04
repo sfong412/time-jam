@@ -18,6 +18,8 @@ public class PlacedBlockShadow : MonoBehaviour
 
     public Sprite jumpPadBlock;
 
+    public Sprite heavyBlock;
+
     Camera mainCamera;
     UIThings2 selector;
 
@@ -102,6 +104,11 @@ public class PlacedBlockShadow : MonoBehaviour
                 transform.localScale = new Vector3(0.14f, 0.08f, 1f);
                 transform.localRotation = Quaternion.Euler(0, 0, 180);
                 spriteRenderer.sprite = jumpPadBlock;
+                break;
+            case 7:
+                transform.localScale = new Vector3(0.7f, 3.4f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 180f);
+                spriteRenderer.sprite = heavyBlock;
                 break;
         }
     }
