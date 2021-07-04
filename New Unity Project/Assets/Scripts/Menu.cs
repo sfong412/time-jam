@@ -9,6 +9,8 @@ public class Menu : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject back; 
+
+    public GameObject blackFade;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Round 1");
+       StartCoroutine(startGame());
     }
 
     public void QuitGame()
@@ -42,4 +44,12 @@ public class Menu : MonoBehaviour
         back.SetActive(false);
         mainMenu.SetActive(true);
     }
+
+    IEnumerator startGame()
+    {
+        blackFade.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
+    }
+
 }

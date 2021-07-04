@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: 4bee4dca41deb7b45a75302e6c76f728
   - enabled: 1
-    path: Assets/Scenes/Round 2.unity
+    path: Assets/Scenes/scrapped round 2.unity
     guid: b9cbe3c14c7590841b379e08e1778492
   m_configObjects: {}

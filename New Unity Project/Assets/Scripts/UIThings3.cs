@@ -98,7 +98,7 @@ public class UIThings3 : MonoBehaviour
 
       
 
-       if (remainingFocus > 1)
+       if (remainingFocus > 10)
        {
             gameplaying.canSlow = true;
        }
@@ -167,12 +167,16 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        
+        if (remainingHealth < 101)
+        {
             Healing(InkRegenRate); 
-        HealingFocus(0.6f);
-        
-        
+        }
+        if (remainingFocus < 151)
+        {
+            HealingFocus(0.6f); 
+        }
+            
+          
     }
 
    

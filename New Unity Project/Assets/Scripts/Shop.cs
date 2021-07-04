@@ -8,6 +8,11 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     public GameObject blackFade;
+    public Animator blackFade2;
+
+    public Animator audioFade2;
+
+    public int nextRoundNumber;
     UIThings2 ui;
 
     bool isBuying = false;
@@ -113,12 +118,22 @@ public class Shop : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(3);
+        StartCoroutine(nextRound());
     }
 
     IEnumerator blackFade22()
     {
         yield return new WaitForSeconds(1);
         blackFade.SetActive(false);
+    }
+
+    IEnumerator nextRound()
+    {
+        blackFade.SetActive(true);
+        blackFade2.SetBool("fade", true);
+        audioFade2.SetBool("fade2", true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(nextRoundNumber);
+
     }
 }
