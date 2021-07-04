@@ -1487,6 +1487,7 @@ MonoBehaviour:
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: 0}
+  blockType7: {fileID: 0}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -3075,7 +3076,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &684164837
 MonoBehaviour:
@@ -7641,6 +7642,7 @@ MonoBehaviour:
   block4: {fileID: 6307049418291793356, guid: 1b11ecba4241c5b4e85df474852aeea6, type: 3}
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
   block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+  block7: {fileID: 0}
 --- !u!4 &1521810343
 Transform:
   m_ObjectHideFlags: 0
@@ -8690,6 +8692,7 @@ MonoBehaviour:
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: 0}
+  blockType7: {fileID: 0}
 --- !u!1 &1744678201
 GameObject:
   m_ObjectHideFlags: 0

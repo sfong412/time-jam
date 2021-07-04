@@ -25,10 +25,11 @@ public class UIThings : MonoBehaviour
     public GameObject Text2;
     [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
-        Being(Duration);
-        stopping = false;
+         stopping = false;
+         Being(Duration);
     }
 
     // Update is called once per frame
@@ -85,5 +86,6 @@ public class UIThings : MonoBehaviour
     public void NextRound()
     {
         StartCoroutine(NextRound1());
+    
     }
 }

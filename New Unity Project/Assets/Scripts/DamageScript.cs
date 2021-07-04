@@ -19,6 +19,7 @@ public class DamageScript : MonoBehaviour
           if (other.tag == "goner")
         {
             triggerDamaged = true;
+            Debug.Log("hit");
         }
     }
 
@@ -31,7 +32,7 @@ public class DamageScript : MonoBehaviour
 
         if (triggerDamaged == true)
         {
-            if (!stopnow)
+            if (stopnow.stopping == false)
             {
             StartCoroutine(damaged2());
             triggerDamaged = false;
@@ -42,6 +43,7 @@ public class DamageScript : MonoBehaviour
 
     IEnumerator damaged2()
     {
+
         cameraMain.SetBool("shook", true);
         damaged = true;
         yield return null;

@@ -12,6 +12,10 @@ public class UIThings3 : MonoBehaviour
 
     public float InkRegenRate;
 
+    public float enemyDamageAmount;
+
+    public float currentEnemyDamageAmount;
+
     public float healthCounter;
 
     public float remainingFocus;
@@ -57,6 +61,7 @@ public class UIThings3 : MonoBehaviour
         remainingEraser = startingEraser;
         eraserBar.maxValue = startingEraser;
         eraserBar.value = remainingEraser;
+        currentEnemyDamageAmount = enemyDamageAmount;
     }
 
     void Awake()
@@ -101,9 +106,11 @@ public class UIThings3 : MonoBehaviour
        if (damageScript.damaged == true && pleaseStop.stopping == false)
        {
           
-                      DamageTaken(10);
+         DamageTaken(currentEnemyDamageAmount);
                               
        }
+       
+
 
        if (healthCounter > remainingHealth)
        {

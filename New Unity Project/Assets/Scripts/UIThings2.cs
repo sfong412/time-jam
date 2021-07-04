@@ -165,7 +165,6 @@ public class UIThings2 : MonoBehaviour
         image5.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
         blockType = blockTypeLoadout[0];
 
-        Debug.Log("button one clicked");
     }
 
     public void two()

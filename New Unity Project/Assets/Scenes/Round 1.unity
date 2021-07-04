@@ -1412,6 +1412,7 @@ MonoBehaviour:
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: 0}
+  blockType7: {fileID: 0}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -1920,7 +1921,6 @@ GameObject:
   - component: {fileID: 470797600}
   - component: {fileID: 470797599}
   - component: {fileID: 470797604}
-  - component: {fileID: 470797605}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2082,32 +2082,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &470797605
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470797598}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.13, y: 0.16}
-    newSize: {x: 0.13, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.16}
-  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2731,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &684164837
 MonoBehaviour:
@@ -3610,6 +3584,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849396114}
   m_CullTransparentMesh: 1
+--- !u!1001 &852310165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1160040605712977760, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_Name
+      value: Scopion (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.042145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160040605712977770, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
 --- !u!1 &852445612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4809,15 +4840,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.16}
+    newSize: {x: 0.13, y: 0.16}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.16}
+  m_Size: {x: 0.13, y: 0.155}
   m_EdgeRadius: 0
 --- !u!1 &1181981861
 GameObject:
@@ -5778,6 +5809,7 @@ MonoBehaviour:
   block4: {fileID: 6307049418291793356, guid: 1b11ecba4241c5b4e85df474852aeea6, type: 3}
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
   block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+  block7: {fileID: 0}
 --- !u!4 &1521810343
 Transform:
   m_ObjectHideFlags: 0
@@ -6101,6 +6133,8 @@ MonoBehaviour:
   startingHealth: 100
   remainingHealth: 0
   InkRegenRate: 0.1
+  enemyDamageAmount: 10
+  currentEnemyDamageAmount: 0
   healthCounter: 0
   remainingFocus: 0
   startingFocus: 150
@@ -8785,7 +8819,7 @@ MonoBehaviour:
   triggerDamaged: 0
   gonered: 0
   cameraMain: {fileID: 519420030}
-  stopnow: {fileID: 0}
+  stopnow: {fileID: 2144463204}
 --- !u!61 &2144735750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8802,13 +8836,13 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.16}
+    newSize: {x: 0.13, y: 0.16}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.18}
+  m_Size: {x: 0.13, y: 0.155}
   m_EdgeRadius: 0
