@@ -822,7 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platforms1: {fileID: 7135699730995980158, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   platforms2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
-  platforms3: {fileID: 0}
+  platforms3: {fileID: 8167577531054015681, guid: 4b81bd3b77cc5104c8a6ba5a96d003d1, type: 3}
 --- !u!1 &191642510
 GameObject:
   m_ObjectHideFlags: 0
