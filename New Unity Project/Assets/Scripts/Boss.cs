@@ -33,4 +33,13 @@ public class Boss : MonoBehaviour
             timer = Random.Range(3f, 8f);
         }
     }
+    
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Insult(Clone)" && other.gameObject.GetComponent<BossInsult>().isReflected == true)
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
 }
