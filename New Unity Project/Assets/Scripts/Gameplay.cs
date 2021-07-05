@@ -229,7 +229,7 @@ public class Gameplay : MonoBehaviour
                     break;
 
                 case 6:
-                    Instantiate(block6, result, Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f), placedBlocks);
+                    Instantiate(block6, result, transform.rotation, placedBlocks);
                     blockPlaced = true;
                     break;
                 

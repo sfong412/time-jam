@@ -30,6 +30,8 @@ public class UIThings : MonoBehaviour
 
     public GameObject audioTransistion2;
 
+    public GameObject audioMan2;
+
     
     [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
@@ -84,7 +86,8 @@ public class UIThings : MonoBehaviour
         Text1.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         Text2.SetActive(true);
-
+       audioMan2.SetActive(true);
+        
     }
 
     IEnumerator NextRound1()

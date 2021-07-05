@@ -4181,7 +4181,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 20a684c11a036ea469f5710ad8bd49bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 84681f535d43e034a9d5dce8eb26d56e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -5158,7 +5158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &689353544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8704,17 +8704,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392200554}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5000002, y: 1.5000002, z: 1}
   m_Children: []
   m_Father: {fileID: 1683287971}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -349.63007, y: -21.100014}
-  m_SizeDelta: {x: 91.1, y: 19.4}
+  m_SizeDelta: {x: 81.7, y: 25.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392200556
 MonoBehaviour:
@@ -8736,7 +8736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0fba7d4b8b000042804c8a0584caf54, type: 3}
+  m_Sprite: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10670,7 +10670,7 @@ MonoBehaviour:
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
-  blockType6: {fileID: 21300000, guid: e0fba7d4b8b000042804c8a0584caf54, type: 3}
+  blockType6: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType7: {fileID: 0}
 --- !u!1 &1827565091
 GameObject:

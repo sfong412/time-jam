@@ -16,6 +16,8 @@ public class UIThings3 : MonoBehaviour
 
     public float currentEnemyDamageAmount;
 
+    public float currentScorpionDamageAmount;
+
     public float healthCounter;
 
     public float remainingFocus;
@@ -107,6 +109,13 @@ public class UIThings3 : MonoBehaviour
        {
           
          DamageTaken(currentEnemyDamageAmount);
+                              
+       }
+
+        if (damageScript.damaged3 == true && pleaseStop.stopping == false)
+       {
+          
+         DamageTaken(currentScorpionDamageAmount);
                               
        }
        
@@ -277,6 +286,15 @@ public class UIThings3 : MonoBehaviour
          if (remainingFocus - damage >= 0)
         {
             remainingEraser -= damage;
+            if (remainingHealth + gameplaying.currentInkCost <= startingHealth)
+            {
+                 remainingHealth += gameplaying.currentInkCost;
+            }
+            else
+            {
+                remainingHealth = startingHealth;
+            }
+        
              
         }
         else 
