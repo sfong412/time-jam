@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 5302421553260242544}
   - component: {fileID: 5302421553260242547}
   - component: {fileID: 5302421553260242546}
+  - component: {fileID: -8453488272094714816}
   m_Layer: 0
   m_Name: Block 6
   m_TagString: Untagged

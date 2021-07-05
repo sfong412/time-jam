@@ -95,7 +95,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 6:
                     UIThings2.loadouts[platform].sprite = ui.blockType6;
-                    UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 180);
+                    UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(1f, 1f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = UIThings2.blockTypeInkCost[5].ToString();

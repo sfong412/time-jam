@@ -78,4 +78,14 @@ public class PlacedBlock : Hazard
            
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Insult(Clone)" && other.gameObject.GetComponent<BossInsult>().isReflected == false)
+        {
+            other.gameObject.GetComponent<BossInsult>().speed = 0.01f;
+            other.gameObject.GetComponent<BossInsult>().isReflected = true;
+            Debug.Log("touched");
+        }
+    }
 }
