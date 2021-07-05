@@ -3095,8 +3095,9 @@ MonoBehaviour:
   rightTriangleBlock: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   leftTriangleBlock: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
-  jumpPadBlock: {fileID: 21300000, guid: e0fba7d4b8b000042804c8a0584caf54, type: 3}
+  jumpPadBlock: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   heavyBlock: {fileID: -334945500499578240, guid: b10d98cad283c174d83c56999237f31c, type: 3}
+  ableToPlace: 1
 --- !u!1 &695014921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7971,6 +7972,7 @@ MonoBehaviour:
   InkRegenRate: 0.1
   enemyDamageAmount: 0
   currentEnemyDamageAmount: 0
+  currentScorpionDamageAmount: 0
   healthCounter: 0
   remainingFocus: 0
   startingFocus: 150
@@ -8696,7 +8698,7 @@ MonoBehaviour:
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType4: {fileID: 4861225214099859983, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
-  blockType6: {fileID: 0}
+  blockType6: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType7: {fileID: 0}
 --- !u!1 &1744678201
 GameObject:
@@ -11531,6 +11533,7 @@ MonoBehaviour:
   Text1: {fileID: 880670806}
   Text2: {fileID: 1181981861}
   audioTransistion2: {fileID: 0}
+  audioMan2: {fileID: 0}
   remainingDuration: 0
 --- !u!1 &2144735747
 GameObject:
@@ -11577,7 +11580,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damaged: 0
+  damaged3: 0
   triggerDamaged: 0
+  triggerDamaged2: 0
   gonered: 0
   cameraMain: {fileID: 519420030}
   stopnow: {fileID: 0}

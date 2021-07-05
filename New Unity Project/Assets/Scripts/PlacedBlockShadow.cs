@@ -103,8 +103,8 @@ public class PlacedBlockShadow : MonoBehaviour
                 spriteRenderer.sprite = cageBlock;
                 break;
             case 6:
-                transform.localScale = new Vector3(0.14f, 0.08f, 1f);
-                transform.localRotation = Quaternion.Euler(0, 0, 180);
+                transform.localScale = new Vector3(6f, 6f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = jumpPadBlock;
                 break;
             case 7:
