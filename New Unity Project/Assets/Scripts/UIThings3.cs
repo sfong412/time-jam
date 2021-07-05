@@ -18,6 +18,8 @@ public class UIThings3 : MonoBehaviour
 
     public float currentScorpionDamageAmount;
 
+    public float currentSpikeDamageAmount;
+
     public float healthCounter;
 
     public float remainingFocus;
@@ -118,6 +120,11 @@ public class UIThings3 : MonoBehaviour
          DamageTaken(currentScorpionDamageAmount);
                               
        }
+
+       if (damageScript.damaged5 == true && pleaseStop.stopping == false)
+       {
+           DamageTaken(currentSpikeDamageAmount);
+       }
        
 
 
@@ -162,6 +169,11 @@ public class UIThings3 : MonoBehaviour
        if (remainingEraser < 20)
        {
             canErase = false; 
+       }
+
+       if (remainingHealth > 100)
+       {
+           remainingHealth = 100;
        }
 
 
