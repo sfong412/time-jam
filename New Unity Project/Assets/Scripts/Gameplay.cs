@@ -49,6 +49,7 @@ public class Gameplay : MonoBehaviour
 
     public GameObject block7;
     public GameObject audioController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,9 +62,6 @@ public class Gameplay : MonoBehaviour
         placedBlockShadow = GameObject.Find("Placed Block Shadow").GetComponent<PlacedBlockShadow>();
 
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
-
-        audioMan = GetComponent<AudioSource>();
-
 
     }
 

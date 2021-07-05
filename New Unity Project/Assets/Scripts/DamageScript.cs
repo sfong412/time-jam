@@ -9,8 +9,12 @@ public class DamageScript : MonoBehaviour
 
     public bool damaged3;
 
+    public bool damaged5;
+
     public bool triggerDamaged;
     public bool triggerDamaged2;
+
+    public bool triggerDamaged3;
     public bool gonered;
 
     public Animator cameraMain;
@@ -29,6 +33,11 @@ public class DamageScript : MonoBehaviour
         {
             triggerDamaged2 = true;
             Debug.Log("hit2");
+        }
+
+        if (other.tag == "gonerspike")
+        {
+            triggerDamaged3 = true;
         }
     }
 
@@ -57,6 +66,15 @@ public class DamageScript : MonoBehaviour
                 triggerDamaged2 = false;
             }
         }
+
+        if (triggerDamaged3 == true)
+        {
+            if (stopnow.stopping == false)
+            {
+                StartCoroutine(damaged6());
+                triggerDamaged3 = false;
+            }
+        }
     }
 
     IEnumerator damaged2()
@@ -79,6 +97,19 @@ public class DamageScript : MonoBehaviour
         damaged3 = true;
         yield return null;
         damaged3 = false;
+        yield return new WaitForSeconds(0.15f);
+        cameraMain.SetBool("shook", false);
+        yield return new WaitForSeconds(2);
+
+    }
+
+    IEnumerator damaged6()
+    {
+
+        cameraMain.SetBool("shook", true);
+        damaged5 = true;
+        yield return null;
+        damaged5 = false;
         yield return new WaitForSeconds(0.15f);
         cameraMain.SetBool("shook", false);
         yield return new WaitForSeconds(2);

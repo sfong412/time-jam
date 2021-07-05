@@ -14,6 +14,8 @@ public class CharacterController2D : MonoBehaviour
 
     public bool isgrounded;
 
+    public bool Jumped;
+
     public Rigidbody2D rb2d;
 
     public UIThings itsTimeToStop;
@@ -52,6 +54,7 @@ public class CharacterController2D : MonoBehaviour
              if (itsTimeToStop.stopping == false)
              {
                  rb2d.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+                 Jumped = true;
             Player.SetBool("Jumped", true);
              }
             

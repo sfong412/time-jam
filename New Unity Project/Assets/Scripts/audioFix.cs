@@ -10,6 +10,7 @@ public class audioFix : MonoBehaviour
 
     public float currentPitch;
 
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();

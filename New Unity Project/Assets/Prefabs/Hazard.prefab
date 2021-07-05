@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 5218795100617015054}
   m_Layer: 0
   m_Name: Hazard
-  m_TagString: goner
+  m_TagString: gonerspike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
