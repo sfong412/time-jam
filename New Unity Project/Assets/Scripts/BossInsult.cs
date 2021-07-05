@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class BossInsult : Hazard
 {
-    float speed = -12f;
+    public float speed = -0.01f;
+
+    public bool isReflected = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform1 = GetComponent<Transform>();
     }
 
     // Update is called once per frame

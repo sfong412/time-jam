@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 9170675815718389963}
   - component: {fileID: 201338781}
   - component: {fileID: 6471808215361909968}
+  - component: {fileID: 5239313983361798795}
   m_Layer: 0
   m_Name: Block 3
   m_TagString: Ground2
@@ -252,6 +253,27 @@ PolygonCollider2D:
       - {x: 0.07, y: -0.07}
       - {x: 0.0696928, y: -0.050581273}
       - {x: -0.05002871, y: 0.07}
+--- !u!50 &5239313983361798795
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307049418291793356}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &8777691651196477822
 GameObject:
   m_ObjectHideFlags: 0
