@@ -14,7 +14,7 @@ public Vector3 lastPos;
 
     public bool detected;
 
-    public Animator Cquirrel;
+    public Animator Bee;
 
     Transform target;
 
@@ -32,17 +32,9 @@ public Vector3 lastPos;
 
     // Update is called once per frame
     void Update()
-    {
-
-        if (Input.GetMouseButton(0))
-        {
-               Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        }
-
-        if (detected == true)
-        {
+    {   
             transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
-        }
+        
 
 var velocity = transform.position - lastPos;
  lastPos = transform.position;
@@ -50,14 +42,14 @@ var velocity = transform.position - lastPos;
  if (velocity.x > 0.005)
  {
      
-      Cquirrel.SetBool("Pointing", false);
+      Bee.SetBool("goodmorning", false);
     
  }
 
  if (velocity.x < 0.005)
  {
     
-     Cquirrel.SetBool("Pointing", true);
+     Bee.SetBool("goodmorning", true);
 
     
  }
@@ -68,24 +60,5 @@ var velocity = transform.position - lastPos;
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "catchMe")
-        {
-            StartCoroutine(noticed());
-        }
-
-        if (other.tag == "Hazard")
-        {
-           detected = false; 
-           Cquirrel.SetBool("Detected", false);
-        }
-    }
-
-    IEnumerator noticed()
-    {
-        Cquirrel.SetBool("Detected", true);
-        yield return new WaitForSeconds(1);
-        detected = true; 
-    }
+   
 }
