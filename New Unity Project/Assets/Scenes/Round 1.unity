@@ -1577,6 +1577,7 @@ MonoBehaviour:
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType7: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
+  blockType8: {fileID: 0}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -4858,7 +4859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28931493, g: 0.5849056, b: 0, a: 1}
+  m_Color: {r: 0.6515147, g: 0.8962264, b: 0.41006586, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6352,6 +6353,7 @@ MonoBehaviour:
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
   block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
   block7: {fileID: 1976227159785723226, guid: 3f91904da49e5c843b856ac8f1f17b79, type: 3}
+  block8: {fileID: 0}
   audioController: {fileID: 483723005}
 --- !u!4 &1521810343
 Transform:
@@ -8650,6 +8652,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974376812}
   m_CullTransparentMesh: 1
+--- !u!1001 &1997375259
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242544, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
+      propertyPath: m_Name
+      value: Block 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
 --- !u!1 &2002396332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,9 +9550,9 @@ MonoBehaviour:
   Timer: 0
   uiFill: {fileID: 1134139636}
   uiText: {fileID: 1878911946}
-  Duration: 70
+  Duration: 3
   stopping: 0
-  currentScene: 1
+  currentScene: 2
   blackFade: {fileID: 2020135375}
   blackFade3: {fileID: 2031531043}
   audioTransistion: {fileID: 483723008}

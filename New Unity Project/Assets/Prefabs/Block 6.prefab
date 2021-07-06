@@ -125,7 +125,8 @@ GameObject:
   - component: {fileID: 5302421553260242544}
   - component: {fileID: 5302421553260242547}
   - component: {fileID: 5302421553260242546}
-  - component: {fileID: -8453488272094714816}
+  - component: {fileID: 8465836946608804252}
+  - component: {fileID: 6350491889141976050}
   m_Layer: 0
   m_Name: Block 6
   m_TagString: Untagged
@@ -234,6 +235,44 @@ PolygonCollider2D:
       - {x: 0.08, y: -0.024999999}
       - {x: 0.08, y: 0.015}
       - {x: 0.07, y: 0.024999999}
+--- !u!95 &8465836946608804252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302421553260242549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a205244887fa2243ae3918e4c40c1c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6350491889141976050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302421553260242549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3342157284279e34b9b4d5937e028a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform1: {fileID: 0}
+  movingThingTransform: {fileID: 0}
+  transform1: {fileID: 0}
+  placedBlock: {fileID: 0}
+  blockPlaced: 0
+  eraser: {fileID: 0}
+  block: {fileID: 8465836946608804252}
 --- !u!1 &5302421554588913031
 GameObject:
   m_ObjectHideFlags: 0
