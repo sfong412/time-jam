@@ -8,6 +8,9 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     public GameObject blackFade;
+
+    public GameObject shopScreen;
+    public GameObject perkScreen;
     public Animator blackFade2;
 
     public Animator audioFade2;
@@ -35,6 +38,7 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DisplayPerkState(GameObject.Find("Ink Regen Perk Button"));
     }
 
     void Awake()
@@ -113,6 +117,26 @@ public class Shop : MonoBehaviour
             isBuying = false;
         }
     }
+
+    public void PerkScreen()
+    {
+        perkScreen.SetActive(true);
+        shopScreen.SetActive(false);
+    }
+
+    public void ShopScreen()
+    {
+        perkScreen.SetActive(false);
+        shopScreen.SetActive(true);
+    }
+
+    public void DisplayPerkState(GameObject button)
+    {
+       // perkState = !perkState;
+
+        //button.GetComponent<TextMeshProUGUI>().text = "bop";
+    }
+
     public void StartGame()
     {
         StartCoroutine(nextRound());
