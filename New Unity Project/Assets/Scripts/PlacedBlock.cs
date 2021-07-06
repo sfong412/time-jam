@@ -83,8 +83,15 @@ public class PlacedBlock : Hazard
     {
         if (other.gameObject.name == "Insult(Clone)" && other.gameObject.GetComponent<BossInsult>().isReflected == false)
         {
-            other.gameObject.GetComponent<BossInsult>().speed = 0.03f;
+            //other.gameObject.GetComponent<BossInsult>().speed = 0.03f;
             other.gameObject.GetComponent<BossInsult>().isReflected = true;
+            Debug.Log("touched");
+        }
+
+        if (other.gameObject.name == "Spitball(Clone)" && other.gameObject.GetComponent<BossSpitball>().isReflected == false)
+        {
+            other.gameObject.GetComponent<BossSpitball>().speed = 0.03f;
+            other.gameObject.GetComponent<BossSpitball>().isReflected = true;
             Debug.Log("touched");
         }
     }

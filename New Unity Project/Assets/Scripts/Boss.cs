@@ -10,6 +10,8 @@ public class Boss : MonoBehaviour
 
     public GameObject insult;
 
+    public GameObject spitball;
+
     float timer = 3f;
 
     // Start is called before the first frame update
@@ -24,12 +26,23 @@ public class Boss : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3 (transform.position.x, (Mathf.Sin(Time.time) * 1.75f) - 1.25f, transform.position.z);
+        
+        int randomNumberGenerator = Random.Range(0, 2);
 
         timer -= Time.deltaTime;
 
         if (timer <= 0)
         {
-            Instantiate(insult, transform.position, transform.rotation, hazardTransform);
+            switch (randomNumberGenerator)
+            {
+                case 0:
+                    Instantiate(insult, transform.position, transform.rotation, hazardTransform);
+                    break;
+                case 1:
+                    Instantiate(spitball, transform.position, transform.rotation, hazardTransform);
+                    break;
+            }
+            
             timer = Random.Range(3f, 8f);
         }
     }
