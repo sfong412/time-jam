@@ -7,14 +7,15 @@ public class audioFix1 : MonoBehaviour
     public AudioSource audioSource;
 
     public Gameplay gamePlay;
-
-    public float currentPitch;
-
     public AudioClip blockplaced;
 
     public AudioClip spikeHit;
 
     public AudioClip blockErased;
+
+    public AudioClip blockErased2;
+
+    public AudioClip blockErased3;
 
     public AudioClip damaged;
 
@@ -23,6 +24,12 @@ public class audioFix1 : MonoBehaviour
     public AudioClip jump;
 
     public AudioClip JumpPad;
+
+    public AudioClip blockPlaced2;
+
+    public AudioClip blockPlaced3;
+
+    public AudioClip blockPlaced4;
     public DamageScript hitMan;
 
     public UIThings3 things;
@@ -41,7 +48,28 @@ public class audioFix1 : MonoBehaviour
     {
         if (gamePlay.blockPlaced == true)
         {
-            audioSource.PlayOneShot(blockplaced, 0.3f);
+            var blockPlacedvaration = Random.Range(0, 3);
+
+            switch (blockPlacedvaration)
+            {
+                case 0:
+                audioSource.PlayOneShot(blockplaced, 0.3f);
+                break;
+
+                case 1:
+                audioSource.PlayOneShot(blockPlaced2, 0.3f);
+                break;
+
+                case 2:
+                audioSource.PlayOneShot(blockPlaced3, 0.3f);
+                break;
+
+                case 3:
+                audioSource.PlayOneShot(blockPlaced4, 0.3f);
+                break;
+
+            }
+            
         }
 
         if (hitMan.damaged5 == true)
@@ -51,6 +79,21 @@ public class audioFix1 : MonoBehaviour
 
         if (things.erased == true)
         {
+            var erasedBlockVaration = Random.Range(0, 2);
+            switch (erasedBlockVaration)
+            {
+                case 0:
+                audioSource.PlayOneShot(blockErased, 0.3f);
+                break;
+
+                case 1: 
+                audioSource.PlayOneShot(blockErased2, 0.3f);
+                break;
+
+                case 2: 
+                audioSource.PlayOneShot(blockErased3, 0.3f);
+                break;
+            }
             audioSource.PlayOneShot(blockErased, 0.3f);
         }
 
