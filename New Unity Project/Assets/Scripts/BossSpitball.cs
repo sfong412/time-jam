@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossSpitball : Hazard
 {
-    public float speed = -0.01f;
+    public float speed = -0.03f;
 
     public bool isReflected = false;
 
@@ -18,5 +18,13 @@ public class BossSpitball : Hazard
     void Update()
     {
         transform1.position = new Vector3(transform1.position.x + speed, transform1.position.y, transform1.position.z);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

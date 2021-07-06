@@ -32,4 +32,12 @@ public class BossInsult : Hazard
             transform1.position = Vector2.MoveTowards(transform1.position, boss.position, reflectedSpeed);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

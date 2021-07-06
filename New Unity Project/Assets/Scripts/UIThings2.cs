@@ -13,7 +13,7 @@ public class UIThings2 : MonoBehaviour
     public Image image5;
     static public int blockType;
 
-    static public int[] blockTypeLoadout = new int[7] { 1, 2, 3, 4, 5, 6, 7 };
+    static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
 
     static public int[] blockTypeInkCost = new int[7] { 30, 15, 10, 10, 40, 25, 35 };
 
@@ -22,7 +22,7 @@ public class UIThings2 : MonoBehaviour
     static public Transform[] prices = new Transform[blockTypeLoadout.Length];
     public int scrollNumber;
 
-    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6, blockType7;
+    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6, blockType7, blockType8;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class UIThings2 : MonoBehaviour
 
         if (blockTypeLoadout == null)
         {
-            blockTypeLoadout = new int[7] { 1, 2, 3, 4, 5, 6, 7};
+            blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
         }
 
         for (int i = 0; i < blockTypeLoadout.Length; i++)
