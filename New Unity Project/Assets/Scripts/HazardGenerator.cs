@@ -5,6 +5,7 @@ using UnityEngine;
 public class HazardGenerator : MonoBehaviour
 {
 
+    public bool canSpawnDoodle;
     Vector3 generatedRandomPosition;
 
     float groundSpawnTime = 3f;
@@ -26,7 +27,13 @@ public class HazardGenerator : MonoBehaviour
     int airHazardTimer;
 
     int platformTimer;
+
+    int doodleTimer;
+
+    
     public int maxSpikes;
+
+    public int maxDoodles;
 
     public int maxAirEnemies;
 
@@ -37,6 +44,8 @@ public class HazardGenerator : MonoBehaviour
     public int airHazardspawnTimer;
 
     public int platformSpawnTimer;
+
+    public int maxDoodleTimer;
 
     int randomNumber;
     public GameObject hazard;
@@ -52,11 +61,12 @@ public class HazardGenerator : MonoBehaviour
 
     public GameObject Scopion;
 
+    public GameObject Doodles;
+
     public GameObject currentAirHazard;
     public GameObject currentGroundEnemy;
 
     public GameObject currentPlatform;
-
 
     Transform transform1;
     Transform movingThingTransform;
@@ -108,13 +118,14 @@ public class HazardGenerator : MonoBehaviour
        //platformSpawnY = -3.35f;
 
         //spawn position for air hazards
-        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.96f, -3.5f), transform.position.z);
+        Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.8f, -3.5f), transform.position.z);
 
         RandomNumberGenerator();
         spawnGroundHazard(groundHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
         spawnCeilingHazard(ceilingHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
         spawnAirHazard(airHazardSpawnPosition, 1, maxAirEnemies, airHazardTimer);
         spawnGroundEnemy(groundHazardSpawnPosition, 2, maxGroundEnemies, groundHazardTimer);
+        spawnDoodle(airHazardSpawnPosition, 1, maxDoodles, doodleTimer);
 
         if (platform != null)
         {
@@ -210,6 +221,29 @@ public class HazardGenerator : MonoBehaviour
         }
     }
 
+     void spawnDoodle(Vector3 spawnPosition, int index, int maxHazards, int timer)
+    {
+        if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
+        {
+            
+            float size = 0.5f;
+
+            //clickPoint -= transform.position;
+
+            int xCount = Mathf.RoundToInt(spawnPosition.x / size);
+            int yCount = Mathf.RoundToInt(spawnPosition.y / size);
+            int zCount = Mathf.RoundToInt(spawnPosition.z / size);
+
+            Vector3 result = new Vector3(
+                (float)xCount * size,
+                (float)yCount * size,
+                (float)zCount * size);
+            
+            Instantiate(Doodles, result, transform.rotation, transform.GetChild(index));
+        }
+        
+    }
+
     void spawnPlatform(Vector3 spawnPosition, int index, int maxHazards, int timer)
     {
         if (transform.GetChild(index).childCount <= maxHazards && timer == 1)
@@ -237,5 +271,7 @@ public class HazardGenerator : MonoBehaviour
         groundHazardTimer = Random.Range(0, groundHazardSpawnTimer);
         airHazardTimer = Random.Range(0, airHazardspawnTimer);
         platformTimer = Random.Range(0, platformSpawnTimer);
+        doodleTimer = Random.Range(0, maxDoodleTimer);
+
     }
 }
