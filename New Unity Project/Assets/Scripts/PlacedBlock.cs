@@ -21,6 +21,8 @@ public class PlacedBlock : Hazard
 
     public UIThings3 eraser;
 
+    public Animator block;
+
 
 
     void Start()
@@ -54,16 +56,19 @@ public class PlacedBlock : Hazard
         if (eraser.canErase)
         {
             renderer.material.color = Color.red;
+            block.SetBool("Bop", true);
         }
         else
         {
             renderer.material.color = Color.gray;
+            block.SetBool("Bop", true);
         }
     
     }
     private void OnMouseExit()
     {
         renderer.material.color = Color.white;
+        block.SetBool("Bop", false);
     }
 
     private void OnMouseOver()
@@ -72,8 +77,7 @@ public class PlacedBlock : Hazard
         {
             if (eraser.canErase)
             {
-                eraser.erased = true;
-                Destroy(gameObject);
+                StartCoroutine(goner());
             }
            
         }
@@ -94,5 +98,13 @@ public class PlacedBlock : Hazard
             other.gameObject.GetComponent<BossSpitball>().isReflected = true;
             Debug.Log("touched");
         }
+    }
+
+    IEnumerator goner()
+    {
+                block.SetBool("gone", true);
+                eraser.erased = true;
+                yield return new WaitForSeconds(0.2f);
+                Destroy(gameObject);
     }
 }

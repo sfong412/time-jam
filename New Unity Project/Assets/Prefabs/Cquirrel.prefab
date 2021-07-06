@@ -284,7 +284,11 @@ MonoBehaviour:
   transform1: {fileID: 0}
   Speed: 4
   velocity: 0
+  velocityTrigger: 0.005
   rigidbody2D: {fileID: 8977165716598174458}
   lastPos: {x: 0, y: 0, z: 0}
   detected: 0
   Cquirrel: {fileID: 8977165716598174459}
+  renderer: {fileID: 8977165716598174455}
+  blueball: {r: 0, g: 0.5294118, b: 1, a: 0}
+  lerpTime: 1
