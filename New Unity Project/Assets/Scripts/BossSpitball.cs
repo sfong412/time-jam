@@ -19,4 +19,12 @@ public class BossSpitball : Hazard
     {
         transform1.position = new Vector3(transform1.position.x + speed, transform1.position.y, transform1.position.z);
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

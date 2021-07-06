@@ -31,7 +31,7 @@ public class Shop : MonoBehaviour
 
         if (UIThings2.blockTypeLoadout == null)
         {
-            UIThings2.blockTypeLoadout = new int[6] { 1, 2, 3, 4, 5, 6 };
+            UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
         }
     }
 
@@ -103,12 +103,20 @@ public class Shop : MonoBehaviour
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
                     priceText.text = UIThings2.blockTypeInkCost[5].ToString();
                     break;
-                 case 7:
+                case 7:
                     UIThings2.loadouts[platform].sprite = ui.blockType7;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
                     priceText.text = UIThings2.blockTypeInkCost[6].ToString();
+                    break;
+
+                case 8:
+                    UIThings2.loadouts[platform].sprite = ui.blockType8;
+                    UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
+                    rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
+                    priceText.text = UIThings2.blockTypeInkCost[7].ToString();
                     break;
             }
 

@@ -48,6 +48,8 @@ public class Gameplay : MonoBehaviour
     public GameObject block6;
 
     public GameObject block7;
+
+    public GameObject block8;
     public GameObject audioController;
 
     // Start is called before the first frame update
@@ -135,6 +137,10 @@ public class Gameplay : MonoBehaviour
 
             case 7:
                 currentInkCost = 35;
+                break;
+
+            case 8:
+                currentInkCost = 5;
                 break;
 
         }
@@ -233,6 +239,11 @@ public class Gameplay : MonoBehaviour
                 
                 case 7:
                     Instantiate(block7, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
+
+                case 8:
+                    Instantiate(block8, result, transform.rotation, placedBlocks);
                     blockPlaced = true;
                     break;
             }

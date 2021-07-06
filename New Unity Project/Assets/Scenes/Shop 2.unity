@@ -623,7 +623,6 @@ RectTransform:
   - {fileID: 2054883358}
   - {fileID: 689353544}
   - {fileID: 286429037}
-  - {fileID: 2052997145}
   m_Father: {fileID: 1569159163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1370,6 +1369,8 @@ Transform:
   - {fileID: 871607521}
   - {fileID: 1827565092}
   - {fileID: 959662101}
+  - {fileID: 1733509274}
+  - {fileID: 2052997145}
   m_Father: {fileID: 26107298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10934,7 +10935,7 @@ RectTransform:
   m_Children:
   - {fileID: 38722594}
   m_Father: {fileID: 64042022}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11497,6 +11498,7 @@ MonoBehaviour:
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType7: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
+  blockType8: {fileID: 0}
 --- !u!1 &1827565091
 GameObject:
   m_ObjectHideFlags: 0
@@ -13034,8 +13036,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498845471}
-  m_Father: {fileID: 26107298}
-  m_RootOrder: 5
+  m_Father: {fileID: 64042022}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
