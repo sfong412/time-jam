@@ -83,7 +83,7 @@ public class PlacedBlock : Hazard
     {
         if (other.gameObject.name == "Insult(Clone)" && other.gameObject.GetComponent<BossInsult>().isReflected == false)
         {
-            other.gameObject.GetComponent<BossInsult>().speed = 0.01f;
+            other.gameObject.GetComponent<BossInsult>().speed = 0.03f;
             other.gameObject.GetComponent<BossInsult>().isReflected = true;
             Debug.Log("touched");
         }
