@@ -8,6 +8,8 @@ public class CquirrelAI : MonoBehaviour
     public float Speed;
     public float velocity;
 
+    public float velocityTrigger;
+
 public Rigidbody2D rigidbody2D;
 
 public Vector3 lastPos;
@@ -18,6 +20,10 @@ public Vector3 lastPos;
 
     Transform target;
 
+    public SpriteRenderer renderer;
+
+    public Color blueball;
+
 
   //  SpriteRenderer movingThingSprite;
 
@@ -26,6 +32,8 @@ public Vector3 lastPos;
     {
         transform1 = GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Color bluebal = new Color(168f, 255f, 255f);
+        bluebal = blueball;
 
        
     }
@@ -47,14 +55,14 @@ public Vector3 lastPos;
 var velocity = transform.position - lastPos;
  lastPos = transform.position;
 
- if (velocity.x > 0.005)
+ if (velocity.x > velocityTrigger)
  {
      
       Cquirrel.SetBool("Pointing", false);
     
  }
 
- if (velocity.x < 0.005)
+ if (velocity.x < velocityTrigger)
  {
     
      Cquirrel.SetBool("Pointing", true);
@@ -75,10 +83,11 @@ var velocity = transform.position - lastPos;
             StartCoroutine(noticed());
         }
 
-        if (other.tag == "Hazard")
+        if (other.tag == "ice")
         {
-           detected = false; 
-           Cquirrel.SetBool("Detected", false);
+            Speed = 0.5f;
+            velocityTrigger = 0.003f;
+            renderer.material.color = Color.Lerp(Color.white, blueball, 0.12f);
         }
     }
 
@@ -88,6 +97,11 @@ var velocity = transform.position - lastPos;
         {
             detected = false;
         }
+
+        if (other.tag == "ice")
+        {
+           StartCoroutine(slow());
+        }
     }
 
     IEnumerator noticed()
@@ -95,6 +109,14 @@ var velocity = transform.position - lastPos;
         Cquirrel.SetBool("Detected", true);
         yield return new WaitForSeconds(1);
         detected = true; 
+    }
+
+    IEnumerator slow()
+    {
+        yield return new WaitForSeconds(1);
+        Speed = 4f;
+        velocityTrigger = 0.005f;
+        renderer.material.color = Color.white;
     }
 
 

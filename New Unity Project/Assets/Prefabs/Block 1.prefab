@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 6307049418291793363}
   - component: {fileID: 2945761642122533626}
   - component: {fileID: -7967574578476652568}
+  - component: {fileID: 3541125602587772112}
   m_Layer: 0
   m_Name: Block 1
   m_TagString: Ground2
@@ -246,6 +247,7 @@ MonoBehaviour:
   placedBlock: {fileID: 0}
   blockPlaced: 0
   eraser: {fileID: 0}
+  block: {fileID: 3541125602587772112}
 --- !u!50 &-7967574578476652568
 Rigidbody2D:
   serializedVersion: 4
@@ -267,3 +269,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &3541125602587772112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307049418291793356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83e6ac5650eff9b4d8c8ae6722a97f5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
