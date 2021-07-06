@@ -6,7 +6,7 @@ public class PerkSystem : MonoBehaviour
 {
 
     UIThings3 ui;
-    static public bool inkRegenPerk = true;
+    static public bool inkRegenPerk = false;
     static public float inkRegenRate;
     static public float startingHealth;
 

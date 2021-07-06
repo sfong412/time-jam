@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossSpitball : Hazard
 {
-    public float speed = -0.01f;
+    public float speed = -0.03f;
 
     public bool isReflected = false;
 
