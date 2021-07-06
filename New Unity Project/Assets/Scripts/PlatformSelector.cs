@@ -10,8 +10,6 @@ public class PlatformSelector : MonoBehaviour
 
     public GameObject platforms3;
 
-    public GameObject platforms4;
-
     HazardGenerator generator;
     void Start()
     {
@@ -21,7 +19,7 @@ public class PlatformSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int randomNumber = Random.Range(0, 4);
+        int randomNumber = Random.Range(0, 3);
         switch (randomNumber)
         {
             case 0:
@@ -36,11 +34,6 @@ public class PlatformSelector : MonoBehaviour
              //   generator.platformSpawnY = Random.Range(-2.5f, -1.5f);
                 generator.currentPlatform = null;
                 break;
-
-            case 3: 
-            generator.platformSpawnY = -3.35f;
-            generator.currentPlatform = platforms4;
-            break;
         }
     }
 }
