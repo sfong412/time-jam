@@ -15,6 +15,7 @@ TagManager:
   - jump
   - goner2
   - gonerspike
+  - doodle
   layers:
   - Default
   - TransparentFX
