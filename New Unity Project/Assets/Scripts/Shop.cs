@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -38,7 +38,6 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DisplayPerkState(GameObject.Find("Ink Regen Perk Button"));
     }
 
     void Awake()
@@ -134,7 +133,7 @@ public class Shop : MonoBehaviour
     {
        // perkState = !perkState;
 
-        //button.GetComponent<TextMeshProUGUI>().text = "bop";
+        button.GetComponentInChildren<Text>().text = "bop";
     }
 
     public void StartGame()
