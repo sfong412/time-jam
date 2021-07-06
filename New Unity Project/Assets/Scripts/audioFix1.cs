@@ -6,6 +6,8 @@ public class audioFix1 : MonoBehaviour
 {
     public AudioSource audioSource;
 
+    public AudioSource footSteps1;
+
     public Gameplay gamePlay;
     public AudioClip blockplaced;
 
@@ -30,6 +32,8 @@ public class audioFix1 : MonoBehaviour
     public AudioClip blockPlaced3;
 
     public AudioClip blockPlaced4;
+
+    public AudioClip footSteps;
     public DamageScript hitMan;
 
     public UIThings3 things;
@@ -39,6 +43,7 @@ public class audioFix1 : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        footSteps1 = GameObject.Find("AudioController(3)").GetComponent<AudioSource>();
        
         
     }
@@ -121,6 +126,19 @@ public class audioFix1 : MonoBehaviour
         if (jumping.jumpHigh == true)
         {
             audioSource.PlayOneShot(JumpPad, 0.3f);
+        }
+
+        if (jumping.isMoving == true && jumping.Jumped == false)
+        {
+            if (!footSteps1.isPlaying)
+            {
+                  footSteps1.Play();
+            }
+          
+        }
+        else
+        {
+            footSteps1.Pause();
         }
     }
 

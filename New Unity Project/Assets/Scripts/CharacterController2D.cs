@@ -14,6 +14,8 @@ public class CharacterController2D : MonoBehaviour
 
     public bool isgrounded;
 
+    public bool isMoving;
+
     public bool Jumped;
 
     public Rigidbody2D rb2d;
@@ -37,6 +39,7 @@ public class CharacterController2D : MonoBehaviour
             var movementx = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movementx, 0, 0) * Time.deltaTime * MovementSpeed;
             Player.SetFloat("X", movementx);
+            
         }
         else
         {
@@ -69,7 +72,15 @@ public class CharacterController2D : MonoBehaviour
     jumpHigh = false;
 }
 
-      
+if (Player.GetFloat("X") != 0 && isgrounded == true )
+{
+    isMoving = true;
+}
+else
+{
+  isMoving = false;  
+}
+
 
 
     }

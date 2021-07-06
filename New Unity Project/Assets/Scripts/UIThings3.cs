@@ -311,7 +311,7 @@ public class UIThings3 : MonoBehaviour
             remainingEraser -= damage;
             if (remainingHealth + gameplaying.currentInkCost <= startingHealth)
             {
-                 remainingHealth += gameplaying.currentInkCost;
+                 remainingHealth += gameplaying.currentInkCost / 2;
             }
             else
             {
