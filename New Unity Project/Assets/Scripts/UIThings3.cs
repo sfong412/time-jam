@@ -55,8 +55,8 @@ public class UIThings3 : MonoBehaviour
 
     void Start()
     {
-        remainingHealth = startingHealth;
-        healthBar.maxValue = startingHealth;
+        remainingHealth = PerkSystem.startingHealth;
+        healthBar.maxValue = PerkSystem.startingHealth;
         healthBar.value = remainingHealth;
         gameplaying.blockPlaced = false;
         remainingFocus = startingFocus;
@@ -67,16 +67,7 @@ public class UIThings3 : MonoBehaviour
         eraserBar.value = remainingEraser;
         currentEnemyDamageAmount = enemyDamageAmount;
 
-        //if (PerkSystem.inkRegenPerk == true)
-        //{
-           // InkRegenRate = 10f;
-           // startingHealth = 50;
-        //}
-        //else
-        //{
-            //InkRegenRate = 0.1f;
-            //startingHealth = 100;
-       // }
+        InkRegenRate = PerkSystem.inkRegenRate;
     }
 
     void Awake()
@@ -182,9 +173,9 @@ public class UIThings3 : MonoBehaviour
             canErase = false; 
        }
 
-       if (remainingHealth > 100)
+       if (remainingHealth > PerkSystem.startingHealth)
        {
-           remainingHealth = 100;
+           remainingHealth = PerkSystem.startingHealth;
        }
 
 
@@ -199,7 +190,7 @@ public class UIThings3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (remainingHealth < 101)
+        if (remainingHealth < PerkSystem.startingHealth)
         {
             Healing(InkRegenRate); 
         }

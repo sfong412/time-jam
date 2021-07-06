@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Shop : MonoBehaviour
 {
     public GameObject blackFade;
+
+    public GameObject shopScreen;
+    public GameObject perkScreen;
     public Animator blackFade2;
 
     public Animator audioFade2;
@@ -113,6 +116,26 @@ public class Shop : MonoBehaviour
             isBuying = false;
         }
     }
+
+    public void PerkScreen()
+    {
+        perkScreen.SetActive(true);
+        shopScreen.SetActive(false);
+    }
+
+    public void ShopScreen()
+    {
+        perkScreen.SetActive(false);
+        shopScreen.SetActive(true);
+    }
+
+    public void DisplayPerkState(GameObject button)
+    {
+       // perkState = !perkState;
+
+        button.GetComponentInChildren<Text>().text = "bop";
+    }
+
     public void StartGame()
     {
         StartCoroutine(nextRound());
