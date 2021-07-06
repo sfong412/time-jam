@@ -82,6 +82,14 @@ var velocity = transform.position - lastPos;
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "catchMe")
+        {
+            detected = false;
+        }
+    }
+
     IEnumerator noticed()
     {
         Cquirrel.SetBool("Detected", true);

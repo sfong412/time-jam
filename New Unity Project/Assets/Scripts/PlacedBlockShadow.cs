@@ -109,7 +109,7 @@ public class PlacedBlockShadow : MonoBehaviour
                 break;
             case 7:
                 transform.localScale = new Vector3(0.7f, 3.4f, 1f);
-                transform.localRotation = Quaternion.Euler(0, 0, 180f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = heavyBlock;
                 break;
         }

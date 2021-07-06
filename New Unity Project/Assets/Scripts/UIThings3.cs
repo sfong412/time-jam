@@ -67,16 +67,16 @@ public class UIThings3 : MonoBehaviour
         eraserBar.value = remainingEraser;
         currentEnemyDamageAmount = enemyDamageAmount;
 
-        if (PerkSystem.inkRegenPerk == true)
-        {
-            InkRegenRate = 10f;
-            startingHealth = 50;
-        }
-        else
-        {
-            InkRegenRate = 0.1f;
-            startingHealth = 100;
-        }
+        //if (PerkSystem.inkRegenPerk == true)
+        //{
+           // InkRegenRate = 10f;
+           // startingHealth = 50;
+        //}
+        //else
+        //{
+            //InkRegenRate = 0.1f;
+            //startingHealth = 100;
+       // }
     }
 
     void Awake()
