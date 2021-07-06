@@ -96,6 +96,7 @@ var velocity = transform.position - lastPos;
         if (other.tag == "catchMe")
         {
             detected = false;
+            Cquirrel.SetBool("Detected", false);
         }
 
         if (other.tag == "ice")

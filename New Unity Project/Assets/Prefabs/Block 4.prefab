@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 8875641920103664121}
   - component: {fileID: 357690696487756963}
   - component: {fileID: 642696002069678623}
+  - component: {fileID: 308873265025028926}
   m_Layer: 0
   m_Name: Block 4
   m_TagString: Ground2
@@ -164,6 +165,7 @@ MonoBehaviour:
   placedBlock: {fileID: 0}
   blockPlaced: 0
   eraser: {fileID: 0}
+  block: {fileID: 308873265025028926}
 --- !u!60 &8875641920103664121
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -247,6 +249,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &308873265025028926
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307049418291793356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a17e215e140ce1f4d946e5409672c871, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6738991385877848305
 GameObject:
   m_ObjectHideFlags: 0

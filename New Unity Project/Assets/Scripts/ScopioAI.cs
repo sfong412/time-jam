@@ -8,6 +8,7 @@ public class ScopioAI : MonoBehaviour
 
     public float shouldIJump;
     public bool shouldIReally;
+    public bool shouldIReally2;
 
     public bool high;
 

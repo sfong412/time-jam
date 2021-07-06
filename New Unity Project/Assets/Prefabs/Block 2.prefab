@@ -191,7 +191,7 @@ MonoBehaviour:
   placedBlock: {fileID: 0}
   blockPlaced: 0
   eraser: {fileID: 0}
-  block: {fileID: 0}
+  block: {fileID: 6037472590627714694}
 --- !u!61 &3094746692096207959
 BoxCollider2D:
   m_ObjectHideFlags: 0
