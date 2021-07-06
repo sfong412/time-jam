@@ -826,7 +826,7 @@ MonoBehaviour:
   platforms1: {fileID: 7135699730995980158, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   platforms2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   platforms3: {fileID: 8167577531054015681, guid: 4b81bd3b77cc5104c8a6ba5a96d003d1, type: 3}
-  platforms4: {fileID: 5502943214005454941, guid: 1cbb3b0e1006b4c439b0e8174b6b3986, type: 3}
+  platforms4: {fileID: 0}
 --- !u!1 &191642510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9377,7 +9377,7 @@ MonoBehaviour:
   Timer: 0
   uiFill: {fileID: 1134139636}
   uiText: {fileID: 1878911946}
-  Duration: 70
+  Duration: 3
   stopping: 0
   currentScene: 1
   blackFade: {fileID: 2020135375}
