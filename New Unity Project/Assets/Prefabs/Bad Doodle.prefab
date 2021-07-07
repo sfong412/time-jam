@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3834519778040446030}
   - component: {fileID: 6512735203952257068}
   m_Layer: 0
-  m_Name: Doodle
+  m_Name: Bad Doodle
   m_TagString: doodle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -4537814106579840796, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.38431373}
+  m_SortingOrder: -5
+  m_Sprite: {fileID: -7608472090161389556, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,49 +101,23 @@ MonoBehaviour:
   transform1: {fileID: 0}
   movingThingTransform: {fileID: 0}
   doodles:
-  - {fileID: -4537814106579840796, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 2281741439546636794, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 1585315390026781490, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -4958292016941099302, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8872604341487548305, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8142312627376145204, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8189464834985733037, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -8199229052781969324, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8627999343108094568, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -7897507327425384284, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -3000613692149012451, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -4458973441662445911, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 5506904691343413632, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 1337506620918094626, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 1398574637921387565, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8969289305651821766, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 7275469753652175213, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 7475634994714630673, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8819029837362196481, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -2338684205087776899, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 4388711622752154241, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -8097556174545775516, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 5010371408370229293, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -6038424803357143404, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 1986357316915673318, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -8225188282472225452, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 2453800478508475278, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -3177385784702547564, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -513786140943326424, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 3433273787780713037, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 6620375643384879297, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -4054796941433029500, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 8723799085811659335, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 1945757428839328383, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -2218570557289034979, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: 6852420017200082211, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -5563288513054587294, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
-  - {fileID: -6935733139556780696, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
+  - {fileID: 617987293789433645, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -7608472090161389556, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: 3826472074981746751, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: 3211899776346835692, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: 985243658253750566, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -2285762463569203848, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -7955841882181339147, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: 5016437698880548366, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -5091084543977627849, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -2318960737205556757, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: 8180406792451935103, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
+  - {fileID: -8498482887940988377, guid: 65ae89d8736bbe443a6372d309d5afef, type: 3}
   currentDoodle: {fileID: 0}
   doodleMan: {fileID: 0}
   currentDoodleNumber: 0
   doodle: {fileID: 8309420846382011897}
-  doodleNumger: 39
+  doodleNumger: 13
 --- !u!61 &3834519778040446030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +135,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.11, y: 0.11}
+    oldSize: {x: 0.16, y: 0.15}
     newSize: {x: 0.11, y: 0.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -73,7 +73,7 @@ public class UIThings : MonoBehaviour
           remainingDuration -= 1 * Time.fixedDeltaTime;
     }
 
-    private void OnEnd()
+    public void OnEnd()
     {
         stopping = true;
         shadow.SetActive(false);

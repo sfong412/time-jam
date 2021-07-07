@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 129102309}
   - component: {fileID: 129102308}
   - component: {fileID: 129102310}
+  - component: {fileID: 129102313}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -474,6 +475,8 @@ MonoBehaviour:
   boss: {fileID: 129102310}
   cam: {fileID: 519420030}
   gotcha: 0
+  goodbye: {fileID: 129102313}
+  huzzah: {fileID: 2127874337}
 --- !u!61 &129102309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -587,6 +590,27 @@ Transform:
   m_Father: {fileID: 43546250}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &129102313
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129102307}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &130008838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,6 +3260,7 @@ MonoBehaviour:
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   jumpPadBlock: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   heavyBlock: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
+  iceBlock: {fileID: 0}
   ableToPlace: 1
 --- !u!1 &698332806
 GameObject:
@@ -5677,7 +5702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1237871879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6267,7 +6292,7 @@ MonoBehaviour:
   platform2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   Cquirrel: {fileID: 8977165716598174456, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
   Scopion: {fileID: 1160040605712977760, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
-  Doodles: {fileID: 8309420846382011899, guid: 80036fba031d43544aa6171c31615730, type: 3}
+  Doodles: {fileID: 8309420846382011899, guid: 60a206de76ced5e4bb74406c3b143fa5, type: 3}
   Bee: {fileID: 3694013302396848462, guid: d1d4b9649e882e54bbf72960f19cb2e1, type: 3}
   currentAirHazard: {fileID: 0}
   currentGroundEnemy: {fileID: 0}
@@ -7992,7 +8017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1909513767
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9553,7 +9578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127874335}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

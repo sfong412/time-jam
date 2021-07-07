@@ -24,6 +24,10 @@ public class Boss : MonoBehaviour
 
     public bool gotcha;
 
+    public Rigidbody2D goodbye;
+
+    public UIThings huzzah;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +62,12 @@ public class Boss : MonoBehaviour
                 timer = Random.Range(1f, 3f);
             }
         }
-        else if (health < 0)
+        else if (health <= 0)
         {
+            boss.SetBool("adios", true);
+            goodbye.bodyType = RigidbodyType2D.Dynamic;
+            StartCoroutine(woo());
+            
 
         }
 
@@ -98,6 +106,12 @@ public class Boss : MonoBehaviour
          yield return new WaitForSeconds(0.15f);
         boss.SetBool("ball", false);
         
+    }
+
+    IEnumerator woo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        huzzah.OnEnd();
     }
 
      void OnTriggerEnter2D(Collider2D other)
