@@ -6,24 +6,50 @@ public class PerkSystem : MonoBehaviour
 {
 
     UIThings3 ui;
-    static public bool inkRegenPerk = false;
+    static public bool inkRegenUpPerk = false;
+
+    static public bool eraserUseUpPerk = false;
+
+    static public bool focusCapacityUpPerk = false;
     static public float inkRegenRate;
-    static public float startingHealth;
+    static public float eraserUseRate;
+    static public float focusCapacityRate;
+    static public float startingHealth = 100;
+
+    static public float startingEraser = 100;
+
+    static public float startingFocus = 150;
 
     // Start is called before the first frame update
     void Start()
     {
         ui = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
 
-        if (inkRegenPerk == true)
+        if (inkRegenUpPerk == true)
         {
             inkRegenRate = 0.2f;
-            startingHealth = 80;
         }
         else
         {
             inkRegenRate = 0.1f;
-            startingHealth = 100;
+        }
+
+        if (eraserUseUpPerk == true)
+        {
+            eraserUseRate = 0.2f;
+        }
+        else
+        {
+            eraserUseRate = 0.1f;
+        }
+
+        if (focusCapacityUpPerk == true)
+        {
+            focusCapacityRate = 0.6f;
+        }
+        else
+        {
+            focusCapacityRate = 0.6f;
         }
     }
 

@@ -61,11 +61,11 @@ public class UIThings3 : MonoBehaviour
         healthBar.maxValue = PerkSystem.startingHealth;
         healthBar.value = remainingHealth;
         gameplaying.blockPlaced = false;
-        remainingFocus = startingFocus;
-        focusBar.maxValue = startingFocus;
+        remainingFocus = PerkSystem.startingFocus;
+        focusBar.maxValue = PerkSystem.startingFocus;
         focusBar.value = remainingFocus;
-        remainingEraser = startingEraser;
-        eraserBar.maxValue = startingEraser;
+        remainingEraser = PerkSystem.startingEraser;
+        eraserBar.maxValue = PerkSystem.startingEraser;
         eraserBar.value = remainingEraser;
         currentEnemyDamageAmount = enemyDamageAmount;
 
@@ -201,9 +201,9 @@ public class UIThings3 : MonoBehaviour
         {
             Healing(InkRegenRate); 
         }
-        if (remainingFocus < 151)
+        if (remainingFocus < PerkSystem.startingFocus)
         {
-            HealingFocus(0.6f); 
+            HealingFocus(PerkSystem.focusCapacityRate); 
         }
             
           
@@ -292,13 +292,13 @@ public class UIThings3 : MonoBehaviour
 
     public void HealingFocus(float increase)
     {
-        if (remainingFocus + increase <= startingFocus)
+        if (remainingFocus + increase <= PerkSystem.startingFocus)
         {
             remainingFocus += increase;
         }
         else
         {
-            remainingFocus = startingFocus;
+            remainingFocus = PerkSystem.startingFocus;
         }
     }
 
@@ -307,13 +307,13 @@ public class UIThings3 : MonoBehaviour
          if (remainingFocus - damage >= 0)
         {
             remainingEraser -= damage;
-            if (remainingHealth + gameplaying.currentInkCost <= startingHealth)
+            if (remainingHealth + gameplaying.currentInkCost <= PerkSystem.startingHealth)
             {
                  remainingHealth += gameplaying.currentInkCost / 2;
             }
             else
             {
-                remainingHealth = startingHealth;
+                remainingHealth = PerkSystem.startingHealth;
             }
         
              
