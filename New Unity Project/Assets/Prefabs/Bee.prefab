@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3694013302396848460}
   - component: {fileID: 3694013302396848461}
   - component: {fileID: 3694013302396848463}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bee
   m_TagString: goner
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3694013302657723550}
   - component: {fileID: 3694013302657723549}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Hazard Trigger
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238299067409105563}
   - component: {fileID: 8856866740348895408}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Hazard Trigger (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}

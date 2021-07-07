@@ -22,6 +22,8 @@ public class UIThings2 : MonoBehaviour
     static public Transform[] prices = new Transform[blockTypeLoadout.Length];
     public int scrollNumber;
 
+    public Color ice;
+
     public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6, blockType7, blockType8;
 
     // Start is called before the first frame update
@@ -108,7 +110,7 @@ public class UIThings2 : MonoBehaviour
 
                 case 7:
                     loadouts[i].sprite = blockType7;
-                    loadouts[i].color =  new Color(0f, 164.7f, 255f);
+                    loadouts[i].color =  Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
@@ -117,7 +119,7 @@ public class UIThings2 : MonoBehaviour
 
                 case 8:
                     loadouts[i].sprite = blockType8;
-                    loadouts[i].color =  Color.white;
+                    loadouts[i].color =  ice;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);

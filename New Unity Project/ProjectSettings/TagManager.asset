@@ -21,11 +21,12 @@ TagManager:
   - boss
   - insult
   - stopnow
+  - shootme
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - shootme
   - Water
   - UI
   - 

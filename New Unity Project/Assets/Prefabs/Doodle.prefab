@@ -143,7 +143,7 @@ MonoBehaviour:
   doodleMan: {fileID: 0}
   currentDoodleNumber: 0
   doodle: {fileID: 8309420846382011897}
-  doodleNumger: 39
+  doodleNumger: 38
 --- !u!61 &3834519778040446030
 BoxCollider2D:
   m_ObjectHideFlags: 0

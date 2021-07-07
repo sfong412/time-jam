@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class adiosLaser : MonoBehaviour
 {
-   void OnTriggerEnter2D(Collider2D other)
-   {
-       if (other.tag == "Player")
-       {
-           SceneManager.LoadScene(1);
-       }
-   }
+    public GameObject currentEnemy;
+ 
 }

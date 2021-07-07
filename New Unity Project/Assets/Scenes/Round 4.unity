@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 27528929}
   - component: {fileID: 27528928}
   - component: {fileID: 27528931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: adios laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8df9040bce8ee43ab826146fa83324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnemy: {fileID: 0}
 --- !u!1 &43546249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1749,7 @@ MonoBehaviour:
   image4: {fileID: 1384341487}
   image5: {fileID: 1951487071}
   scrollNumber: 0
+  ice: {r: 0, g: 0.64705884, b: 1, a: 1}
   blockType1: {fileID: -8177916521313437856, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType2: {fileID: 3665973890185625742, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
@@ -2264,7 +2266,7 @@ GameObject:
   - component: {fileID: 470797600}
   - component: {fileID: 470797599}
   - component: {fileID: 470797604}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3110,7 +3112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663271039}
   - component: {fileID: 663271040}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Detection Hitbox
   m_TagString: catchMe
   m_Icon: {fileID: 0}
@@ -3260,7 +3262,7 @@ MonoBehaviour:
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   jumpPadBlock: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   heavyBlock: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
-  iceBlock: {fileID: 0}
+  iceBlock: {fileID: 6672687899222105256, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
   ableToPlace: 1
 --- !u!1 &698332806
 GameObject:
@@ -3929,7 +3931,7 @@ GameObject:
   - component: {fileID: 815729353}
   - component: {fileID: 815729352}
   - component: {fileID: 815729354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: adios laser (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4040,6 +4042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8df9040bce8ee43ab826146fa83324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnemy: {fileID: 0}
 --- !u!1 &849396114
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5457,7 @@ GameObject:
   - component: {fileID: 1176681403}
   - component: {fileID: 1176681404}
   - component: {fileID: 1176681405}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Jump Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9695,7 +9698,7 @@ GameObject:
   - component: {fileID: 2144735748}
   - component: {fileID: 2144735750}
   - component: {fileID: 2144735749}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Hazard Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
