@@ -56,6 +56,12 @@ public class scopionFix : MonoBehaviour
            directionguy.shouldI = true;
        }
 
+       if (other.tag == "ice")
+       {
+           directionguy.slowed = true;
+       }
+       
+
     
        }
 
@@ -77,6 +83,14 @@ public class scopionFix : MonoBehaviour
        }
        }
     
+       }
+
+       void OnTriggerExit(Collider2D other)
+       {
+           if (other.tag == "ice")
+           {
+               directionguy.slowed = false;
+           }
        }
 
      

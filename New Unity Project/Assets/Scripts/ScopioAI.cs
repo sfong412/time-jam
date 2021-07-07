@@ -19,11 +19,17 @@ public class ScopioAI : MonoBehaviour
 
     public bool shouldI;
 
+    public bool slowed;
+
 
 public Rigidbody2D rigidbody2D1;
 
 
     public Animator Scopio;
+
+    public Color blueballed;
+
+    public SpriteRenderer huh;
 
 
   //  SpriteRenderer movingThingSprite;
@@ -78,6 +84,14 @@ public Rigidbody2D rigidbody2D1;
             rigidbody2D1.velocity = new Vector3(0, 0, 0);
             stopim = false;
         }
+
+        if (slowed == true)
+        {
+            Speed = 0.5f;
+            huh.material.color = Color.Lerp(Color.white, blueballed, 0.3f);
+            StartCoroutine(slowed1());
+        }
+       
         
     }
 
@@ -98,12 +112,6 @@ public Rigidbody2D rigidbody2D1;
     {
         Destroy(gameObject);
     }
-
-  
-       
-     
-   
-
    void MoveLeft()
    {
        Scopio.SetBool("right", true);
@@ -127,11 +135,11 @@ public Rigidbody2D rigidbody2D1;
        rigidbody2D1.AddForce(new Vector2(0, 2), ForceMode2D.Impulse);
    }
 
+   IEnumerator slowed1()
+   {
+       yield return new WaitForSeconds(3);
+       Speed = 1.2f;
+       huh.material.color = Color.white;
 
-
-    
-
-   
-
-
+   }
 }

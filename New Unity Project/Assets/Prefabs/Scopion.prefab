@@ -229,8 +229,11 @@ MonoBehaviour:
   direction: 1
   stopim: 0
   shouldI: 0
+  slowed: 0
   rigidbody2D1: {fileID: 1160040605712977773}
   Scopio: {fileID: 1160040605712977775}
+  blueballed: {r: 0, g: 0.5294118, b: 1, a: 0}
+  huh: {fileID: 1160040605712977771}
 --- !u!95 &1160040605712977775
 Animator:
   serializedVersion: 3

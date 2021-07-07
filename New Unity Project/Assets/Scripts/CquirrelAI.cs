@@ -87,7 +87,7 @@ var velocity = transform.position - lastPos;
         {
             Speed = 0.5f;
             velocityTrigger = 0.003f;
-            renderer.material.color = Color.Lerp(Color.white, blueball, 0.12f);
+            renderer.material.color = Color.Lerp(Color.white, blueball, 0.3f);
         }
     }
 
@@ -115,8 +115,8 @@ var velocity = transform.position - lastPos;
     IEnumerator slow()
     {
         yield return new WaitForSeconds(1);
-        Speed = 4f;
-        velocityTrigger = 0.005f;
+        Speed = 3f;
+        velocityTrigger = 0.004f;
         renderer.material.color = Color.white;
     }
 

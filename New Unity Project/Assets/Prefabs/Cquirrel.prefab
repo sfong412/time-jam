@@ -283,9 +283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform1: {fileID: 0}
-  Speed: 4
+  Speed: 3
   velocity: 0
-  velocityTrigger: 0.005
+  velocityTrigger: 0.004
   rigidbody2D: {fileID: 8977165716598174458}
   lastPos: {x: 0, y: 0, z: 0}
   detected: 0

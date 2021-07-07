@@ -11,6 +11,8 @@ public class Shop : MonoBehaviour
 
     public GameObject shopScreen;
     public GameObject perkScreen;
+
+    public GameObject secret;
     public Animator blackFade2;
 
     public Animator audioFade2;
@@ -44,6 +46,10 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.D))
+        {
+            StartCoroutine(secret1());
+        }
     }
 
     void Awake()
@@ -219,6 +225,14 @@ public class Shop : MonoBehaviour
         audioFade2.SetBool("fade2", true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(nextRoundNumber);
+
+    }
+
+    IEnumerator secret1()
+    {
+        secret.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        SceneManager.LoadScene(8);
 
     }
 }

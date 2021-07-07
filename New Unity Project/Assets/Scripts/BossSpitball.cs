@@ -27,4 +27,13 @@ public class BossSpitball : Hazard
             Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "boss")
+        {
+            Destroy(gameObject);
+            //Debug.Log("sus");
+        }
+    }
 }

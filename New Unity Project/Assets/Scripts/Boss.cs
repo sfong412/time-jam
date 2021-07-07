@@ -116,7 +116,7 @@ public class Boss : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "insult")
+            if (other.tag == "insult" || other.tag == "ball")
             {
                 gotcha = true;
             }

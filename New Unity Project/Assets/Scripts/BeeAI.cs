@@ -18,6 +18,12 @@ public Vector3 lastPos;
 
     Transform target;
 
+    public float turnThreshhold;
+
+    public SpriteRenderer blue;
+
+    public Color blueballed;
+
 
   //  SpriteRenderer movingThingSprite;
 
@@ -39,14 +45,14 @@ public Vector3 lastPos;
 var velocity = transform.position - lastPos;
  lastPos = transform.position;
 
- if (velocity.x > 0.004)
+ if (velocity.x > turnThreshhold)
  {
      
       Bee.SetBool("goodmorning", false);
     
  }
 
- if (velocity.x < 0.004)
+ if (velocity.x < turnThreshhold)
  {
     
      Bee.SetBool("goodmorning", true);
@@ -58,6 +64,29 @@ var velocity = transform.position - lastPos;
     public void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "ice")
+        {
+            Speed = 0.5f;
+            turnThreshhold = 0.003f;
+            blue.material.color = Color.Lerp(Color.white, blueballed, 0.3f);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        StartCoroutine(slow());
+    }
+
+    IEnumerator slow()
+    {
+        yield return new WaitForSeconds(1);
+        Speed = 1f;
+        turnThreshhold = 0.005f;
+        blue.material.color = Color.white;
     }
 
    
