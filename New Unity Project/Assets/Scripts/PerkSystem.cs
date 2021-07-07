@@ -5,7 +5,7 @@ using UnityEngine;
 public class PerkSystem : MonoBehaviour
 {
 
-    UIThings3 ui;
+  //  UIThings3 ui;
     static public bool inkRegenUpPerk = false;
 
     static public bool eraserUseUpPerk = false;
@@ -25,7 +25,7 @@ public class PerkSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ui = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
+        //ui = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
 
         if (inkRegenUpPerk == true)
         {
