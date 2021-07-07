@@ -704,7 +704,7 @@ MonoBehaviour:
   platforms1: {fileID: 7135699730995980158, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   platforms2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   platforms3: {fileID: 8167577531054015681, guid: 4b81bd3b77cc5104c8a6ba5a96d003d1, type: 3}
-  platforms4: {fileID: 0}
+  platforms4: {fileID: 5502943214005454941, guid: 1cbb3b0e1006b4c439b0e8174b6b3986, type: 3}
 --- !u!1 &191642510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9490,6 +9490,7 @@ MonoBehaviour:
   Text2: {fileID: 1181981861}
   audioTransistion2: {fileID: 483723005}
   audioMan2: {fileID: 1026889672}
+  nomore: {fileID: 0}
   remainingDuration: 0
 --- !u!114 &2127874338
 MonoBehaviour:
