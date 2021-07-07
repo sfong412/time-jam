@@ -198,7 +198,7 @@ public class UIThings3 : MonoBehaviour
     {
         if (remainingHealth < PerkSystem.startingHealth)
         {
-            Healing(InkRegenRate); 
+            Healing(PerkSystem.inkRegenRate2); 
         }
         if (remainingFocus < PerkSystem.startingFocus)
         {
