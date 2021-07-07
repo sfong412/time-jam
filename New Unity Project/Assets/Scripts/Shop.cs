@@ -59,7 +59,25 @@ public class Shop : MonoBehaviour
 
     public void SelectPerk(int perkType)
     {
-        perkType = currentPerkType;
+        isBuying = true;
+        currentPerkType = perkType;
+        
+        switch (currentPerkType)
+        {
+            case 0:
+                PerkSystem.inkRegenUpPerk = !PerkSystem.inkRegenUpPerk;
+                Debug.Log("inkRegenUpPerk: " + PerkSystem.inkRegenUpPerk);
+                break;
+            case 1: 
+                PerkSystem.eraserUseUpPerk = !PerkSystem.eraserUseUpPerk;
+                Debug.Log("eraserUseUpPerk: " + PerkSystem.eraserUseUpPerk);
+                break;
+            case 2:
+                PerkSystem.focusCapacityUpPerk = !PerkSystem.focusCapacityUpPerk;
+                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
+                break;
+        }
+       // Debug.Log(PerkSystem.inkRegenUpPerk);
     }
 
     public void PlaceItem(int platform)
@@ -144,13 +162,24 @@ public class Shop : MonoBehaviour
         }
     }
 
+    public void PlacePerk()
+    {
+        if (isBuying == true)
+        {
+
+        }
+    }
+
+
     public void PerkScreen()
     {
+        isBuying = false;
         perkScreen2.SetBool("move", true);
     }
 
     public void ShopScreen()
     {
+        isBuying = false;
         perkScreen2.SetBool("move", false);
     }
 
@@ -168,7 +197,13 @@ public class Shop : MonoBehaviour
 
     public void StartGame()
     {
+        isBuying = false;
         StartCoroutine(nextRound());
+    }
+
+    public void StartGameTest()
+    {
+        SceneManager.LoadScene("Round 2");
     }
 
     IEnumerator blackFade22()
