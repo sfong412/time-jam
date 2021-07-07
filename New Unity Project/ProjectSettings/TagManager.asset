@@ -20,6 +20,7 @@ TagManager:
   - cat
   - boss
   - insult
+  - stopnow
   layers:
   - Default
   - TransparentFX
