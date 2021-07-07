@@ -20,6 +20,9 @@ public class PlacedBlockShadow : MonoBehaviour
 
     public Sprite heavyBlock;
 
+    public Sprite iceBlock;
+
+
     public bool ableToPlace = true;
 
     Camera mainCamera;
@@ -111,6 +114,11 @@ public class PlacedBlockShadow : MonoBehaviour
                 transform.localScale = new Vector3(5f, 5f, 1f);
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = heavyBlock;
+                break;
+            case 8:
+                transform.localScale = new Vector3(4f, 4f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                spriteRenderer.sprite = iceBlock;
                 break;
         }
     }
