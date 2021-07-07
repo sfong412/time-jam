@@ -20,6 +20,8 @@ public class UIThings3 : MonoBehaviour
 
     public float currentSpikeDamageAmount;
 
+    public float currentCatDamageAmount;
+
     public float healthCounter;
 
     public float remainingFocus;
@@ -126,6 +128,11 @@ public class UIThings3 : MonoBehaviour
        if (damageScript.damaged5 == true && pleaseStop.stopping == false)
        {
            DamageTaken(currentSpikeDamageAmount);
+       }
+
+       if (damageScript.damaged7 == true && pleaseStop.stopping == false)
+       {
+           DamageTaken(currentCatDamageAmount);
        }
        
 

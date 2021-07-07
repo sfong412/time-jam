@@ -32,6 +32,8 @@ public class UIThings : MonoBehaviour
 
     public GameObject audioMan2;
 
+    public GameObject nomore;
+
     
     [SerializeField]private float remainingDuration;
     // Start is called before the first frame update
@@ -76,6 +78,7 @@ public class UIThings : MonoBehaviour
         stopping = true;
         shadow.SetActive(false);
         StartCoroutine(UIAnimations());
+        nomore.SetActive(false);
     }
 
     IEnumerator UIAnimations()

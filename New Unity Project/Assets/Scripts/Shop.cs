@@ -15,6 +15,8 @@ public class Shop : MonoBehaviour
 
     public Animator audioFade2;
 
+    public Animator perkScreen2;
+
     public int nextRoundNumber;
     UIThings2 ui;
 
@@ -23,6 +25,8 @@ public class Shop : MonoBehaviour
     int blockType;
 
     int currentBlockType;
+
+    int currentPerkType;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +53,11 @@ public class Shop : MonoBehaviour
     {
         isBuying = true;
         currentBlockType = blockType;
+    }
+
+    public void SelectPerk(int perkType)
+    {
+        perkType = currentPerkType;
     }
 
     public void PlaceItem(int platform)
@@ -127,14 +136,12 @@ public class Shop : MonoBehaviour
 
     public void PerkScreen()
     {
-        perkScreen.SetActive(true);
-        shopScreen.SetActive(false);
+        perkScreen2.SetBool("move", true);
     }
 
     public void ShopScreen()
     {
-        perkScreen.SetActive(false);
-        shopScreen.SetActive(true);
+        perkScreen2.SetBool("move", false);
     }
 
     public void DisplayPerkState(GameObject button)

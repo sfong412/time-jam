@@ -63,6 +63,8 @@ public class HazardGenerator : MonoBehaviour
 
     public GameObject Doodles;
 
+    public GameObject Bee;
+
     public GameObject currentAirHazard;
     public GameObject currentGroundEnemy;
 
@@ -95,7 +97,7 @@ public class HazardGenerator : MonoBehaviour
         Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
-        randomNumber = Random.Range(0, 6);
+        randomNumber = Random.Range(0, 5);
         switch (randomNumber)
         {
             case 0:
@@ -112,6 +114,10 @@ public class HazardGenerator : MonoBehaviour
             case 3:
                 currentGroundEnemy = Scopion;  
                 break; 
+
+            case 4: 
+                currentAirHazard = Bee;
+                break;
         }
 
         //currentPlatform = platform2;

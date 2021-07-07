@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Round 2.unity
     guid: 271e09fffdb26284eaab95de2c563006
+  - enabled: 1
+    path: Assets/Scenes/Shop 3.unity
+    guid: 8e915d17727a16d42b1e9075d53ed4d5
+  - enabled: 1
+    path: Assets/Scenes/Round 3.unity
+    guid: 2734242d063ab8b4aa7c7a5a963d1b68
+  - enabled: 1
+    path: Assets/Scenes/Shop 4.unity
+    guid: b91a89e9e96768c4fad159b581e2b1f0
   m_configObjects: {}

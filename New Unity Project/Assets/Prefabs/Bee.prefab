@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform1: {fileID: 3694013302396848448}
-  Speed: 2
+  Speed: 1
   velocity: 0
   rigidbody2D: {fileID: 3694013302396848460}
   lastPos: {x: 0, y: 0, z: 0}

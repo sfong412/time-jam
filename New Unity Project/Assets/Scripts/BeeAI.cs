@@ -39,14 +39,14 @@ public Vector3 lastPos;
 var velocity = transform.position - lastPos;
  lastPos = transform.position;
 
- if (velocity.x > 0.005)
+ if (velocity.x > 0.004)
  {
      
       Bee.SetBool("goodmorning", false);
     
  }
 
- if (velocity.x < 0.005)
+ if (velocity.x < 0.004)
  {
     
      Bee.SetBool("goodmorning", true);

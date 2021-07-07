@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8977165716598174453}
   m_Layer: 0
   m_Name: Cquirrel
-  m_TagString: goner
+  m_TagString: cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,4 +291,3 @@ MonoBehaviour:
   Cquirrel: {fileID: 8977165716598174459}
   renderer: {fileID: 8977165716598174455}
   blueball: {r: 0, g: 0.5294118, b: 1, a: 0}
-  lerpTime: 1
