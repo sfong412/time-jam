@@ -23,6 +23,8 @@ TagManager:
   - stopnow
   - shootme
   - ball
+  - inBounds
+  - notCatchMe
   layers:
   - Default
   - TransparentFX

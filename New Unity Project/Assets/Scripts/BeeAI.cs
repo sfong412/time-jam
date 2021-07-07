@@ -31,7 +31,7 @@ public Vector3 lastPos;
     void Start()
     {
         transform1 = GetComponent<Transform>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
 
        
     }
@@ -40,6 +40,7 @@ public Vector3 lastPos;
     void Update()
     {   
             transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
+            target = GameObject.FindGameObjectWithTag("catchMe").GetComponent<Transform>();
         
 
 var velocity = transform.position - lastPos;
@@ -79,6 +80,11 @@ var velocity = transform.position - lastPos;
     void OnTriggerExit2D(Collider2D other)
     {
         StartCoroutine(slow());
+    }
+
+    void FixedUpdate()
+    {
+        target = GameObject.FindGameObjectWithTag("catchMe").GetComponent<Transform>();
     }
 
     IEnumerator slow()

@@ -52,6 +52,8 @@ public Vector3 lastPos;
             transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
         }
 
+         target = GameObject.FindGameObjectWithTag("catchMe").GetComponent<Transform>();
+
 var velocity = transform.position - lastPos;
  lastPos = transform.position;
 

@@ -25,6 +25,8 @@ public class CharacterController2D : MonoBehaviour
     public bool jumpHigh;
 
     public Animator Player;
+
+    public GameObject respawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +85,14 @@ else
 
 
 
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "inBounds")
+        {
+            transform.position = respawn.transform.position;
+        }
     }
 
 

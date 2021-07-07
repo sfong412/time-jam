@@ -174,7 +174,7 @@ MonoBehaviour:
   lastPos: {x: 0, y: 0, z: 0}
   detected: 0
   Bee: {fileID: 3694013302396848461}
-  turnThreshhold: 0.004
+  turnThreshhold: 0.005
   blue: {fileID: 3694013302396848449}
   blueballed: {r: 0, g: 0.5294118, b: 1, a: 0}
 --- !u!1 &3694013302657723551
