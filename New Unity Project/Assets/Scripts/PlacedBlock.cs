@@ -29,6 +29,7 @@ public class PlacedBlock : Hazard
     {
         transform1 = GetComponent<Transform>();
         renderer = GetComponent<SpriteRenderer>();
+        placedBlock = GetComponent<PlacedBlock>();
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
@@ -63,7 +64,7 @@ public class PlacedBlock : Hazard
             renderer.material.color = Color.gray;
             block.SetBool("Bop", true);
         }
-    
+        Debug.Log("on mouse over");
     }
     private void OnMouseExit()
     {
