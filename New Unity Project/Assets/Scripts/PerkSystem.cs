@@ -11,7 +11,7 @@ public class PerkSystem : MonoBehaviour
     static public bool eraserUseUpPerk = false;
 
     static public bool focusCapacityUpPerk = false;
-    static public float inkRegenRate;
+    static public float inkRegenRate2;
     static public float eraserUseRate;
     static public float focusCapacityRate;
     static public float startingHealth = 100;
@@ -20,6 +20,8 @@ public class PerkSystem : MonoBehaviour
 
     static public float startingFocus = 150;
 
+    public UIThings3 fix;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +29,11 @@ public class PerkSystem : MonoBehaviour
 
         if (inkRegenUpPerk == true)
         {
-            inkRegenRate = 0.2f;
+            fix.InkRegenRate = fix.InkRegenRate * 2;
         }
         else
         {
-            inkRegenRate = 0.1f;
+            inkRegenRate2 = fix.InkRegenRate;
         }
 
         if (eraserUseUpPerk == true)

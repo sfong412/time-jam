@@ -10,6 +10,7 @@ public class buttonFix : MonoBehaviour
     {
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
     }
+
     
    
     

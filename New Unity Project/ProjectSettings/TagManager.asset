@@ -18,6 +18,8 @@ TagManager:
   - doodle
   - ice
   - cat
+  - boss
+  - insult
   layers:
   - Default
   - TransparentFX
