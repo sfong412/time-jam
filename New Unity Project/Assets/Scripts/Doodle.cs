@@ -19,6 +19,8 @@ public class Doodle : MonoBehaviour
 
     public SpriteRenderer doodle;
 
+    public int doodleNumger;
+
   //  SpriteRenderer movingThingSprite;
 
     // Start is called before the first frame update
@@ -35,7 +37,7 @@ public class Doodle : MonoBehaviour
     void Awake()
     {
              doodleMan = GameObject.Find("Hazard Generator").GetComponent<HazardGenerator>();
-             currentDoodleNumber = Random.Range(0, 37);
+             currentDoodleNumber = Random.Range(0, doodleNumger);
              doodle.sprite = doodles[currentDoodleNumber];
              
              

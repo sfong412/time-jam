@@ -45,6 +45,17 @@ public class scopionFix : MonoBehaviour
        {
            directionguy.high = true;
        }
+
+       if (other.tag == "stopnow")
+       {
+           directionguy.stopim = true;
+           directionguy.shouldI = false;
+       }
+       else
+       {
+           directionguy.shouldI = true;
+       }
+
     
        }
 

@@ -15,6 +15,10 @@ public class ScopioAI : MonoBehaviour
     public bool ignore;
     public int direction = 1;
 
+    public bool stopim;
+
+    public bool shouldI;
+
 
 public Rigidbody2D rigidbody2D1;
 
@@ -51,14 +55,28 @@ public Rigidbody2D rigidbody2D1;
 
         if (shouldIReally == true)
         {
+            if (shouldI == true)
+            {
             Jump();
             shouldIReally = false;
+            }
+           
         }
 
         if (high == true)
         {
+            if (shouldI == true)
+            {
             Jump2();
             high = false;
+            }
+           
+        }
+        
+        if (stopim == true)
+        {
+            rigidbody2D1.velocity = new Vector3(0, 0, 0);
+            stopim = false;
         }
         
     }

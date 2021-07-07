@@ -69,7 +69,6 @@ public class UIThings3 : MonoBehaviour
         eraserBar.value = remainingEraser;
         currentEnemyDamageAmount = enemyDamageAmount;
 
-        InkRegenRate = PerkSystem.inkRegenRate;
     }
 
     void Awake()
