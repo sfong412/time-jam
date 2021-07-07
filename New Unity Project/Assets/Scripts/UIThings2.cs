@@ -13,9 +13,9 @@ public class UIThings2 : MonoBehaviour
     public Image image5;
     static public int blockType;
 
-    static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
+    static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 8};
 
-    static public int[] blockTypeInkCost = new int[7] { 30, 15, 10, 10, 40, 25, 35 };
+    static public int[] blockTypeInkCost = new int[8] { 30, 15, 10, 10, 40, 25, 35, 5 };
 
     static public Image[] loadouts = new Image[5];
 
@@ -59,6 +59,7 @@ public class UIThings2 : MonoBehaviour
             {
                 case 1:
                     loadouts[i].sprite = blockType1;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.9f, 0.7f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -66,6 +67,7 @@ public class UIThings2 : MonoBehaviour
                     break;
                 case 2:
                     loadouts[i].sprite = blockType2;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(-0.8f, 0.7f, 1f);
                     rectTransform.sizeDelta = new Vector2(36.7f, 153.3f);
@@ -73,6 +75,7 @@ public class UIThings2 : MonoBehaviour
                     break;
                 case 3:
                     loadouts[i].sprite = blockType3;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 180);
                     loadouts[i].transform.localScale = new Vector3(-0.7f, -2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -80,6 +83,7 @@ public class UIThings2 : MonoBehaviour
                     break;
                 case 4:
                     loadouts[i].sprite = blockType4;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 90);
                     loadouts[i].transform.localScale = new Vector3(-0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -87,6 +91,7 @@ public class UIThings2 : MonoBehaviour
                     break;
                 case 5:
                     loadouts[i].sprite = blockType5;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -94,6 +99,7 @@ public class UIThings2 : MonoBehaviour
                     break;
                 case 6:
                     loadouts[i].sprite = blockType6;
+                    loadouts[i].color = Color.white;
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(1f, 1f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -102,6 +108,7 @@ public class UIThings2 : MonoBehaviour
 
                 case 7:
                     loadouts[i].sprite = blockType7;
+                    loadouts[i].color =  new Color(0f, 164.7f, 255f);
                     loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     loadouts[i].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);

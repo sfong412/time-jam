@@ -47,7 +47,7 @@ public class PerkSystem : MonoBehaviour
 
         if (focusCapacityUpPerk == true)
         {
-            focusCapacityRate = 0.6f;
+            focusCapacityRate = 6.6f;
         }
         else
         {

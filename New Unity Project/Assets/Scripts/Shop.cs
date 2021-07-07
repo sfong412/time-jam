@@ -20,6 +20,8 @@ public class Shop : MonoBehaviour
     public int nextRoundNumber;
     UIThings2 ui;
 
+    UIThings3 uiThings3;
+
     bool isBuying = false;
 
     int blockType;
@@ -72,6 +74,7 @@ public class Shop : MonoBehaviour
             {
                 case 1:
                     UIThings2.loadouts[platform].sprite = ui.blockType1;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.9f, 0.7f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -79,6 +82,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 2:
                     UIThings2.loadouts[platform].sprite = ui.blockType2;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.8f, 0.7f, 1f);
                     rectTransform.sizeDelta = new Vector2(36.7f, 153.3f);
@@ -86,6 +90,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 3:
                     UIThings2.loadouts[platform].sprite = ui.blockType3;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 180);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.7f, -2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -93,6 +98,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 4:
                     UIThings2.loadouts[platform].sprite = ui.blockType4;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 90);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(-0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -100,6 +106,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 5:
                     UIThings2.loadouts[platform].sprite = ui.blockType5;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 2.78f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -107,6 +114,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 6:
                     UIThings2.loadouts[platform].sprite = ui.blockType6;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(1f, 1f, 1f);
                     rectTransform.sizeDelta = new Vector2(154.8f, 39.8f);
@@ -114,6 +122,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 7:
                     UIThings2.loadouts[platform].sprite = ui.blockType7;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
@@ -122,6 +131,7 @@ public class Shop : MonoBehaviour
 
                 case 8:
                     UIThings2.loadouts[platform].sprite = ui.blockType8;
+                    UIThings2.loadouts[platform].color = new Color(0f, 164.7f, 255f);
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);

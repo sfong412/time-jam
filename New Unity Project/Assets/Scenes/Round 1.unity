@@ -2959,6 +2959,7 @@ MonoBehaviour:
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   jumpPadBlock: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   heavyBlock: {fileID: -334945500499578240, guid: b10d98cad283c174d83c56999237f31c, type: 3}
+  iceBlock: {fileID: 6672687899222105256, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
   ableToPlace: 1
 --- !u!1 &698332806
 GameObject:

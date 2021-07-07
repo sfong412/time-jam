@@ -897,6 +897,7 @@ MonoBehaviour:
   platforms1: {fileID: 7135699730995980158, guid: 0c759712de155c3438b19b1c950d4e35, type: 3}
   platforms2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   platforms3: {fileID: 8167577531054015681, guid: 4b81bd3b77cc5104c8a6ba5a96d003d1, type: 3}
+  platforms4: {fileID: 0}
 --- !u!1 &191642510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1489,7 @@ MonoBehaviour:
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: 0}
   blockType7: {fileID: 0}
+  blockType8: {fileID: 0}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -2153,6 +2155,7 @@ MonoBehaviour:
   MovementSpeed: 5
   JumpForce: 1.5
   isgrounded: 0
+  isMoving: 0
   Jumped: 0
   rb2d: {fileID: 470797601}
   itsTimeToStop: {fileID: 2144463204}
@@ -3098,6 +3101,7 @@ MonoBehaviour:
   cageBlock: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   jumpPadBlock: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   heavyBlock: {fileID: -334945500499578240, guid: b10d98cad283c174d83c56999237f31c, type: 3}
+  iceBlock: {fileID: 6672687899222105256, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
   ableToPlace: 1
 --- !u!1 &695014921
 GameObject:
@@ -7146,13 +7150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901cb96aae3211e49a2b1015c0348f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSpawnDoodle: 0
   platformSpawnY: 0
   maxSpikes: 15
+  maxDoodles: 0
   maxAirEnemies: 7
   maxGroundEnemies: 5
   groundHazardSpawnTimer: 20
   airHazardspawnTimer: 30
   platformSpawnTimer: 45
+  maxDoodleTimer: 0
   hazard: {fileID: 5198866977051932483, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
   upsidedownHazard: {fileID: 5198866977051932483, guid: d6ce0a716c1ee4f4e83f49a00009e21e, type: 3}
   airHazard: {fileID: 4675744391322538413, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
@@ -7160,6 +7167,8 @@ MonoBehaviour:
   platform2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   Cquirrel: {fileID: 8977165716598174456, guid: d6ad6982a7349094592603fd991aa41c, type: 3}
   Scopion: {fileID: 1160040605712977760, guid: c86d66b70ac7f8d488996fee93afaf65, type: 3}
+  Doodles: {fileID: 0}
+  Bee: {fileID: 0}
   currentAirHazard: {fileID: 0}
   currentGroundEnemy: {fileID: 0}
   currentPlatform: {fileID: 0}
@@ -7647,6 +7656,7 @@ MonoBehaviour:
   block5: {fileID: 6307049418291793356, guid: 97530e34d423d9e4c8249b7b391891ad, type: 3}
   block6: {fileID: 5302421553260242549, guid: c74a0f94c5c965a42b25a21be8123844, type: 3}
   block7: {fileID: 1976227159785723226, guid: 3f91904da49e5c843b856ac8f1f17b79, type: 3}
+  block8: {fileID: 0}
   audioController: {fileID: 0}
 --- !u!4 &1521810343
 Transform:
@@ -7975,6 +7985,7 @@ MonoBehaviour:
   currentEnemyDamageAmount: 0
   currentScorpionDamageAmount: 0
   currentSpikeDamageAmount: 0
+  currentCatDamageAmount: 0
   healthCounter: 0
   remainingFocus: 0
   startingFocus: 150
@@ -8702,6 +8713,7 @@ MonoBehaviour:
   blockType5: {fileID: -7271198792740933489, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType6: {fileID: -6944614100572300844, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType7: {fileID: 0}
+  blockType8: {fileID: 0}
 --- !u!1 &1744678201
 GameObject:
   m_ObjectHideFlags: 0
@@ -11579,6 +11591,7 @@ MonoBehaviour:
   Text2: {fileID: 1181981861}
   audioTransistion2: {fileID: 0}
   audioMan2: {fileID: 0}
+  nomore: {fileID: 0}
   remainingDuration: 0
 --- !u!1 &2144735747
 GameObject:
@@ -11627,9 +11640,11 @@ MonoBehaviour:
   damaged: 0
   damaged3: 0
   damaged5: 0
+  damaged7: 0
   triggerDamaged: 0
   triggerDamaged2: 0
   triggerDamaged3: 0
+  triggerDamaged4: 0
   gonered: 0
   cameraMain: {fileID: 519420030}
   stopnow: {fileID: 0}
