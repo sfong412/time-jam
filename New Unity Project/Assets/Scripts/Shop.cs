@@ -148,7 +148,12 @@ public class Shop : MonoBehaviour
     {
        // perkState = !perkState;
 
-        button.GetComponentInChildren<Text>().text = "bop";
+        button.GetComponentInChildren<Text>().text = "Ink Regen Perk: " + PerkSystem.inkRegenPerk.ToString();
+    }
+
+    public void ChangePerkState()
+    {
+        PerkSystem.inkRegenPerk = !PerkSystem.inkRegenPerk;
     }
 
     public void StartGame()
