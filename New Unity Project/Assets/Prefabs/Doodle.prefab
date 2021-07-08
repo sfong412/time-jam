@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8309420846382011898}
   - component: {fileID: 3834519778040446030}
   - component: {fileID: 6512735203952257068}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Doodle
   m_TagString: doodle
   m_Icon: {fileID: 0}

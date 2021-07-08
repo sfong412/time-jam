@@ -29,6 +29,8 @@ public class Gameplay : MonoBehaviour
 
     Vector3 worldPosition;
 
+    //Ray worldPosition;
+
     Grid grid;
 
     public AudioSource audioMan;
@@ -50,6 +52,8 @@ public class Gameplay : MonoBehaviour
     public GameObject block7;
 
     public GameObject block8;
+
+    public GameObject block9;
     public GameObject audioController;
 
     // Start is called before the first frame update
@@ -141,6 +145,10 @@ public class Gameplay : MonoBehaviour
 
             case 8:
                 currentInkCost = 5;
+                break;
+
+            case 9:
+                currentInkCost = 0;
                 break;
 
         }
@@ -244,6 +252,11 @@ public class Gameplay : MonoBehaviour
 
                 case 8:
                     Instantiate(block8, result, transform.rotation, placedBlocks);
+                    blockPlaced = true;
+                    break;
+
+                case 9:
+                    Instantiate(block9, result, transform.rotation, placedBlocks);
                     blockPlaced = true;
                     break;
             }
