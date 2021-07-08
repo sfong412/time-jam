@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6699757763939518243}
   - component: {fileID: 1185104658435069580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Trigger
   m_TagString: ball
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 4917980013027641947}
   - component: {fileID: 3174232045131650041}
   - component: {fileID: -3757409105029349625}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spitball
   m_TagString: goner
   m_Icon: {fileID: 0}

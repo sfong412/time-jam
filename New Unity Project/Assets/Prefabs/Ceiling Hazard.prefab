@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6699757763939518243}
   - component: {fileID: 3588699358813987427}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Trigger
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 6015945414894806380}
   - component: {fileID: 2407734713841018867}
   - component: {fileID: 3533198783559879532}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ceiling Hazard
   m_TagString: gonerspike
   m_Icon: {fileID: 0}

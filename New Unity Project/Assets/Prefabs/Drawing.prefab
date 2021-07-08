@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8424836465303859104}
   - component: {fileID: 7747715581384913765}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground Trigger (1)
   m_TagString: Ground2
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6699757763939518243}
   - component: {fileID: 3588699358813987427}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Trigger
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168624571649097995}
   - component: {fileID: 6429397570161716985}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground Trigger
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 1090318894610117514}
   - component: {fileID: 2407734713841018867}
   - component: {fileID: 5218795100617015054}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Drawing
   m_TagString: gonerspike
   m_Icon: {fileID: 0}

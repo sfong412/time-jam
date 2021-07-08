@@ -793,7 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177516901}
   - component: {fileID: 177516902}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform Selector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4429,7 +4429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864596749}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6620,7 +6620,7 @@ GameObject:
   - component: {fileID: 1416313661}
   - component: {fileID: 1416313662}
   - component: {fileID: 1416313663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7685,7 +7685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691763776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Air Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8133,7 +8133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833664933}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Natural Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}

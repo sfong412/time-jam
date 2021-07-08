@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 129102308}
   - component: {fileID: 129102310}
   - component: {fileID: 129102313}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177516901}
   - component: {fileID: 177516902}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform Selector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4174,7 +4174,7 @@ GameObject:
   - component: {fileID: 750160260}
   - component: {fileID: 750160261}
   - component: {fileID: 750160262}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Damage Hitbox
   m_TagString: boss
   m_Icon: {fileID: 0}
@@ -4743,7 +4743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864596749}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4787,9 +4787,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876853972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 1416313661}
   m_RootOrder: 2
@@ -6762,7 +6762,7 @@ GameObject:
   - component: {fileID: 1416313661}
   - component: {fileID: 1416313662}
   - component: {fileID: 1416313663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7942,7 +7942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691763776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Air Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8138,7 +8138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751687227}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tracking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8420,7 +8420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833664933}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Natural Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
