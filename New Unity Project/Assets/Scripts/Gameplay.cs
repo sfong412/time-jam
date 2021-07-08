@@ -27,7 +27,7 @@ public class Gameplay : MonoBehaviour
     PlacedBlockShadow placedBlockShadow;
     Camera mainCamera;
 
-    Vector3 worldPosition_;
+    Vector3 worldPosition;
 
     //Ray worldPosition;
 
