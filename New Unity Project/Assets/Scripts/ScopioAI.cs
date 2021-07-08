@@ -31,13 +31,15 @@ public Rigidbody2D rigidbody2D1;
 
     public SpriteRenderer huh;
 
+ 
+
 
   //  SpriteRenderer movingThingSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+      
     }
 
     void Awake()

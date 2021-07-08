@@ -42,6 +42,10 @@ public class audioFix1 : MonoBehaviour
     public AudioClip catHit;
 
     public AudioClip catHit2;
+    public AudioClip scorpionJump;
+    public AudioClip spitBall;
+    public AudioClip boss1;
+    public AudioClip boss2;
     public DamageScript hitMan;
 
     public UIThings3 things;
@@ -51,6 +55,10 @@ public class audioFix1 : MonoBehaviour
     public CharacterController2D jumping;
 
     public bool meow2;
+
+    public bool jumps;
+
+    public Boss boss;
 
     void Start()
     {
@@ -158,15 +166,15 @@ public class audioFix1 : MonoBehaviour
             switch (meowVaration)
             {
                 case 0:
-                audioSource.PlayOneShot(moew, 0.2f);
+                audioSource.PlayOneShot(moew, 0.1f);
                 break;
 
                 case 1: 
-                audioSource.PlayOneShot(moew2, 0.2f);
+                audioSource.PlayOneShot(moew2, 0.1f);
                 break;
 
                 case 2: 
-                audioSource.PlayOneShot(moew3, 0.2f);
+                audioSource.PlayOneShot(moew3, 0.1f);
                 break;
             }
             meow2 = false;
@@ -178,13 +186,41 @@ public class audioFix1 : MonoBehaviour
             switch (catHitVaration)
             {
                case 0:
-               audioSource.PlayOneShot(catHit, 0.2f);
+               audioSource.PlayOneShot(catHit, 0.1f);
                break;
                case 1:
-               audioSource.PlayOneShot(catHit2, 0.2f); 
+               audioSource.PlayOneShot(catHit2, 0.1f); 
                break;
 
             }
+        }
+
+        if (jumps == true)
+        {
+             audioSource.PlayOneShot(scorpionJump, 0.2f);
+             jumps = false;
+        }
+
+        if (boss.dog == true)
+        {
+            audioSource.PlayOneShot(spitBall, 0.7f);
+            boss.dog = false;
+        }
+
+        
+        if (boss.dog2 == true)
+        {
+             var bossSwearVariation = Random.Range(0, 2);
+            switch (bossSwearVariation)
+            {
+               case 0:
+               audioSource.PlayOneShot(boss1, 0.7f);
+               break;
+               case 1:
+               audioSource.PlayOneShot(boss2, 0.7f); 
+               break;
+            }
+            boss.dog2 = false;
         }
 
         if (heyl.stopping == true)

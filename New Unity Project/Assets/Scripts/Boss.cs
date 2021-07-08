@@ -28,6 +28,10 @@ public class Boss : MonoBehaviour
 
     public UIThings huzzah;
 
+    public bool dog;
+
+    public bool dog2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,9 +58,11 @@ public class Boss : MonoBehaviour
                     case 0:
                         Instantiate(insult, transform.position, transform.rotation, hazardTransform);
                         StartCoroutine(insult1());
+                        dog2 = true;
                         break;
                     case 1:
                         StartCoroutine(spitball2());
+                        dog = true;
                         break;
                 }
                 timer = Random.Range(1f, 3f);
