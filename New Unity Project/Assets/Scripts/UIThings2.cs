@@ -15,7 +15,7 @@ public class UIThings2 : MonoBehaviour
 
     static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
 
-    static public int[] blockTypeInkCost = new int[9] { 30, 15, 10, 10, 40, 25, 35, 5, 0 };
+    static public int[] blockTypeInkCost = new int[9] { 30, 15, 10, 10, 40, 25, 35, 5, 50 };
 
     static public Image[] loadouts = new Image[5];
 

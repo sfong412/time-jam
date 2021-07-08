@@ -148,7 +148,7 @@ public class Gameplay : MonoBehaviour
                 break;
 
             case 9:
-                currentInkCost = 0;
+                currentInkCost = 50;
                 break;
 
         }
