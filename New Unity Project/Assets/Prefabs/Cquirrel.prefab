@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5519181804976912685}
   - component: {fileID: 3836891505285364486}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Hazard Trigger (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8977165715785357096}
   - component: {fileID: 8977165715785357099}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Hazard Trigger
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 8977165716598174459}
   - component: {fileID: 8977165716598174453}
   - component: {fileID: 2140941915246049927}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Cquirrel
   m_TagString: cat
   m_Icon: {fileID: 0}

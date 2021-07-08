@@ -47,7 +47,7 @@ public class PerkSystem : MonoBehaviour
 
         if (focusCapacityUpPerk == true)
         {
-            startingFocus = 1000f;
+            startingFocus = 100f;
         }
         else
         {

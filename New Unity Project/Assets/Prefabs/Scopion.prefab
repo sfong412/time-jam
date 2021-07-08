@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6938114528289147973}
   - component: {fileID: 5158366176565704634}
   - component: {fileID: 4496269414568215128}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Hazard Trigger (2)
   m_TagString: scopion
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1160040605712977773}
   - component: {fileID: 1160040605712977774}
   - component: {fileID: 1160040605712977775}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Scopion
   m_TagString: goner2
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 1160040605720363852}
   - component: {fileID: 1160040605720363850}
   - component: {fileID: 1160040605720363851}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Hazard Trigger (1)
   m_TagString: scopion
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160040605915719974}
   - component: {fileID: 1160040605915719973}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Hazard Trigger
   m_TagString: Hazard
   m_Icon: {fileID: 0}

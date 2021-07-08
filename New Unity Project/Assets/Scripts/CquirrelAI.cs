@@ -24,6 +24,8 @@ public Vector3 lastPos;
 
     public Color blueball;
 
+    public audioFix1 meow;
+
 
   //  SpriteRenderer movingThingSprite;
 
@@ -34,6 +36,7 @@ public Vector3 lastPos;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Color bluebal = new Color(168f, 255f, 255f);
         bluebal = blueball;
+        meow = GameObject.Find("AudioController (2)").GetComponent<audioFix1>();
 
        
     }
@@ -110,6 +113,7 @@ var velocity = transform.position - lastPos;
     IEnumerator noticed()
     {
         Cquirrel.SetBool("Detected", true);
+        meow.meow2 = true;
         yield return new WaitForSeconds(1);
         detected = true; 
     }

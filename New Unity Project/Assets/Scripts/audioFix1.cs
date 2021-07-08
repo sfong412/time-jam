@@ -33,12 +33,24 @@ public class audioFix1 : MonoBehaviour
 
     public AudioClip blockPlaced4;
 
-    public AudioClip footSteps;
+    public AudioClip moew;
+
+    public AudioClip moew2;
+
+    public AudioClip moew3;
+
+    public AudioClip catHit;
+
+    public AudioClip catHit2;
     public DamageScript hitMan;
 
     public UIThings3 things;
 
+    public UIThings heyl;
+
     public CharacterController2D jumping;
+
+    public bool meow2;
 
     void Start()
     {
@@ -99,7 +111,6 @@ public class audioFix1 : MonoBehaviour
                 audioSource.PlayOneShot(blockErased3, 0.3f);
                 break;
             }
-            audioSource.PlayOneShot(blockErased, 0.3f);
         }
 
         if (hitMan.damaged == true)
@@ -114,7 +125,7 @@ public class audioFix1 : MonoBehaviour
 
         if(things.gameplaying.shake == true)
         {
-            audioSource.PlayOneShot(noInk, 0.5f);
+            audioSource.PlayOneShot(noInk, 0.8f);
         }
 
         if (jumping.Jumped == true)
@@ -140,6 +151,47 @@ public class audioFix1 : MonoBehaviour
         {
             footSteps1.Pause();
         }
+
+        if (meow2 == true)
+        {
+             var meowVaration = Random.Range(0, 2);
+            switch (meowVaration)
+            {
+                case 0:
+                audioSource.PlayOneShot(moew, 0.2f);
+                break;
+
+                case 1: 
+                audioSource.PlayOneShot(moew2, 0.2f);
+                break;
+
+                case 2: 
+                audioSource.PlayOneShot(moew3, 0.2f);
+                break;
+            }
+            meow2 = false;
+        }
+
+        if (hitMan.triggerDamaged4 == true)
+        {
+             var catHitVaration = Random.Range(0, 2);
+            switch (catHitVaration)
+            {
+               case 0:
+               audioSource.PlayOneShot(catHit, 0.2f);
+               break;
+               case 1:
+               audioSource.PlayOneShot(catHit2, 0.2f); 
+               break;
+
+            }
+        }
+
+        if (heyl.stopping == true)
+        {
+            audioSource.volume = 0;
+        }
+
     }
 
    
