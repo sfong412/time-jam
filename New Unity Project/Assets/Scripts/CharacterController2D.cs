@@ -47,6 +47,7 @@ public class CharacterController2D : MonoBehaviour
         {
             Player.SetBool("time", true);
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;    
+            Player.SetFloat("X", 0);
         }
 
     }

@@ -33,6 +33,7 @@ public class UIThings : MonoBehaviour
     public GameObject audioMan2;
 
     public GameObject nomore;
+    public GameObject nomore2;
 
     
     [SerializeField]private float remainingDuration;
@@ -78,7 +79,7 @@ public class UIThings : MonoBehaviour
         stopping = true;
         shadow.SetActive(false);
         StartCoroutine(UIAnimations());
-        nomore.SetActive(false);
+        
     }
 
     IEnumerator UIAnimations()
@@ -107,9 +108,22 @@ public class UIThings : MonoBehaviour
         blackFade2.SetActive(false);
     }
 
+    IEnumerator hank()
+    {
+         blackFade2.SetActive(true);
+        blackFade3.SetBool("otherWay", true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(currentScene);
+    }
+
     public void NextRound()
     {
         StartCoroutine(NextRound1());
     
+    }
+
+    public void Died2()
+    {
+        StartCoroutine(hank());
     }
 }

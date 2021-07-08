@@ -10,7 +10,7 @@ public class Alert : MonoBehaviour
 
     public Rigidbody2D not;
 
-    public bool had = true;
+public Animator Alert1;
 
     void Start()
     {
@@ -21,7 +21,7 @@ public class Alert : MonoBehaviour
         
             if (other.tag == "Ground2")
         {
-           
+            Alert1.SetBool("stop", true);
             detector.tag = "notCatchMe";
             detector2.SetActive(true);
             Debug.Log("under");
@@ -45,7 +45,8 @@ public class Alert : MonoBehaviour
         yield return new WaitForSeconds(5);
         detector.tag = "catchMe";
         detector2.SetActive(false);
-        had = false;
+        Alert1.SetBool("sadness", true);
+
         
     }
 }

@@ -51,9 +51,18 @@ public class UIThings3 : MonoBehaviour
     public DamageScript damageScript;
     
     public Animator Ink;
-    public Animator Eraser;
+    public Animator blackFade;
 
     public UIThings pleaseStop;
+
+    public Animator audioTransistion;
+
+    public GameObject roundGone;
+
+    public GameObject roundGone2;
+
+    public GameObject roundGone3;
+
 
     void Start()
     {
@@ -255,8 +264,7 @@ public class UIThings3 : MonoBehaviour
         }
         else 
         {   
-          remainingHealth = 0;
-          damageScript.gonered = true;   
+          StartCoroutine(dying());
         }
         
         
@@ -321,6 +329,20 @@ public class UIThings3 : MonoBehaviour
         {   
           canErase = false; 
         }
+    }
+
+    IEnumerator dying()
+    {
+          remainingHealth = 0;
+          audioTransistion.SetBool("audioFade", true);
+          blackFade.SetBool("transistion", true);
+          pleaseStop.stopping = true;
+          roundGone.SetActive(true);
+          yield return new WaitForSeconds(0.5f);
+          roundGone2.SetActive(true);
+          yield return new WaitForSeconds(0.5f);
+           roundGone3.SetActive(true);
+          
     }
 
     
