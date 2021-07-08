@@ -15,7 +15,7 @@ public class UIThings2 : MonoBehaviour
 
     static public int[] blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
 
-    static public int[] blockTypeInkCost = new int[9] { 30, 15, 10, 10, 40, 25, 35, 5, 50 };
+    static public int[] blockTypeInkCost = new int[10] { 30, 15, 10, 10, 40, 25, 35, 5, 50, 99 };
 
     static public Image[] loadouts = new Image[5];
 
@@ -24,7 +24,7 @@ public class UIThings2 : MonoBehaviour
 
     public Color ice;
 
-    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6, blockType7, blockType8, blockType9;
+    public Sprite blockType1, blockType2, blockType3, blockType4, blockType5, blockType6, blockType7, blockType8, blockType9, blockType10;
 
     // Start is called before the first frame update
     void Start()
@@ -132,6 +132,14 @@ public class UIThings2 : MonoBehaviour
                     loadouts[i].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
                     priceText.text = blockTypeInkCost[8].ToString();
+                    break;
+                case 10:
+                    loadouts[i].sprite = blockType10;
+                    loadouts[i].color =  Color.white;
+                    loadouts[i].transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    loadouts[i].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
+                    rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
+                    priceText.text = blockTypeInkCost[9].ToString();
                     break;
             }
         }

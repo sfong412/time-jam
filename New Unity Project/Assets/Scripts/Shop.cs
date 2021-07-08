@@ -169,6 +169,14 @@ public class Shop : MonoBehaviour
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
                     priceText.text = UIThings2.blockTypeInkCost[8].ToString();
                     break;
+                case 10:
+                    UIThings2.loadouts[platform].sprite = ui.blockType10;
+                    UIThings2.loadouts[platform].color =  Color.white;
+                    UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
+                    rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
+                    priceText.text = UIThings2.blockTypeInkCost[9].ToString();
+                    break;
             }
 
             //   UIThings2.loadouts[platform].sprite = ui.blockType5;

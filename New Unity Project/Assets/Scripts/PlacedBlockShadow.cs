@@ -24,6 +24,7 @@ public class PlacedBlockShadow : MonoBehaviour
 
     public Sprite alertBlock;
 
+    public Sprite goneBlock;  
 
     public bool ableToPlace = true;
 
@@ -126,6 +127,11 @@ public class PlacedBlockShadow : MonoBehaviour
                 transform.localScale = new Vector3(4f, 4f, 1f);
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
                 spriteRenderer.sprite = alertBlock;
+                break;
+            case 10:
+                transform.localScale = new Vector3(4f, 4f, 1f);
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                spriteRenderer.sprite = goneBlock;
                 break;
         }
     }
