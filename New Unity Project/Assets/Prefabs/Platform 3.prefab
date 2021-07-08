@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7043039601442774322}
   - component: {fileID: 7950490029099539265}
   - component: {fileID: 6397850173900624947}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform 2 1 (1) 1
   m_TagString: Ground2
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 6760715109590428709}
   - component: {fileID: 6032129859215029510}
   - component: {fileID: 8324154971753102662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform 3
   m_TagString: Ground2
   m_Icon: {fileID: 0}

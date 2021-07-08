@@ -6,7 +6,7 @@ public class PerkSystem : MonoBehaviour
 {
 
   //  UIThings3 ui;
-    static public bool inkRegenUpPerk = false;
+    static public bool inkRegenUpPerk = true;
 
     static public bool eraserUseUpPerk = false;
 
@@ -29,7 +29,7 @@ public class PerkSystem : MonoBehaviour
 
         if (inkRegenUpPerk == true)
         {
-            inkRegenRate2 = 0.1f * 10;
+            inkRegenRate2 = 0.1f * 1000;
         }
         else
         {

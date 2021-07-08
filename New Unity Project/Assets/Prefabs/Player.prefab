@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7918029884601871105}
   - component: {fileID: 7918029884601871110}
   - component: {fileID: 7918029884601871111}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Jump Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7918029885554787006}
   - component: {fileID: 7918029885554787004}
   - component: {fileID: 7918029885554787007}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hazard Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 7918029886113078682}
   - component: {fileID: 7918029886113078693}
   - component: {fileID: 7918029886113078686}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918029886222313157}
   - component: {fileID: 7918029886222313018}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detection Hitbox
   m_TagString: catchMe
   m_Icon: {fileID: 0}
