@@ -107,10 +107,6 @@ public class HazardGenerator : MonoBehaviour
                 currentAirHazard = airHazard;
                 break;
 
-            case 2:
-                currentGroundEnemy = hazard;
-                break;
-
             case 3:
                 currentGroundEnemy = Scopion;  
                 break; 
@@ -127,15 +123,15 @@ public class HazardGenerator : MonoBehaviour
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.8f, -3.5f), transform.position.z);
 
         RandomNumberGenerator();
-        spawnGroundHazard(groundHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
-        spawnCeilingHazard(ceilingHazardSpawnPosition, 0, maxSpikes, groundHazardTimer);
-        spawnAirHazard(airHazardSpawnPosition, 1, maxAirEnemies, airHazardTimer);
-        spawnGroundEnemy(groundHazardSpawnPosition, 2, maxGroundEnemies, groundHazardTimer);
-        spawnDoodle(airHazardSpawnPosition, 1, maxDoodles, doodleTimer);
+        spawnGroundHazard(groundHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
+        spawnCeilingHazard(ceilingHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
+        spawnAirHazard(airHazardSpawnPosition, 0, maxAirEnemies, airHazardTimer);
+        spawnGroundEnemy(groundHazardSpawnPosition, 5, maxGroundEnemies, groundHazardTimer);
+        spawnDoodle(airHazardSpawnPosition, 6, maxDoodles, doodleTimer);
 
         if (platform != null)
         {
-            spawnPlatform(platformSpawnPosition, 3, 1, platformTimer);
+            spawnPlatform(platformSpawnPosition, 4, 1, platformTimer);
         }
     }
 

@@ -29,7 +29,7 @@ public class PerkSystem : MonoBehaviour
 
         if (inkRegenUpPerk == true)
         {
-            inkRegenRate2 = 0.1f * 1000;
+            inkRegenRate2 = 0.1f * 2;
         }
         else
         {

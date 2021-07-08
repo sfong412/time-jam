@@ -118,7 +118,11 @@ public class Boss : MonoBehaviour
         {
             if (other.tag == "insult" || other.tag == "ball")
             {
-                gotcha = true;
+                if (huzzah.stopping == false)
+                {
+                    gotcha = true;
+                }
+                
             }
         }
 
