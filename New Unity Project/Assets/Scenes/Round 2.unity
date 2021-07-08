@@ -1583,7 +1583,7 @@ MonoBehaviour:
   image4: {fileID: 1384341487}
   image5: {fileID: 1951487071}
   scrollNumber: 0
-  ice: {r: 0, g: 0, b: 0, a: 0}
+  ice: {r: 0, g: 0.64705884, b: 1, a: 1}
   blockType1: {fileID: -8177916521313437856, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType2: {fileID: 3665973890185625742, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}
   blockType3: {fileID: 5180069130486379377, guid: 89e658b0e711bde4a80a215d8e3b7156, type: 3}

@@ -847,7 +847,7 @@ MonoBehaviour:
   blackFade2: {fileID: 689353545}
   audioFade2: {fileID: 520346538}
   perkScreen2: {fileID: 1569159164}
-  nextRoundNumber: 5
+  nextRoundNumber: 6
 --- !u!1 &46601640
 GameObject:
   m_ObjectHideFlags: 0
@@ -12472,7 +12472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001547734}
   m_Layer: 0
-  m_Name: ice cube
+  m_Name: alert block price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20671,7 +20671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -827, y: 83.1}
+  m_AnchoredPosition: {x: -839.93, y: 83.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664796916
@@ -20694,7 +20694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c2a9bcee642aa54b92396b4a6266774, type: 2}
   m_sharedMaterial: {fileID: 3184777496284794644, guid: 4c2a9bcee642aa54b92396b4a6266774, type: 2}
@@ -21624,7 +21624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"if you slay alert, you won''t get hurt"'
+  m_text: '"this is bound to save someone"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c2a9bcee642aa54b92396b4a6266774, type: 2}
   m_sharedMaterial: {fileID: 3184777496284794644, guid: 4c2a9bcee642aa54b92396b4a6266774, type: 2}
