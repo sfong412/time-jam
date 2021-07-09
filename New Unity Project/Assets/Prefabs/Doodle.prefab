@@ -139,11 +139,12 @@ MonoBehaviour:
   - {fileID: 6852420017200082211, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
   - {fileID: -5563288513054587294, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
   - {fileID: -6935733139556780696, guid: 30f988c59f61d254993ef1f6fad13828, type: 3}
+  - {fileID: 5294651683615892872, guid: e5783355a8a6a3848b0eed1c05db937c, type: 3}
   currentDoodle: {fileID: 0}
   doodleMan: {fileID: 0}
   currentDoodleNumber: 0
   doodle: {fileID: 8309420846382011897}
-  doodleNumger: 38
+  doodleNumger: 39
 --- !u!61 &3834519778040446030
 BoxCollider2D:
   m_ObjectHideFlags: 0
