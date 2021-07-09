@@ -46,6 +46,10 @@ public class audioFix1 : MonoBehaviour
     public AudioClip spitBall;
     public AudioClip boss1;
     public AudioClip boss2;
+
+    public AudioClip hitBoss;
+    public AudioClip hitBoss1;
+    public AudioClip hitBoss2;
     public DamageScript hitMan;
 
     public UIThings3 things;
@@ -221,6 +225,24 @@ public class audioFix1 : MonoBehaviour
                break;
             }
             boss.dog2 = false;
+        }
+
+        if (boss.dog3 == true)
+        {
+            var hitBossVaration = Random.Range(0,2);
+            switch (hitBossVaration)
+            {
+                case 0:
+                audioSource.PlayOneShot(hitBoss, 0.7f);
+                break;
+                case 1:
+                audioSource.PlayOneShot(hitBoss1, 0.7f);
+                break;
+                case 2: 
+                audioSource.PlayOneShot(hitBoss2, 0.7f);
+                break;
+            }
+            boss.dog3 = false;
         }
 
         if (heyl.stopping == true)

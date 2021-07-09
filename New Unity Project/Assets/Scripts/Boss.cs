@@ -32,6 +32,8 @@ public class Boss : MonoBehaviour
 
     public bool dog2;
 
+    public bool dog3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +91,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator hit()
     {
+        dog3 = true;
         boss.SetBool("hit", true);
         cam.SetBool("shook", true);
         yield return new WaitForSeconds(0.1f);
