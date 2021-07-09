@@ -6,11 +6,18 @@ public class PerkSystem : MonoBehaviour
 {
 
   //  UIThings3 ui;
-    static public bool inkRegenUpPerk = true;
+    static public bool inkRegenUpPerk = false;
 
     static public bool eraserUseUpPerk = false;
 
     static public bool focusCapacityUpPerk = false;
+
+    static public bool inkRegenDownPerk = false;
+
+    static public bool eraserUseDownPerk = false;
+
+    static public bool focusCapacityDownPerk = false;
+
     static public float inkRegenRate2 = 0.1f;
     static public float eraserUseRate = 0.1f;
     static public float focusCapacityRate;
@@ -20,13 +27,60 @@ public class PerkSystem : MonoBehaviour
 
     static public float startingFocus = 150;
 
+    float inkRegenMultiplier;
+
+    float eraserUseMultiplier;
+
+    float focusCapacityMultiplier;
+
     public UIThings3 fix;
 
     // Start is called before the first frame update
     void Start()
     {
-        //ui = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
+        if (inkRegenUpPerk == true)
+        {
+            inkRegenMultiplier = 2;
+        }
+        else if (inkRegenDownPerk == true)
+        {
+            inkRegenMultiplier = 0.5f;
+        }
+        else
+        {
+            inkRegenMultiplier = 1;
+        }
 
+        if (eraserUseUpPerk == true)
+        {
+            eraserUseMultiplier = 0.5f;
+        }
+        else if (eraserUseDownPerk == true)
+        {
+            eraserUseMultiplier = 1.2f;
+        }
+        else
+        {
+            eraserUseMultiplier = 1;
+        }
+
+        if (focusCapacityUpPerk == true)
+        {
+            focusCapacityMultiplier = 1.5f;
+        }
+        else if (focusCapacityDownPerk == true)
+        {
+            focusCapacityMultiplier = 0.666666f;
+        }
+        else
+        {
+            focusCapacityMultiplier = 1;
+        }
+
+        inkRegenRate2 = 0.1f * inkRegenMultiplier;
+        eraserUseRate = 0.1f * eraserUseMultiplier;
+        startingFocus = 150f * focusCapacityMultiplier;
+/*
         if (inkRegenUpPerk == true)
         {
             inkRegenRate2 = 0.1f * 2;
@@ -53,6 +107,7 @@ public class PerkSystem : MonoBehaviour
         {
             startingFocus = 150f;
         }
+*/
     }
 
     // Update is called once per frame

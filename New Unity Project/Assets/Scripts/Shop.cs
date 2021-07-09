@@ -32,10 +32,17 @@ public class Shop : MonoBehaviour
 
     int currentPerkType;
 
+    bool goodPerkSelected;
+
+    bool badPerkSelected;
+
     // Start is called before the first frame update
     void Start()
     {
         ui = GameObject.Find("Selectors").GetComponent<UIThings2>();
+
+        goodPerkSelected = false;
+        badPerkSelected = false;
 
         if (UIThings2.blockTypeLoadout == null)
         {
@@ -71,16 +78,58 @@ public class Shop : MonoBehaviour
         switch (currentPerkType)
         {
             case 0:
-                PerkSystem.inkRegenUpPerk = !PerkSystem.inkRegenUpPerk;
+                PerkSystem.inkRegenUpPerk = true;
+
+                PerkSystem.eraserUseUpPerk = false;
+                PerkSystem.focusCapacityUpPerk = false;
+
                 Debug.Log("inkRegenUpPerk: " + PerkSystem.inkRegenUpPerk);
+                goodPerkSelected = true;
                 break;
             case 1: 
-                PerkSystem.eraserUseUpPerk = !PerkSystem.eraserUseUpPerk;
+                PerkSystem.eraserUseUpPerk = true;
+
+                PerkSystem.inkRegenUpPerk = false;
+                PerkSystem.focusCapacityUpPerk = false;
+
                 Debug.Log("eraserUseUpPerk: " + PerkSystem.eraserUseUpPerk);
+                goodPerkSelected = true;
                 break;
             case 2:
-                PerkSystem.focusCapacityUpPerk = !PerkSystem.focusCapacityUpPerk;
+                PerkSystem.focusCapacityUpPerk = true;
+
+                PerkSystem.inkRegenUpPerk = false;
+                PerkSystem.eraserUseUpPerk = false;
+
                 Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
+                goodPerkSelected = true;
+                break;
+            case 3:
+                PerkSystem.focusCapacityUpPerk = true;
+
+                PerkSystem.inkRegenUpPerk = false;
+                PerkSystem.eraserUseUpPerk = false;
+
+                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
+                goodPerkSelected = true;
+                break;
+            case 4:
+                PerkSystem.focusCapacityUpPerk = true;
+
+                PerkSystem.inkRegenUpPerk = false;
+                PerkSystem.eraserUseUpPerk = false;
+
+                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
+                goodPerkSelected = true;
+                break;
+            case 5:
+                PerkSystem.focusCapacityUpPerk = true;
+
+                PerkSystem.inkRegenUpPerk = false;
+                PerkSystem.eraserUseUpPerk = false;
+
+                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
+                goodPerkSelected = true;
                 break;
         }
        // Debug.Log(PerkSystem.inkRegenUpPerk);
@@ -181,14 +230,6 @@ public class Shop : MonoBehaviour
 
             //   UIThings2.loadouts[platform].sprite = ui.blockType5;
             isBuying = false;
-        }
-    }
-
-    public void PlacePerk()
-    {
-        if (isBuying == true)
-        {
-
         }
     }
 
