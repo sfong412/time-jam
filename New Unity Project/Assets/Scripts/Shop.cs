@@ -248,7 +248,7 @@ public class Shop : MonoBehaviour
     {
         secret.SetActive(true);
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(10);
 
     }
 }
