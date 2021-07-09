@@ -20,7 +20,7 @@ public class PerkSystem : MonoBehaviour
 
     static public float inkRegenRate2 = 0.1f;
     static public float eraserUseRate = 0.1f;
-    static public float focusCapacityRate;
+    static public float focusCapacityRate = 0.5f;
     static public float startingHealth = 100;
 
     static public float startingEraser = 100;

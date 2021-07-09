@@ -24,7 +24,7 @@ public class Gameplay1 : MonoBehaviour
 
     Transform placedBlocks;
 
-    PlacedBlockShadow1 placedBlockShadow;
+    public PlacedBlockShadow1 placedBlockShadow;
     Camera mainCamera;
 
     Vector3 worldPosition;
@@ -39,7 +39,7 @@ public class Gameplay1 : MonoBehaviour
 
     public UIThings2 selector;
 
-    public UIThings3 guiBars;
+    public UIThings5 guiBars;
 
     public GameObject block1;
     public GameObject block2;

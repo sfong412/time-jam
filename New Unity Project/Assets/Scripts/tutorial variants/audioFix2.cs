@@ -197,7 +197,13 @@ public class audioFix2 : MonoBehaviour
         }
 
     }
+
+    if (textPlaying == true)
+    {
+        footSteps1.Pause();
+    }
         }
+
        
 
    

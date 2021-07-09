@@ -36,7 +36,7 @@ public class UIThings : MonoBehaviour
     public GameObject nomore2;
 
     
-    [SerializeField]private float remainingDuration;
+    public float remainingDuration;
     // Start is called before the first frame update
     
     void Awake()

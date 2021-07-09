@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacedBlock : Hazard
+public class PlacedBlock1 : Hazard
 {
 
     public Transform transform1;
@@ -19,7 +19,7 @@ public class PlacedBlock : Hazard
 
     public bool blockPlaced;
 
-    public UIThings3 eraser;
+    public UIThings5 eraser;
     public Animator block;
 
 
@@ -33,7 +33,7 @@ public class PlacedBlock : Hazard
 
         movingThingTransform = GameObject.Find("MovingThing").GetComponent<Transform>();
         movingThingBoxCollider = GameObject.Find("MovingThing").GetComponent<BoxCollider2D>();
-        eraser = GameObject.Find("Ink Bar").GetComponent<UIThings3>();
+        eraser = GameObject.Find("Ink Bar").GetComponent<UIThings5>();
         blockPlaced = true;
     }
 

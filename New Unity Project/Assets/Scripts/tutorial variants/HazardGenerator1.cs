@@ -94,7 +94,7 @@ public class HazardGenerator1 : MonoBehaviour
 
         Vector3 ceilingHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-1.00f, 4.00f), 0.68f, transform.position.z);
 
-        Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
+        //Vector3 platformSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x + platformBoxCollider.size.x + Random.Range(-1.00f, 4.00f), platformSpawnY, transform.position.z);
 
         //random number generator to randomize floor/ceiling hazard generation
         randomNumber = Random.Range(0, 5);
@@ -123,15 +123,15 @@ public class HazardGenerator1 : MonoBehaviour
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.8f, -3.5f), transform.position.z);
 
         RandomNumberGenerator();
-        spawnGroundHazard(groundHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
+        //spawnGroundHazard(groundHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
         spawnCeilingHazard(ceilingHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
         spawnAirHazard(airHazardSpawnPosition, 0, maxAirEnemies, airHazardTimer);
-        spawnGroundEnemy(groundHazardSpawnPosition, 5, maxGroundEnemies, groundHazardTimer);
+        //spawnGroundEnemy(groundHazardSpawnPosition, 5, maxGroundEnemies, groundHazardTimer);
         spawnDoodle(airHazardSpawnPosition, 6, maxDoodles, doodleTimer);
 
         if (platform != null)
         {
-            spawnPlatform(platformSpawnPosition, 4, 1, platformTimer);
+            //spawnPlatform(platformSpawnPosition, 4, 1, platformTimer);
         }
     }
 

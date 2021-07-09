@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -32,12 +33,38 @@ public class DialogueManager : MonoBehaviour
     public GameObject UISelector;
 
     public GameObject placedBlockShadow;
+
+    public GameObject birds;
+
+    public GameObject birds2;
+
+    public Transform blocks;
+
+    public GameObject blocks2;
+
+    public Gameplay1 scroll;
+
+    public HazardGenerator1 generator1;
+
+    public Image TimerBorder;
+
+    public Image TimerFill;
+
+    public Text timer;
+
+    public UIThings Timer;
+
+    int childs;
     
 
     void Awake()
     {
         flag.transform.localScale = new Vector3(0, 0 , 0);
         thatonething = false;
+        TimerFill = GameObject.Find("Fillbots").GetComponent<Image>();
+        TimerBorder = GameObject.Find("Timer").GetComponent<Image>();
+        timer = GameObject.Find("Textbots").GetComponent<Text>();
+
     }
 
     // Update is called once per frame
@@ -71,6 +98,18 @@ public class DialogueManager : MonoBehaviour
             else if (eventNumber == 4)
             {
                 five();
+            }
+            else if (eventNumber == 5)
+            {
+                six();
+            }
+            else if (eventNumber == 6)
+            {
+                seven();
+            }
+            else if (eventNumber == 7)
+            {
+                eight();
             }
     
         
@@ -166,11 +205,99 @@ public class DialogueManager : MonoBehaviour
             complete = false;
             dialogue.startNextThing= true;
             Flag2.flagCaptured = false;
-             hazardManager.SetActive(false);
             UISelector.SetActive(false);
             placedBlockShadow.SetActive(false);
+            childs = blocks.childCount;
+            for(int i = childs - 1; i >= 0; i--)
+            {
+                GameObject.Destroy(blocks.GetChild(i).gameObject);
+            }
+            
+                
+            
+
         }
         }
+    }
+
+    void six()
+    {
+         if (dialogue.cutscene.textPlaying == false)
+        {
+            UISelector.SetActive(true);
+            placedBlockShadow.SetActive(true);
+            flag.transform.localScale = new Vector3(5, 5 , 5);
+             flag.transform.position = spawnPoints[3].transform.position;
+             birds.SetActive(true);
+        if (Flag2.flagCaptured == true)
+        {
+            flag.transform.localScale = new Vector3(0, 0 , 0);
+            complete = true;
+            Debug.Log("sys");
+            dialogue.NextEvent();
+            complete = false;
+            dialogue.startNextThing= true;
+            birds.SetActive(false);
+            Flag2.flagCaptured = false;
+             UISelector.SetActive(false);
+            placedBlockShadow.SetActive(false);
+            childs = blocks.childCount;
+            for(int i = childs - 1; i >= 0; i--)
+            {
+                GameObject.Destroy(blocks.GetChild(i).gameObject);
+            }
+        }
+        }
+    }
+
+    void seven()
+    {
+          if (dialogue.cutscene.textPlaying == false)
+        {
+            UISelector.SetActive(true);
+            placedBlockShadow.SetActive(true);
+            flag.transform.localScale = new Vector3(5, 5 , 5);
+             flag.transform.position = spawnPoints[4].transform.position;
+             birds2.SetActive(true);
+        if (Flag2.flagCaptured == true)
+        {
+            flag.transform.localScale = new Vector3(0, 0 , 0);
+            complete = true;
+            Debug.Log("sys");
+            dialogue.NextEvent();
+            complete = false;
+            dialogue.startNextThing= true;
+            birds2.SetActive(false);
+            Flag2.flagCaptured = false;
+             UISelector.SetActive(false);
+            placedBlockShadow.SetActive(false);
+            childs = blocks.childCount;
+            for(int i = childs - 1; i >= 0; i--)
+            {
+                GameObject.Destroy(blocks.GetChild(i).gameObject);
+            }
+        }
+        }
+    }
+
+    void eight()
+    {
+        if (dialogue.cutscene.textPlaying == false)
+        {
+        UISelector.SetActive(true);
+        placedBlockShadow.SetActive(true);
+        scroll.scrollSpeed = 0.6f;
+        generator1.maxAirEnemies = 5;
+        generator1.maxSpikes = 7;
+        Timer.Duration = 30;
+        Timer.remainingDuration = 30;
+        TimerBorder.enabled = true;
+        TimerFill.enabled = true;
+        timer.enabled = true;
+
+        }
+       
+
     }
 
     IEnumerator one2()
@@ -187,6 +314,8 @@ public class DialogueManager : MonoBehaviour
         {
             one3= false;
         }
+        yield return new WaitForSeconds(1);
+        one3= false;
     }
 
     IEnumerator owned()
