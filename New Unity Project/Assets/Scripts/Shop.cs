@@ -36,10 +36,16 @@ public class Shop : MonoBehaviour
 
     bool badPerkSelected;
 
+    TextMeshProUGUI goodPerkText;
+    TextMeshProUGUI badPerkText;
+
     // Start is called before the first frame update
     void Start()
     {
         ui = GameObject.Find("Selectors").GetComponent<UIThings2>();
+
+        goodPerkText = GameObject.Find("Selected Good Perk (1)").GetComponent<TextMeshProUGUI>();
+        badPerkText = GameObject.Find("Selected Bad Perk (1)").GetComponent<TextMeshProUGUI>();
 
         goodPerkSelected = false;
         badPerkSelected = false;
@@ -82,6 +88,13 @@ public class Shop : MonoBehaviour
 
                 PerkSystem.eraserUseUpPerk = false;
                 PerkSystem.focusCapacityUpPerk = false;
+                goodPerkText.text = "Ink Regen Up";
+
+                if (PerkSystem.inkRegenDownPerk == true)
+                {
+                    PerkSystem.inkRegenDownPerk = false;
+                    badPerkText.text = "None";
+                }
 
                 Debug.Log("inkRegenUpPerk: " + PerkSystem.inkRegenUpPerk);
                 goodPerkSelected = true;
@@ -91,6 +104,13 @@ public class Shop : MonoBehaviour
 
                 PerkSystem.inkRegenUpPerk = false;
                 PerkSystem.focusCapacityUpPerk = false;
+                goodPerkText.text = "Eraser Use Up";
+
+                if (PerkSystem.eraserUseDownPerk == true)
+                {
+                    PerkSystem.eraserUseDownPerk = false;
+                    badPerkText.text = "None";
+                }
 
                 Debug.Log("eraserUseUpPerk: " + PerkSystem.eraserUseUpPerk);
                 goodPerkSelected = true;
@@ -100,36 +120,64 @@ public class Shop : MonoBehaviour
 
                 PerkSystem.inkRegenUpPerk = false;
                 PerkSystem.eraserUseUpPerk = false;
+                goodPerkText.text = "Focus Capacity Up";
+
+                if (PerkSystem.focusCapacityDownPerk == true)
+                {
+                    PerkSystem.focusCapacityDownPerk = false;
+                    badPerkText.text = "None";
+                }
 
                 Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
                 goodPerkSelected = true;
                 break;
             case 3:
-                PerkSystem.focusCapacityUpPerk = true;
+                PerkSystem.inkRegenDownPerk = true;
 
-                PerkSystem.inkRegenUpPerk = false;
-                PerkSystem.eraserUseUpPerk = false;
+                PerkSystem.eraserUseDownPerk = false;
+                PerkSystem.focusCapacityDownPerk = false;
+                badPerkText.text = "Ink Regen Down";
 
-                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
-                goodPerkSelected = true;
+                if (PerkSystem.inkRegenUpPerk == true)
+                {
+                    PerkSystem.inkRegenUpPerk = false;
+                    goodPerkText.text = "None";
+                }
+
+                Debug.Log("inkRegenDownPerk: " + PerkSystem.inkRegenDownPerk);
+                badPerkSelected = true;
                 break;
             case 4:
-                PerkSystem.focusCapacityUpPerk = true;
+                PerkSystem.eraserUseDownPerk = true;
 
-                PerkSystem.inkRegenUpPerk = false;
-                PerkSystem.eraserUseUpPerk = false;
+                PerkSystem.inkRegenDownPerk = false;
+                PerkSystem.focusCapacityDownPerk = false;
+                badPerkText.text = "Eraser Use Down";
 
-                Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
-                goodPerkSelected = true;
+                if (PerkSystem.eraserUseUpPerk == true)
+                {
+                    PerkSystem.eraserUseUpPerk = false;
+                    goodPerkText.text = "None";
+                }
+
+                Debug.Log("eraserUseDownPerk: " + PerkSystem.eraserUseDownPerk);
+                badPerkSelected = true;
                 break;
             case 5:
-                PerkSystem.focusCapacityUpPerk = true;
+                PerkSystem.focusCapacityDownPerk = true;
 
-                PerkSystem.inkRegenUpPerk = false;
-                PerkSystem.eraserUseUpPerk = false;
+                PerkSystem.inkRegenDownPerk = false;
+                PerkSystem.eraserUseDownPerk = false;
+                badPerkText.text = "Focus Capacity Down";
+
+                if (PerkSystem.focusCapacityUpPerk == true)
+                {
+                    PerkSystem.focusCapacityUpPerk = false;
+                    goodPerkText.text = "None";
+                }
 
                 Debug.Log("focusCapacityUpPerk: " + PerkSystem.focusCapacityUpPerk);
-                goodPerkSelected = true;
+                badPerkSelected = true;
                 break;
         }
        // Debug.Log(PerkSystem.inkRegenUpPerk);
