@@ -1611,7 +1611,7 @@ MonoBehaviour:
   blockType7: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   blockType8: {fileID: 6672687899222105256, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
   blockType9: {fileID: 6298587033996042055, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
-  blockType10: {fileID: 0}
+  blockType10: {fileID: 3055640631713576854, guid: 03a1ba7b5eb98a8419085f28db0cff34, type: 3}
 --- !u!4 &324687310
 Transform:
   m_ObjectHideFlags: 0
@@ -3348,7 +3348,7 @@ MonoBehaviour:
   heavyBlock: {fileID: -6762553659110008678, guid: aee9464bea72e6941b8eed1ca5dc9ba3, type: 3}
   iceBlock: {fileID: 6672687899222105256, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
   alertBlock: {fileID: 6298587033996042055, guid: 0e6a7ea5f8702774695d009965671992, type: 3}
-  goneBlock: {fileID: 0}
+  goneBlock: {fileID: 3055640631713576854, guid: 03a1ba7b5eb98a8419085f28db0cff34, type: 3}
   ableToPlace: 1
 --- !u!1 &698332806
 GameObject:
@@ -7050,7 +7050,7 @@ MonoBehaviour:
   block7: {fileID: 1976227159785723226, guid: 3f91904da49e5c843b856ac8f1f17b79, type: 3}
   block8: {fileID: 6919631538750734161, guid: 3433a95f87ea82e478a5e5ebdfefa566, type: 3}
   block9: {fileID: 1147591342822520179, guid: 7ffeae1a31b30094baa65b8c7b02221d, type: 3}
-  block10: {fileID: 0}
+  block10: {fileID: 2398732459190274096, guid: 6cf2c9f3122f1e04bbe3ab307d343ae2, type: 3}
   audioController: {fileID: 483723005}
 --- !u!4 &1521810343
 Transform:
