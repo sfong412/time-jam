@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Gameplay : MonoBehaviour
+public class Gameplay1 : MonoBehaviour
 {
     public float scrollSpeed = 1f;
     public float currentInkCost;
@@ -24,14 +24,14 @@ public class Gameplay : MonoBehaviour
 
     Transform placedBlocks;
 
-    PlacedBlockShadow placedBlockShadow;
+    PlacedBlockShadow1 placedBlockShadow;
     Camera mainCamera;
 
     Vector3 worldPosition;
 
     //Ray worldPosition;
 
-    Grid grid;
+    public Grid grid;
 
     public AudioSource audioMan;
 
@@ -58,6 +58,8 @@ public class Gameplay : MonoBehaviour
     public GameObject block10;
     public GameObject audioController;
 
+    public audioFix2 thing;
+
 
 
     // Start is called before the first frame update
@@ -69,7 +71,7 @@ public class Gameplay : MonoBehaviour
 
         placedBlocks = GameObject.Find("Placed Blocks").GetComponent<Transform>();
 
-        placedBlockShadow = GameObject.Find("Placed Block Shadow").GetComponent<PlacedBlockShadow>();
+        placedBlockShadow = GameObject.Find("Placed Block Shadow").GetComponent<PlacedBlockShadow1>();
 
         selector = GameObject.Find("Selectors").GetComponent<UIThings2>();
 
@@ -202,7 +204,7 @@ public class Gameplay : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (canPlace && stop.stopping == false)
+        if (canPlace && stop.stopping == false && thing.textPlaying == false)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = mainCamera.nearClipPlane;

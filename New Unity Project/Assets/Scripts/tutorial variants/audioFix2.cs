@@ -8,7 +8,7 @@ public class audioFix2 : MonoBehaviour
 
     public AudioSource footSteps1;
 
-    public Gameplay gamePlay;
+    public Gameplay1 gamePlay;
     public AudioClip blockplaced;
 
     public AudioClip spikeHit;
@@ -44,7 +44,7 @@ public class audioFix2 : MonoBehaviour
     public AudioClip catHit2;
     public DamageScript hitMan;
 
-    public UIThings3 things;
+    public UIThings5 things;
 
     public UIThings heyl;
 
