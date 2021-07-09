@@ -28,6 +28,10 @@ public class Dialogue : MonoBehaviour
 
     public int[] nextDialogueCap;
 
+    public UIThings5 yeah;
+
+ 
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +58,7 @@ public class Dialogue : MonoBehaviour
         {
             StopAllCoroutines();
             textComponent.text = dialogueManager.lines[index];
+             cutscene.speaking = false;
         }
         }
 
@@ -96,6 +101,9 @@ public class Dialogue : MonoBehaviour
         dialogueManager.complete = false;
          if (startNextThing == true)
         {
+            yeah.remainingEraser = yeah.startingEraser;
+            yeah.remainingFocus = yeah.startingFocus;
+            yeah.remainingHealth = yeah.startingHealth;
             dialogueManager.complete = false;
             index3 += 1;
             indexCap += nextDialogueCap[index3];
@@ -112,11 +120,14 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        cutscene.speaking = true;
         foreach(char c in dialogueManager.lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        cutscene.speaking = false;
+       
     }
 
     IEnumerator sus()

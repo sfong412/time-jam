@@ -64,6 +64,7 @@ public class DialogueManager : MonoBehaviour
         TimerFill = GameObject.Find("Fillbots").GetComponent<Image>();
         TimerBorder = GameObject.Find("Timer").GetComponent<Image>();
         timer = GameObject.Find("Textbots").GetComponent<Text>();
+        generator1.enabled = false;
 
     }
 
@@ -284,16 +285,20 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogue.cutscene.textPlaying == false)
         {
+             flag.transform.localScale = new Vector3(5, 5 , 5);
+             flag.transform.position = spawnPoints[5].transform.position;
         UISelector.SetActive(true);
         placedBlockShadow.SetActive(true);
-        scroll.scrollSpeed = 0.6f;
-        generator1.maxAirEnemies = 5;
-        generator1.maxSpikes = 7;
-        Timer.Duration = 30;
-        Timer.remainingDuration = 30;
-        TimerBorder.enabled = true;
-        TimerFill.enabled = true;
-        timer.enabled = true;
+        scroll.scrollSpeed = 0.4f;
+        StartCoroutine(missFlag());
+        generator1.maxAirEnemies = 10;
+        generator1.maxSpikes = 12;
+        generator1.enabled = true;
+
+        if (Flag2.flagCaptured == true)
+        {
+            Timer.OnEnd();
+        }
 
         }
        
@@ -332,5 +337,11 @@ public class DialogueManager : MonoBehaviour
             spike.SetActive(false);
             Flag2.flagCaptured = false;
 
+    }
+
+    IEnumerator missFlag()
+    {
+        yield return new WaitForSeconds(10);
+        scroll.scrollSpeed = 0f;
     }
 }

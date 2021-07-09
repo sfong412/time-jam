@@ -129,7 +129,7 @@ public Rigidbody2D rigidbody2D1;
 
    void Jump()
    {
-       rigidbody2D1.AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
+       rigidbody2D1.AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
    }
 
     void Jump2()

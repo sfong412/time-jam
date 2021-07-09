@@ -123,7 +123,7 @@ public class HazardGenerator1 : MonoBehaviour
         Vector3 airHazardSpawnPosition = new Vector3(movingThingTransform.position.x + movingThingBoxCollider.bounds.size.x / 2 + Random.Range(-2.00f, 8.00f), Random.Range(0.8f, -3.5f), transform.position.z);
 
         RandomNumberGenerator();
-        //spawnGroundHazard(groundHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
+        spawnGroundHazard(groundHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
         spawnCeilingHazard(ceilingHazardSpawnPosition, 1, maxSpikes, groundHazardTimer);
         spawnAirHazard(airHazardSpawnPosition, 0, maxAirEnemies, airHazardTimer);
         //spawnGroundEnemy(groundHazardSpawnPosition, 5, maxGroundEnemies, groundHazardTimer);

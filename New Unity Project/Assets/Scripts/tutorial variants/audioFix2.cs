@@ -8,6 +8,8 @@ public class audioFix2 : MonoBehaviour
 
     public AudioSource footSteps1;
 
+    public AudioSource talking;
+
     public Gameplay1 gamePlay;
     public AudioClip blockplaced;
 
@@ -53,6 +55,7 @@ public class audioFix2 : MonoBehaviour
     public bool meow2;
 
     public bool textPlaying;
+    public bool speaking;
 
     void Start()
     {
@@ -115,6 +118,12 @@ public class audioFix2 : MonoBehaviour
                 audioSource.PlayOneShot(blockErased3, 0.3f);
                 break;
             }
+        }
+
+        
+        else
+        {
+            talking.Pause();
         }
 
         if (hitMan.damaged == true)
@@ -202,6 +211,19 @@ public class audioFix2 : MonoBehaviour
     {
         footSteps1.Pause();
     }
+
+    if (speaking == true)
+        {
+            if (!talking.isPlaying)
+            {
+                talking.Play();
+            }
+            
+        }
+        else
+        {
+            talking.Pause();
+        } 
         }
 
        
