@@ -105,7 +105,7 @@ MonoBehaviour:
   placedBlock: {fileID: 0}
   blockPlaced: 0
   eraser: {fileID: 0}
-  block: {fileID: 0}
+  block: {fileID: 2398732459190274093}
 --- !u!95 &2398732459190274093
 Animator:
   serializedVersion: 3
