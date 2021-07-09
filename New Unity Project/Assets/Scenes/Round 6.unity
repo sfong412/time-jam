@@ -1191,12 +1191,12 @@ MonoBehaviour:
   blockPlaced2: {fileID: 8300000, guid: 1b02ccccbd7ea0c41a035c2c89f1dacc, type: 3}
   blockPlaced3: {fileID: 8300000, guid: 3f444bbf759eca846b4b4846c6df06fb, type: 3}
   blockPlaced4: {fileID: 8300000, guid: 8886604c8bd8e544fb160970c16f6476, type: 3}
-  moew: {fileID: 0}
-  moew2: {fileID: 0}
-  moew3: {fileID: 0}
-  catHit: {fileID: 0}
-  catHit2: {fileID: 0}
-  scorpionJump: {fileID: 0}
+  moew: {fileID: 8300000, guid: 5a6c2d68c9c220043b1bfaf00c633122, type: 3}
+  moew2: {fileID: 8300000, guid: 25389f3eb58284a4abb7591dc3583606, type: 3}
+  moew3: {fileID: 8300000, guid: b608b61bfb2ef95489e9b9be7a25f841, type: 3}
+  catHit: {fileID: 8300000, guid: 39b97934459d95b40b56a6ef309ba3bc, type: 3}
+  catHit2: {fileID: 8300000, guid: 88564f333f189d542ae171e5fb2b1d08, type: 3}
+  scorpionJump: {fileID: 8300000, guid: 42e3bcb458ecd4a48a79503f22452c03, type: 3}
   spitBall: {fileID: 0}
   boss1: {fileID: 0}
   boss2: {fileID: 0}

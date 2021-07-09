@@ -199,12 +199,6 @@ public class audioFix1 : MonoBehaviour
             }
         }
 
-        if (jumps == true)
-        {
-             audioSource.PlayOneShot(scorpionJump, 0.2f);
-             jumps = false;
-        }
-
         if (boss.dog == true)
         {
             audioSource.PlayOneShot(spitBall, 0.7f);

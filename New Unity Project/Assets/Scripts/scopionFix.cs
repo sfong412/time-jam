@@ -19,14 +19,13 @@ public class scopionFix : MonoBehaviour
        {
            directionguy.direction = 0;
            directionguy.shouldIReally = true;
-           jumps.jumps = true;
+         
           
        }
        else
        {
            directionguy.direction = 1;
            directionguy.shouldIReally = true;
-           jumps.jumps = true;
       
 
        }
@@ -37,14 +36,13 @@ public class scopionFix : MonoBehaviour
            if (directionguy.direction == 1)
        {
            directionguy.direction = 0;
-           jumps.jumps = true;
+
           
           
        }
        else
        {
            directionguy.direction = 1;
-           jumps.jumps = true;
          
       
 
@@ -83,14 +81,12 @@ public class scopionFix : MonoBehaviour
        {
            directionguy.direction = 0;
            directionguy.shouldIReally = true;
-           jumps.jumps = true;
        
        }
        else
        {
            directionguy.direction = 1;
            directionguy.shouldIReally = true;
-           jumps.jumps = true;
     
        }
        }
