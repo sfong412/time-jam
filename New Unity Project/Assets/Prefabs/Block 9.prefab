@@ -157,7 +157,7 @@ MonoBehaviour:
   placedBlock: {fileID: 0}
   blockPlaced: 0
   eraser: {fileID: 0}
-  block: {fileID: 0}
+  block: {fileID: 1147591342822520174}
 --- !u!114 &1147591342822520176
 MonoBehaviour:
   m_ObjectHideFlags: 0
