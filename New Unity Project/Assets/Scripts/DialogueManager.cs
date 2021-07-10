@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -53,6 +54,8 @@ public class DialogueManager : MonoBehaviour
     public Text timer;
 
     public UIThings Timer;
+
+    public GameObject skip;
 
     public bool amongus;
 
@@ -115,6 +118,11 @@ public class DialogueManager : MonoBehaviour
             {
                 eight();
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(2);
+        }
     
         
     }
@@ -127,6 +135,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (one3 == false)
                 {
+                    skip.SetActive(false);
                     StartCoroutine(one2());
                     
                 }
