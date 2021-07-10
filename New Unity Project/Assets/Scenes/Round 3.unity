@@ -1233,6 +1233,7 @@ MonoBehaviour:
   hitBoss: {fileID: 0}
   hitBoss1: {fileID: 0}
   hitBoss2: {fileID: 0}
+  GONE: {fileID: 8300000, guid: 4d6b0e814ba8d4a45b1a98840eceb676, type: 3}
   hitMan: {fileID: 2144735749}
   things: {fileID: 1542899951}
   heyl: {fileID: 0}
@@ -1240,6 +1241,7 @@ MonoBehaviour:
   meow2: 0
   jumps: 0
   boss: {fileID: 0}
+  kaboom: 0
 --- !u!82 &255697531
 AudioSource:
   m_ObjectHideFlags: 0

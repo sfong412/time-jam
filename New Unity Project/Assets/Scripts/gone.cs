@@ -15,6 +15,8 @@ public class gone : MonoBehaviour
 
     public GameObject groundHazards;
 
+    public audioFix1 boom;
+
     public bool pushed = true;
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class gone : MonoBehaviour
         airHazards = GameObject.Find("Air Hazards");
         groundHazards = GameObject.Find("Ground Enemies");
         camera2 = GameObject.Find("Main Camera").GetComponent<Animator>();
+        boom = GameObject.Find("AudioController (2)").GetComponent<audioFix1>();
         pushed = true;
     }
 
@@ -41,6 +44,7 @@ public class gone : MonoBehaviour
     {
            if (other.tag == "Player")
         {
+            boom.kaboom = true;
             StartCoroutine(camShake());
             button.SetBool("pressed", true);
             StartCoroutine(gone2());

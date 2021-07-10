@@ -50,6 +50,8 @@ public class audioFix1 : MonoBehaviour
     public AudioClip hitBoss;
     public AudioClip hitBoss1;
     public AudioClip hitBoss2;
+    
+    public AudioClip GONE;
     public DamageScript hitMan;
 
     public UIThings3 things;
@@ -64,6 +66,8 @@ public class audioFix1 : MonoBehaviour
 
     public Boss boss;
 
+    public bool kaboom;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -75,6 +79,14 @@ public class audioFix1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+         if (kaboom == true)
+        { 
+            audioSource.PlayOneShot(GONE, 0.7f);
+            kaboom = false;
+        }
+
+
         if (gamePlay.blockPlaced == true)
         {
             var blockPlacedvaration = Random.Range(0, 3);
@@ -199,6 +211,11 @@ public class audioFix1 : MonoBehaviour
             }
         }
 
+        if (heyl.stopping == true)
+        {
+            audioSource.volume = 0;
+        }
+
         if (boss.dog == true)
         {
             audioSource.PlayOneShot(spitBall, 0.5f);
@@ -239,10 +256,8 @@ public class audioFix1 : MonoBehaviour
             boss.dog3 = false;
         }
 
-        if (heyl.stopping == true)
-        {
-            audioSource.volume = 0;
-        }
+
+        
 
     }
 
