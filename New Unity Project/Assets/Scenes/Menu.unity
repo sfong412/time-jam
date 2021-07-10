@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9896cefcde555943812ae570a0951d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiBeep: {fileID: 533232978}
+  uiBeep: {fileID: 58168276}
   beep1: {fileID: 8300000, guid: db351842b9402374d8dc88b4900d14f7, type: 3}
   beep2: {fileID: 8300000, guid: c5ffec91c90a17c44a6f08af30ad70ef, type: 3}
   beep3: {fileID: 8300000, guid: e718083da804645449fc8537040c7aba, type: 3}
