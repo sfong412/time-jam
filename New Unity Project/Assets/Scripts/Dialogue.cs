@@ -101,6 +101,7 @@ public class Dialogue : MonoBehaviour
         dialogueManager.complete = false;
          if (startNextThing == true)
         {
+            yeah.canErase = true;
             yeah.remainingEraser = yeah.startingEraser;
             yeah.remainingFocus = yeah.startingFocus;
             yeah.remainingHealth = yeah.startingHealth;

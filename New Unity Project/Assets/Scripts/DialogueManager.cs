@@ -54,6 +54,8 @@ public class DialogueManager : MonoBehaviour
 
     public UIThings Timer;
 
+    public bool amongus;
+
     int childs;
     
 
@@ -65,6 +67,7 @@ public class DialogueManager : MonoBehaviour
         TimerBorder = GameObject.Find("Timer").GetComponent<Image>();
         timer = GameObject.Find("Textbots").GetComponent<Text>();
         generator1.enabled = false;
+        amongus = false;
 
     }
 
@@ -285,12 +288,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogue.cutscene.textPlaying == false)
         {
+            StartCoroutine(missFlag());
              flag.transform.localScale = new Vector3(5, 5 , 5);
              flag.transform.position = spawnPoints[5].transform.position;
         UISelector.SetActive(true);
         placedBlockShadow.SetActive(true);
-        scroll.scrollSpeed = 0.4f;
-        StartCoroutine(missFlag());
         generator1.maxAirEnemies = 10;
         generator1.maxSpikes = 12;
         generator1.enabled = true;
@@ -298,6 +300,15 @@ public class DialogueManager : MonoBehaviour
         if (Flag2.flagCaptured == true)
         {
             Timer.OnEnd();
+        }
+
+        if (amongus == false)
+        {
+            scroll.scrollSpeed = 0.4f;
+        }
+        else
+        {
+            scroll.scrollSpeed = 0;
         }
 
         }
@@ -341,7 +352,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator missFlag()
     {
-        yield return new WaitForSeconds(10);
-        scroll.scrollSpeed = 0f;
+        yield return new WaitForSeconds(45);
+        amongus = true;
     }
 }

@@ -110,15 +110,17 @@ else
 
     }
 
-    void OnTriggerExit2D(Collider2D other)
+   
+
+
+   
+}
+
+ void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "inBounds")
         {
             transform.position = respawn.transform.position;
         }
     }
-
-
-   
-}
 }
