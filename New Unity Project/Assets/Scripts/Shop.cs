@@ -49,8 +49,6 @@ public class Shop : MonoBehaviour
         goodPerkText = GameObject.Find("Selected Good Perk (1)").GetComponent<TextMeshProUGUI>();
         badPerkText = GameObject.Find("Selected Bad Perk (1)").GetComponent<TextMeshProUGUI>();
 
-        goodPerkSelected = false;
-        badPerkSelected = false;
 
         if (UIThings2.blockTypeLoadout == null)
         {
@@ -71,6 +69,9 @@ public class Shop : MonoBehaviour
             PerkSystem.eraserCapacityDownPerk = false;
             PerkSystem.focusUseDownPerk = false;
             PerkSystem.focusCapacityDownPerk = false;
+
+            goodPerkSelected = false;
+            badPerkSelected = false;
         }
 
     }
@@ -557,9 +558,12 @@ public class Shop : MonoBehaviour
 
     public void StartGame()
     {
-        whyUnity = true;
-        isBuying = false;
-        StartCoroutine(nextRound());
+        if (goodPerkSelected == true && badPerkSelected == true && goodPerkText.text != "None" && badPerkText.text != "None")
+        {
+            whyUnity = true;
+            isBuying = false;
+            StartCoroutine(nextRound());
+        }
     }
 
     public void StartGameTest()

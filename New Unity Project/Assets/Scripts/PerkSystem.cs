@@ -9,7 +9,7 @@ public class PerkSystem : MonoBehaviour
     static public bool inkRegenUpPerk = false;
     static public bool inkCapacityUpPerk = false;
 
-    static public bool eraserUseUpPerk = true;
+    static public bool eraserUseUpPerk = false;
     static public bool eraserCapacityUpPerk = false;
 
     static public bool focusUseUpPerk = false;
@@ -62,7 +62,7 @@ public class PerkSystem : MonoBehaviour
 
         if (inkCapacityUpPerk == true)
         {
-            inkCapacityMultiplier = 100.25f;
+            inkCapacityMultiplier = 1.25f;
         }
         else if (inkCapacityDownPerk == true)
         {
@@ -86,6 +86,32 @@ public class PerkSystem : MonoBehaviour
             eraserUseMultiplier = 1;
         }
 
+        if (eraserCapacityUpPerk == true)
+        {
+            eraserCapacityMultiplier = 1.5f;
+        }
+        else if (eraserCapacityDownPerk == true)
+        {
+            eraserCapacityMultiplier = 0.8f;
+        }
+        else if (eraserCapacityUpPerk == false && eraserCapacityDownPerk == false)
+        {
+            eraserCapacityMultiplier = 1;
+        }
+
+        if (focusUseUpPerk == true)
+        {
+            focusUseMultiplier = 0.5f;
+        }
+        else if (focusUseDownPerk == true)
+        {
+            focusUseMultiplier = 1.25f;
+        }
+        else if (focusUseUpPerk == false && focusUseDownPerk == false)
+        {
+            focusUseMultiplier = 1;
+        }
+
         if (focusCapacityUpPerk == true)
         {
             focusCapacityMultiplier = 1.5f;
@@ -101,7 +127,7 @@ public class PerkSystem : MonoBehaviour
 
         inkRegenRate2 = 0.1f * inkRegenMultiplier;
         startingHealth = 100f * inkCapacityMultiplier;
-        eraserUseRate = 20f * eraserUseMultiplier;
+        eraserUseRate = 0.1f * eraserUseMultiplier;
         startingEraser = 100f * eraserCapacityMultiplier;
         focusUseRate = 0.5f * focusUseMultiplier;
         startingFocus = 150f * focusCapacityMultiplier;
