@@ -2041,10 +2041,12 @@ MonoBehaviour:
   moew3: {fileID: 8300000, guid: 25389f3eb58284a4abb7591dc3583606, type: 3}
   catHit: {fileID: 8300000, guid: 39b97934459d95b40b56a6ef309ba3bc, type: 3}
   catHit2: {fileID: 8300000, guid: b608b61bfb2ef95489e9b9be7a25f841, type: 3}
+  flagCaptured: {fileID: 8300000, guid: 375bc30ad6b6f0044b773e5ee12d8c02, type: 3}
   hitMan: {fileID: 2144735749}
   things: {fileID: 1542899951}
   heyl: {fileID: 2144463204}
   jumping: {fileID: 929370386}
+  hello: {fileID: 1281795883}
   meow2: 0
   textPlaying: 0
   speaking: 0

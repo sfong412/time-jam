@@ -44,6 +44,8 @@ public class audioFix2 : MonoBehaviour
     public AudioClip catHit;
 
     public AudioClip catHit2;
+
+    public AudioClip flagCaptured;
     public DamageScript hitMan;
 
     public UIThings5 things;
@@ -51,6 +53,8 @@ public class audioFix2 : MonoBehaviour
     public UIThings heyl;
 
     public CharacterController2D1 jumping;
+
+    public DialogueManager hello;
 
     public bool meow2;
 
@@ -203,6 +207,11 @@ public class audioFix2 : MonoBehaviour
         if (heyl.stopping == true)
         {
             audioSource.volume = 0;
+        }
+
+        if (hello.Flag2.flagCaptured == true)
+        {
+            audioSource.PlayOneShot(flagCaptured, 0.3f);
         }
 
     }

@@ -201,7 +201,7 @@ public class audioFix1 : MonoBehaviour
 
         if (boss.dog == true)
         {
-            audioSource.PlayOneShot(spitBall, 0.7f);
+            audioSource.PlayOneShot(spitBall, 0.5f);
             boss.dog = false;
         }
 
@@ -212,10 +212,10 @@ public class audioFix1 : MonoBehaviour
             switch (bossSwearVariation)
             {
                case 0:
-               audioSource.PlayOneShot(boss1, 0.7f);
+               audioSource.PlayOneShot(boss1, 0.5f);
                break;
                case 1:
-               audioSource.PlayOneShot(boss2, 0.7f); 
+               audioSource.PlayOneShot(boss2, 0.5f); 
                break;
             }
             boss.dog2 = false;
@@ -227,13 +227,13 @@ public class audioFix1 : MonoBehaviour
             switch (hitBossVaration)
             {
                 case 0:
-                audioSource.PlayOneShot(hitBoss, 0.7f);
+                audioSource.PlayOneShot(hitBoss, 0.5f);
                 break;
                 case 1:
-                audioSource.PlayOneShot(hitBoss1, 0.7f);
+                audioSource.PlayOneShot(hitBoss1, 0.5f);
                 break;
                 case 2: 
-                audioSource.PlayOneShot(hitBoss2, 0.7f);
+                audioSource.PlayOneShot(hitBoss2, 0.5f);
                 break;
             }
             boss.dog3 = false;
