@@ -558,7 +558,7 @@ public class Shop : MonoBehaviour
 
     public void StartGame()
     {
-        if (goodPerkSelected == true && badPerkSelected == true && goodPerkText.text != "None" && badPerkText.text != "None")
+        if (goodPerkSelected == true && badPerkSelected == true && goodPerkText.text != "None" && badPerkText.text != "None" || nextRoundNumber == 3)
         {
             whyUnity = true;
             isBuying = false;
