@@ -211,7 +211,7 @@ public class UIThings5 : MonoBehaviour
         }
         if (remainingFocus < PerkSystem.startingFocus)
         {
-            HealingFocus(PerkSystem.focusCapacityRate); 
+            HealingFocus(PerkSystem.focusUseRate); 
         }
             
           

@@ -179,11 +179,11 @@ public class UIThings3 : MonoBehaviour
 
        if (erased == true)
        {
-           EraserDeplete(20);
+           EraserDeplete(PerkSystem.eraserUseRate);
            erased = false;
        }
 
-       if (remainingEraser < 20)
+       if (remainingEraser < PerkSystem.eraserUseRate)
        {
             canErase = false; 
        }
@@ -211,7 +211,7 @@ public class UIThings3 : MonoBehaviour
         }
         if (remainingFocus < PerkSystem.startingFocus)
         {
-            HealingFocus(PerkSystem.focusCapacityRate); 
+            HealingFocus(PerkSystem.focusUseRate); 
         }
             
           
