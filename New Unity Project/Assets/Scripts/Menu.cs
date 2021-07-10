@@ -60,11 +60,25 @@ public class Menu : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
+    public void MainMenu()
+    {
+        whyUnity = true;
+        audioo.SetBool("almost", true);
+       StartCoroutine(startGame2());
+    }
+
     IEnumerator startGame()
     {
         blackFade.SetActive(true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
+    }
+
+     IEnumerator startGame2()
+    {
+        blackFade.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator quitGame()
