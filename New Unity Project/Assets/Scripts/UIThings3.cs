@@ -157,7 +157,7 @@ public class UIThings3 : MonoBehaviour
 
        if (gameplaying.slowDownThereBuster == true)
        {
-           FocusDeplete(1f);
+           FocusDeplete(PerkSystem.focusUseRate);
        }
 
        if (remainingHealth < gameplaying.currentInkCost)
@@ -211,7 +211,7 @@ public class UIThings3 : MonoBehaviour
         }
         if (remainingFocus < PerkSystem.startingFocus)
         {
-            HealingFocus(PerkSystem.focusUseRate); 
+            HealingFocus(0.5f); 
         }
             
           

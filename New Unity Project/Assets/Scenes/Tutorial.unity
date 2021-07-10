@@ -7470,6 +7470,7 @@ MonoBehaviour:
   TimerFill: {fileID: 1134139636}
   timer: {fileID: 1878911946}
   Timer: {fileID: 2144463204}
+  amongus: 0
 --- !u!4 &1283522973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4675744391322538406, guid: 877d25f2d0fc27e46bf29dfa0ee9b929, type: 3}
@@ -13499,7 +13500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918029886113078681, guid: 0d7b75dab05754749a35162a5433e870, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 7918029886113078681, guid: 0d7b75dab05754749a35162a5433e870, type: 3}
       propertyPath: m_LocalPosition.z
