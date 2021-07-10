@@ -39,6 +39,8 @@ public class Shop : MonoBehaviour
     TextMeshProUGUI goodPerkText;
     TextMeshProUGUI badPerkText;
 
+    public bool whyUnity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,7 @@ public class Shop : MonoBehaviour
             PerkSystem.eraserUseDownPerk = false;
             PerkSystem.focusCapacityDownPerk = false;
         }
+
     }
 
     // Update is called once per frame
@@ -73,6 +76,8 @@ public class Shop : MonoBehaviour
         {
             StartCoroutine(secret1());
         }
+
+      
     }
 
     void Awake()
@@ -82,12 +87,15 @@ public class Shop : MonoBehaviour
 
     public void SelectItem(int blockType)
     {
+        whyUnity = true;
         isBuying = true;
         currentBlockType = blockType;
+
     }
 
     public void SelectPerk(int perkType)
     {
+        whyUnity = true;
         isBuying = true;
         currentPerkType = perkType;
 
@@ -243,6 +251,7 @@ public class Shop : MonoBehaviour
 
     public void PlaceItem(int platform)
     {
+        whyUnity = true;
         if (isBuying == true)
         {
             TextMeshProUGUI priceText = UIThings2.prices[platform].GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -342,12 +351,14 @@ public class Shop : MonoBehaviour
 
     public void PerkScreen()
     {
+        whyUnity = true;
         isBuying = false;
         perkScreen2.SetBool("move", true);
     }
 
     public void ShopScreen()
     {
+        whyUnity = true;
         isBuying = false;
         perkScreen2.SetBool("move", false);
     }
@@ -366,6 +377,7 @@ public class Shop : MonoBehaviour
 
     public void StartGame()
     {
+        whyUnity = true;
         isBuying = false;
         StartCoroutine(nextRound());
     }

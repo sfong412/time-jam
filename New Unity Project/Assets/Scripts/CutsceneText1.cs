@@ -15,6 +15,8 @@ public class CutsceneText1 : MonoBehaviour
 
     public Animator finished;
 
+    public CutSceneBullyManager talking;
+
     int index;
     // Start is called before the first frame update
     void Start()
@@ -72,11 +74,13 @@ public class CutsceneText1 : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+         talking.speaking = true;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(typeSpeed);
         }
+        talking.speaking = false;
     }
 
     IEnumerator bossFight()

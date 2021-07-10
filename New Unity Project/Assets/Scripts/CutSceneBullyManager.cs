@@ -15,6 +15,10 @@ public class CutSceneBullyManager : MonoBehaviour
 
     public CutsceneText1 ooga;
 
+    public AudioSource audioMan;
+
+    public bool speaking;
+
     public int indexl = 0;
 
     // Update is called once per frame
@@ -46,6 +50,19 @@ public class CutSceneBullyManager : MonoBehaviour
                  four.SetActive(true);
                  break;
 
+            }
+
+            if (speaking == true)
+            {
+                if (!audioMan.isPlaying)
+                {
+                    audioMan.Play();
+                }
+            
+            }
+            else
+            {
+                audioMan.Pause();
             }
         
     }

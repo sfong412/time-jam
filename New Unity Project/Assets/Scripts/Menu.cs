@@ -18,6 +18,10 @@ public class Menu : MonoBehaviour
 
     public GameObject upped;
     public GameObject upped2;
+
+    public Animator audioo;
+
+    public bool whyUnity;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +36,15 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        whyUnity = true;
+        audioo.SetBool("almost", true);
        StartCoroutine(startGame());
     }
 
     public void QuitGame()
     {
+           whyUnity = true;
+        audioo.SetBool("almost", true);
         StartCoroutine(quitGame());
     }
 
