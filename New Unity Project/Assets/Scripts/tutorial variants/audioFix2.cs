@@ -8,7 +8,9 @@ public class audioFix2 : MonoBehaviour
 
     public AudioSource footSteps1;
 
-    public Gameplay gamePlay;
+    public AudioSource talking;
+
+    public Gameplay1 gamePlay;
     public AudioClip blockplaced;
 
     public AudioClip spikeHit;
@@ -42,17 +44,22 @@ public class audioFix2 : MonoBehaviour
     public AudioClip catHit;
 
     public AudioClip catHit2;
+
+    public AudioClip flagCaptured;
     public DamageScript hitMan;
 
-    public UIThings3 things;
+    public UIThings5 things;
 
     public UIThings heyl;
 
     public CharacterController2D1 jumping;
 
+    public DialogueManager hello;
+
     public bool meow2;
 
     public bool textPlaying;
+    public bool speaking;
 
     void Start()
     {
@@ -115,6 +122,12 @@ public class audioFix2 : MonoBehaviour
                 audioSource.PlayOneShot(blockErased3, 0.3f);
                 break;
             }
+        }
+
+        
+        else
+        {
+            talking.Pause();
         }
 
         if (hitMan.damaged == true)
@@ -196,8 +209,32 @@ public class audioFix2 : MonoBehaviour
             audioSource.volume = 0;
         }
 
-    }
+        if (hello.Flag2.flagCaptured == true)
+        {
+            audioSource.PlayOneShot(flagCaptured, 0.3f);
         }
+
+    }
+
+    if (textPlaying == true)
+    {
+        footSteps1.Pause();
+    }
+
+    if (speaking == true)
+        {
+            if (!talking.isPlaying)
+            {
+                talking.Play();
+            }
+            
+        }
+        else
+        {
+            talking.Pause();
+        } 
+        }
+
        
 
    

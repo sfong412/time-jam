@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 29df79de2c9d3594f82bffa94f75ba99
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - movingThing: {instanceID: 0}
+  - hazard: {fileID: 6307049418291793356, guid: 695692fbdeb6f024f89f8bc7c217f9e9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

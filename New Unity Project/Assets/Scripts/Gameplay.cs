@@ -160,6 +160,8 @@ public class Gameplay : MonoBehaviour
 
         }
 
+        grid = GameObject.Find("Hazard Generator").GetComponent<Grid>();
+
 
         if (stop.stopping == false)
         {

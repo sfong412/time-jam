@@ -20,7 +20,6 @@ public class PlacedBlock : Hazard
     public bool blockPlaced;
 
     public UIThings3 eraser;
-
     public Animator block;
 
 
@@ -107,4 +106,6 @@ public class PlacedBlock : Hazard
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
+
+    
 }

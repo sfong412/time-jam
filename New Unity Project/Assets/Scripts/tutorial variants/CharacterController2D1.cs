@@ -29,6 +29,7 @@ public class CharacterController2D1 : MonoBehaviour
     public GameObject respawn;
 
     public Dialogue text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,7 @@ public class CharacterController2D1 : MonoBehaviour
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;    
             Player.SetFloat("X", 0);
         }
+
         }
         else
         {
@@ -80,8 +82,7 @@ public class CharacterController2D1 : MonoBehaviour
             
          
         } 
-       
-        }
+         
      
 
 
@@ -119,4 +120,5 @@ else
 
 
    
+}
 }

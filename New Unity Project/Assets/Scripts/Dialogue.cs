@@ -22,7 +22,15 @@ public class Dialogue : MonoBehaviour
 
     public int indexCap;
 
+    public int index3;
+
     public bool startNextThing;
+
+    public int[] nextDialogueCap;
+
+    public UIThings5 yeah;
+
+ 
 
 
     // Start is called before the first frame update
@@ -50,17 +58,11 @@ public class Dialogue : MonoBehaviour
         {
             StopAllCoroutines();
             textComponent.text = dialogueManager.lines[index];
+             cutscene.speaking = false;
         }
         }
 
-        if (startNextThing == true)
-        {
-            direction.SetActive(false);
-            transform.localScale = new Vector3(1.44f, 1.44f, 0);
-            NextLine();
-            startNextThing = false;
-             
-        }
+       
 
         
        
@@ -94,13 +96,38 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    public void NextEvent()
+    {
+        dialogueManager.complete = false;
+         if (startNextThing == true)
+        {
+            yeah.remainingEraser = yeah.startingEraser;
+            yeah.remainingFocus = yeah.startingFocus;
+            yeah.remainingHealth = yeah.startingHealth;
+            dialogueManager.complete = false;
+            index3 += 1;
+            indexCap += nextDialogueCap[index3];
+            index2 += 1;
+            direction.SetActive(false);
+            transform.localScale = new Vector3(1.44f, 1.44f, 0);
+            NextLine();
+            startNextThing = false;
+            Debug.Log("what");
+            dialogueManager.eventNumber += 1;
+             
+        }
+    }
+
     IEnumerator TypeLine()
     {
+        cutscene.speaking = true;
         foreach(char c in dialogueManager.lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        cutscene.speaking = false;
+       
     }
 
     IEnumerator sus()
