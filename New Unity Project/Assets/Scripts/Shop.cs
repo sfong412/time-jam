@@ -52,7 +52,17 @@ public class Shop : MonoBehaviour
 
         if (UIThings2.blockTypeLoadout == null)
         {
-            UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5};
+            UIThings2.blockTypeLoadout = new int[5] { 1, 2, 3, 4, 5 };
+        }
+
+        if (HasActivatedPerks() == true)
+        {
+            PerkSystem.inkRegenUpPerk = false;
+            PerkSystem.eraserUseUpPerk = false;
+            PerkSystem.focusCapacityUpPerk = false;
+            PerkSystem.inkRegenDownPerk = false;
+            PerkSystem.eraserUseDownPerk = false;
+            PerkSystem.focusCapacityDownPerk = false;
         }
     }
 
@@ -80,7 +90,7 @@ public class Shop : MonoBehaviour
     {
         isBuying = true;
         currentPerkType = perkType;
-        
+
         switch (currentPerkType)
         {
             case 0:
@@ -107,7 +117,7 @@ public class Shop : MonoBehaviour
                 Debug.Log("inkRegenUpPerk: " + PerkSystem.inkRegenUpPerk);
                 goodPerkSelected = true;
                 break;
-            case 1: 
+            case 1:
                 PerkSystem.eraserUseUpPerk = !PerkSystem.eraserUseUpPerk;
 
                 PerkSystem.inkRegenUpPerk = false;
@@ -228,7 +238,7 @@ public class Shop : MonoBehaviour
                 badPerkSelected = true;
                 break;
         }
-       // Debug.Log(PerkSystem.inkRegenUpPerk);
+        // Debug.Log(PerkSystem.inkRegenUpPerk);
     }
 
     public void PlaceItem(int platform)
@@ -308,7 +318,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 9:
                     UIThings2.loadouts[platform].sprite = ui.blockType9;
-                    UIThings2.loadouts[platform].color =  Color.white;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
@@ -316,7 +326,7 @@ public class Shop : MonoBehaviour
                     break;
                 case 10:
                     UIThings2.loadouts[platform].sprite = ui.blockType10;
-                    UIThings2.loadouts[platform].color =  Color.white;
+                    UIThings2.loadouts[platform].color = Color.white;
                     UIThings2.loadouts[platform].transform.localRotation = Quaternion.Euler(0, 0, 0);
                     UIThings2.loadouts[platform].transform.localScale = new Vector3(0.7f, 3.4f, 1f);
                     rectTransform.sizeDelta = new Vector2(91.1f, 19.4f);
@@ -344,7 +354,7 @@ public class Shop : MonoBehaviour
 
     public void DisplayPerkState(GameObject button)
     {
-       // perkState = !perkState;
+        // perkState = !perkState;
 
         button.GetComponentInChildren<Text>().text = "Ink Regen Up Perk: " + PerkSystem.inkRegenUpPerk.ToString();
     }
@@ -387,5 +397,17 @@ public class Shop : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(10);
 
+    }
+
+    bool HasActivatedPerks()
+    {
+        if (PerkSystem.inkRegenUpPerk == true || PerkSystem.inkRegenDownPerk == true || PerkSystem.eraserUseUpPerk == true || PerkSystem.eraserUseDownPerk == true || PerkSystem.focusCapacityUpPerk == true || PerkSystem.focusCapacityDownPerk == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
