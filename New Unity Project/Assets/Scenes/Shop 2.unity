@@ -847,7 +847,7 @@ MonoBehaviour:
   blackFade2: {fileID: 689353545}
   audioFade2: {fileID: 520346538}
   perkScreen2: {fileID: 1569159164}
-  nextRoundNumber: 6
+  nextRoundNumber: 5
   whyUnity: 0
 --- !u!1 &46601640
 GameObject:
@@ -10557,7 +10557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &689353544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10609,8 +10609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

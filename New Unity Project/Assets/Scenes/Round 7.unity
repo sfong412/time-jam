@@ -10573,7 +10573,7 @@ MonoBehaviour:
   uiText: {fileID: 1909513768}
   Duration: 10000
   stopping: 0
-  currentScene: 6
+  currentScene: 16
   blackFade: {fileID: 2020135375}
   blackFade3: {fileID: 2031531043}
   audioTransistion: {fileID: 483723008}
