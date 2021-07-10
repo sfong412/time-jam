@@ -42,7 +42,7 @@ public class UIThings : MonoBehaviour
     void Awake()
     {
         stopping = false;
-        Being(10);
+        Being(Duration);
         StartCoroutine(StartRound());
         audioTransistion2.SetActive(true);
     }
