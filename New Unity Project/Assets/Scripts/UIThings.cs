@@ -35,23 +35,23 @@ public class UIThings : MonoBehaviour
     public GameObject nomore;
     public GameObject nomore2;
 
-    
+
     public float remainingDuration;
     // Start is called before the first frame update
-    
+
     void Awake()
     {
-         stopping = false;
-         Being(Duration);
-         StartCoroutine(StartRound());
-         audioTransistion2.SetActive(true);
+        stopping = false;
+        Being(10);
+        StartCoroutine(StartRound());
+        audioTransistion2.SetActive(true);
     }
 
     // Update is called once per frame
     void Being(int Second)
     {
         remainingDuration = Second;
-        StartCoroutine(UpdateTimer()); 
+        StartCoroutine(UpdateTimer());
     }
 
     void Update()
@@ -61,7 +61,7 @@ public class UIThings : MonoBehaviour
 
     IEnumerator UpdateTimer()
     {
-        while(remainingDuration >= 0)
+        while (remainingDuration >= 0)
         {
             uiText.text = $"{remainingDuration / 60:00}:{remainingDuration % 60:00}";
             yield return new WaitForSeconds(1f);
@@ -71,7 +71,7 @@ public class UIThings : MonoBehaviour
 
     void FixedUpdate()
     {
-          remainingDuration -= 1 * Time.fixedDeltaTime;
+        remainingDuration -= 1 * Time.fixedDeltaTime;
     }
 
     public void OnEnd()
@@ -79,7 +79,7 @@ public class UIThings : MonoBehaviour
         stopping = true;
         shadow.SetActive(false);
         StartCoroutine(UIAnimations());
-        
+
     }
 
     IEnumerator UIAnimations()
@@ -90,8 +90,8 @@ public class UIThings : MonoBehaviour
         Text1.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         Text2.SetActive(true);
-       audioMan2.SetActive(true);
-        
+        audioMan2.SetActive(true);
+
     }
 
     IEnumerator NextRound1()
@@ -102,7 +102,7 @@ public class UIThings : MonoBehaviour
         SceneManager.LoadScene(currentScene + 1);
     }
 
-     IEnumerator StartRound()
+    IEnumerator StartRound()
     {
         yield return new WaitForSeconds(1f);
         blackFade2.SetActive(false);
@@ -110,7 +110,7 @@ public class UIThings : MonoBehaviour
 
     IEnumerator hank()
     {
-         blackFade2.SetActive(true);
+        blackFade2.SetActive(true);
         blackFade3.SetBool("otherWay", true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(currentScene);
@@ -119,7 +119,7 @@ public class UIThings : MonoBehaviour
     public void NextRound()
     {
         StartCoroutine(NextRound1());
-    
+
     }
 
     public void Died2()

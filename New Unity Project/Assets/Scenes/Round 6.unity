@@ -3755,6 +3755,7 @@ MonoBehaviour:
   platforms2: {fileID: 5923489969206649219, guid: 86d659ceac86f3146ac6a1d6e143cbcc, type: 3}
   platforms3: {fileID: 8167577531054015681, guid: 4b81bd3b77cc5104c8a6ba5a96d003d1, type: 3}
   platforms4: {fileID: 0}
+  platforms5: {fileID: 0}
 --- !u!1 &751995650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,7 +5740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127874337}
         m_TargetAssemblyTypeName: UIThings, Assembly-CSharp
         m_MethodName: NextRound
         m_Mode: 1

@@ -84,11 +84,19 @@ public class Shop : MonoBehaviour
         switch (currentPerkType)
         {
             case 0:
-                PerkSystem.inkRegenUpPerk = true;
+                PerkSystem.inkRegenUpPerk = !PerkSystem.inkRegenUpPerk;
 
                 PerkSystem.eraserUseUpPerk = false;
                 PerkSystem.focusCapacityUpPerk = false;
-                goodPerkText.text = "Ink Regen Up";
+
+                if (PerkSystem.inkRegenUpPerk == true)
+                {
+                    goodPerkText.text = "Ink Regen Up";
+                }
+                else
+                {
+                    goodPerkText.text = "None";
+                }
 
                 if (PerkSystem.inkRegenDownPerk == true)
                 {
@@ -100,11 +108,19 @@ public class Shop : MonoBehaviour
                 goodPerkSelected = true;
                 break;
             case 1: 
-                PerkSystem.eraserUseUpPerk = true;
+                PerkSystem.eraserUseUpPerk = !PerkSystem.eraserUseUpPerk;
 
                 PerkSystem.inkRegenUpPerk = false;
                 PerkSystem.focusCapacityUpPerk = false;
-                goodPerkText.text = "Eraser Use Up";
+
+                if (PerkSystem.eraserUseUpPerk == true)
+                {
+                    goodPerkText.text = "Eraser Use Up";
+                }
+                else
+                {
+                    goodPerkText.text = "None";
+                }
 
                 if (PerkSystem.eraserUseDownPerk == true)
                 {
@@ -116,11 +132,19 @@ public class Shop : MonoBehaviour
                 goodPerkSelected = true;
                 break;
             case 2:
-                PerkSystem.focusCapacityUpPerk = true;
+                PerkSystem.focusCapacityUpPerk = !PerkSystem.focusCapacityUpPerk;
 
                 PerkSystem.inkRegenUpPerk = false;
                 PerkSystem.eraserUseUpPerk = false;
-                goodPerkText.text = "Focus Capacity Up";
+
+                if (PerkSystem.focusCapacityUpPerk == true)
+                {
+                    goodPerkText.text = "Focus Capacity Up";
+                }
+                else
+                {
+                    goodPerkText.text = "None";
+                }
 
                 if (PerkSystem.focusCapacityDownPerk == true)
                 {
@@ -132,11 +156,19 @@ public class Shop : MonoBehaviour
                 goodPerkSelected = true;
                 break;
             case 3:
-                PerkSystem.inkRegenDownPerk = true;
+                PerkSystem.inkRegenDownPerk = !PerkSystem.inkRegenDownPerk;
 
                 PerkSystem.eraserUseDownPerk = false;
                 PerkSystem.focusCapacityDownPerk = false;
-                badPerkText.text = "Ink Regen Down";
+
+                if (PerkSystem.inkRegenDownPerk == true)
+                {
+                    badPerkText.text = "Ink Regen Down";
+                }
+                else
+                {
+                    badPerkText.text = "None";
+                }
 
                 if (PerkSystem.inkRegenUpPerk == true)
                 {
@@ -148,11 +180,19 @@ public class Shop : MonoBehaviour
                 badPerkSelected = true;
                 break;
             case 4:
-                PerkSystem.eraserUseDownPerk = true;
+                PerkSystem.eraserUseDownPerk = !PerkSystem.eraserUseDownPerk;
 
                 PerkSystem.inkRegenDownPerk = false;
                 PerkSystem.focusCapacityDownPerk = false;
-                badPerkText.text = "Eraser Use Down";
+
+                if (PerkSystem.eraserUseDownPerk == true)
+                {
+                    badPerkText.text = "Eraser Use Down";
+                }
+                else
+                {
+                    badPerkText.text = "None";
+                }
 
                 if (PerkSystem.eraserUseUpPerk == true)
                 {
@@ -164,11 +204,19 @@ public class Shop : MonoBehaviour
                 badPerkSelected = true;
                 break;
             case 5:
-                PerkSystem.focusCapacityDownPerk = true;
+                PerkSystem.focusCapacityDownPerk = !PerkSystem.focusCapacityDownPerk;
 
                 PerkSystem.inkRegenDownPerk = false;
                 PerkSystem.eraserUseDownPerk = false;
-                badPerkText.text = "Focus Capacity Down";
+
+                if (PerkSystem.focusCapacityDownPerk == true)
+                {
+                    badPerkText.text = "Focus Capacity Down";
+                }
+                else
+                {
+                    badPerkText.text = "None";
+                }
 
                 if (PerkSystem.focusCapacityUpPerk == true)
                 {
