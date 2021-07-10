@@ -7,20 +7,26 @@ public class PerkSystem : MonoBehaviour
 
   //  UIThings3 ui;
     static public bool inkRegenUpPerk = false;
+    static public bool inkCapacityUpPerk = false;
 
-    static public bool eraserUseUpPerk = false;
+    static public bool eraserUseUpPerk = true;
+    static public bool eraserCapacityUpPerk = false;
 
+    static public bool focusUseUpPerk = false;
     static public bool focusCapacityUpPerk = false;
 
     static public bool inkRegenDownPerk = false;
+    static public bool inkCapacityDownPerk = false;
 
     static public bool eraserUseDownPerk = false;
+    static public bool eraserCapacityDownPerk = false;
 
+    static public bool focusUseDownPerk = false;
     static public bool focusCapacityDownPerk = false;
 
     static public float inkRegenRate2 = 0.1f;
     static public float eraserUseRate = 0.1f;
-    static public float focusCapacityRate = 0.5f;
+    static public float focusUseRate = 0.5f;
     static public float startingHealth = 100;
 
     static public float startingEraser = 100;
@@ -28,9 +34,12 @@ public class PerkSystem : MonoBehaviour
     static public float startingFocus = 150;
 
     static public float inkRegenMultiplier;
+    static public float inkCapacityMultiplier;
 
     static public float eraserUseMultiplier;
+    static public float eraserCapacityMultiplier;
 
+    static public float focusUseMultiplier;
     static public float focusCapacityMultiplier;
 
     public UIThings3 fix;
@@ -49,6 +58,19 @@ public class PerkSystem : MonoBehaviour
         else if (inkRegenUpPerk == false && inkRegenDownPerk == false)
         {
             inkRegenMultiplier = 1;
+        }
+
+        if (inkCapacityUpPerk == true)
+        {
+            inkCapacityMultiplier = 100.25f;
+        }
+        else if (inkCapacityDownPerk == true)
+        {
+            inkCapacityMultiplier = 0.8f;
+        }
+        else if (inkCapacityUpPerk == false && inkCapacityDownPerk == false)
+        {
+            inkCapacityMultiplier = 1;
         }
 
         if (eraserUseUpPerk == true)
@@ -78,7 +100,10 @@ public class PerkSystem : MonoBehaviour
         }
 
         inkRegenRate2 = 0.1f * inkRegenMultiplier;
-        eraserUseRate = 0.1f * eraserUseMultiplier;
+        startingHealth = 100f * inkCapacityMultiplier;
+        eraserUseRate = 20f * eraserUseMultiplier;
+        startingEraser = 100f * eraserCapacityMultiplier;
+        focusUseRate = 0.5f * focusUseMultiplier;
         startingFocus = 150f * focusCapacityMultiplier;
 /*
         if (inkRegenUpPerk == true)
