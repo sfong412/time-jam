@@ -73,8 +73,8 @@ public class UIThings3 : MonoBehaviour
         remainingFocus = PerkSystem.startingFocus;
         focusBar.maxValue = PerkSystem.startingFocus;
         focusBar.value = remainingFocus;
-        remainingEraser = PerkSystem.startingEraser;
-        eraserBar.maxValue = PerkSystem.startingEraser;
+        remainingEraser = startingEraser;
+        eraserBar.maxValue = startingEraser;
         eraserBar.value = remainingEraser;
         currentEnemyDamageAmount = enemyDamageAmount;
 
@@ -114,7 +114,7 @@ public class UIThings3 : MonoBehaviour
 
       
 
-       if (remainingFocus > 149)
+       if (remainingFocus >= PerkSystem.startingFocus)
        {
             gameplaying.canSlow = true;
        }
