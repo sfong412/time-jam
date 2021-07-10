@@ -76,9 +76,13 @@ public class UIThings : MonoBehaviour
 
     public void OnEnd()
     {
+        if (stopping == false)
+        {
         stopping = true;
         shadow.SetActive(false);
         StartCoroutine(UIAnimations());
+        }
+      
 
     }
 
