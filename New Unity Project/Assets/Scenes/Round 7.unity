@@ -6259,7 +6259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127874337}
         m_TargetAssemblyTypeName: UIThings, Assembly-CSharp
         m_MethodName: NextRound
         m_Mode: 1

@@ -344,6 +344,4 @@ public class UIThings3 : MonoBehaviour
            roundGone3.SetActive(true);
           
     }
-
-    
 }

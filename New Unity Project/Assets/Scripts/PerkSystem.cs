@@ -27,26 +27,26 @@ public class PerkSystem : MonoBehaviour
 
     static public float startingFocus = 150;
 
-    float inkRegenMultiplier;
+    static public float inkRegenMultiplier;
 
-    float eraserUseMultiplier;
+    static public float eraserUseMultiplier;
 
-    float focusCapacityMultiplier;
+    static public float focusCapacityMultiplier;
 
     public UIThings3 fix;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         if (inkRegenUpPerk == true)
         {
-            inkRegenMultiplier = 2;
+            inkRegenMultiplier = 2f;
         }
         else if (inkRegenDownPerk == true)
         {
             inkRegenMultiplier = 0.5f;
         }
-        else
+        else if (inkRegenUpPerk == false && inkRegenDownPerk == false)
         {
             inkRegenMultiplier = 1;
         }
@@ -59,7 +59,7 @@ public class PerkSystem : MonoBehaviour
         {
             eraserUseMultiplier = 1.2f;
         }
-        else
+        else if (eraserUseUpPerk == false && eraserUseDownPerk == false)
         {
             eraserUseMultiplier = 1;
         }
@@ -72,7 +72,7 @@ public class PerkSystem : MonoBehaviour
         {
             focusCapacityMultiplier = 0.666666f;
         }
-        else
+        else if (focusCapacityUpPerk == false && focusCapacityDownPerk == false)
         {
             focusCapacityMultiplier = 1;
         }
@@ -108,11 +108,5 @@ public class PerkSystem : MonoBehaviour
             startingFocus = 150f;
         }
 */
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
